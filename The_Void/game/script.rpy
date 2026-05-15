@@ -5,7 +5,10 @@
 
 define narrator = nvl_narrator
 define a = Character("Alisia", color="#fffd7b")
-define c = Character("Cotard", color="#fffd7b")
+define c = Character("Cotard", color="#9c1908")
+define bee = Character("Przczułka", color = "#ffa600")
+define unon = Character("???", color = "#ffffff")
+define u = Character("Uczniowie", color = "#a1fd28")
 
 
 # The game starts here.
@@ -164,7 +167,7 @@ label Chapter_1:
 
     scene bg void entrance
 
-    "Dziennik Alysii Wpis 001"
+    "{size=+20}Dziennik Alysii Wpis 001{/size}"
 
     "Dla moich uczniów"
 
@@ -187,7 +190,7 @@ label Chapter_1:
     "Nie martwcie się."
     "{b}On się mną zaopiekuje.{/b}"
     nvl clear
-    "{b}{size=+60}Wejście do Nicości{/size}{/b}"
+    "{b}{size=+60}Akt Pierwszy{/size}{/b}"
     nvl clear
     "Wiatr… jest dziwnie cichy"
     "Nie zimny. Nie ciepły."
@@ -207,659 +210,603 @@ label Chapter_1:
 
     "Alysia wybucha lekkim śmiechem"
 
-    Alysia:
-    Właśnie dlatego tu jesteśmy.
+    a "Właśnie dlatego tu jesteśmy."
 
+    "Cotard patrzy w dół."
+    "Długo."
+    "Zbyt długo."
 
-    Cotard patrzy w dół.
-    Długo.
-    Zbyt długo.
+    c "Nie czuję strachu."
+    c "…"
+    c "To nie jest odwaga."
 
-    Cotard:
-    Nie czuję strachu.
-    …
-    To nie jest odwaga.
+    menu:
+        "Wiem, to głupota.":
+            jump choice1chapter1_1
+        "Dlaczego tak mówisz?":
+            jump choice1chapter1_2
 
-    #Alysia:
-    #1> Wiem, to głupota.
-    #2> Dlaczego tak mówisz?
+    label choice1chapter1_1:
+    c "To dobrze."
+    c "Przynajmniej to się nie zmieniło"
+    jump choice1chapter1_done
 
-    #Cotard:
-    #1> To dobrze.
-    #Przynajmniej to się nie zmieniło
-    #2> Bo ja i tak nie istnieję.
-    #A jednak nadal potrafię popełniać błędy.
+    label choice1chapter1_2:
+    c "Bo ja i tak nie istnieję."
+    c "A jednak nadal potrafię popełniać błędy."
+    jump choice1chapter1_done
 
-    Zejście
-    Pierwszy krok.
-    Ziemia nie wydaje dźwięku.
+    label choice1chapter1_done:
+    "Pierwszy krok."
+    "Ziemia nie wydaje dźwięku."
+
+    a "Słyszysz to?"
+
+    c "Nie"
+    c "…i właśnie to powinno cię martwić."
+
+    a "Jesteś jedyną osobą, która może tam wejść i wrócić."
+
+    "Cotard przekrzywia głowę jakby analizował coś czego nie da się zrozumieć"
+
+    c "Boje się, jak na Ciebie zadziała to otoczenie."
 
-    Alysia:
-    Słyszysz to?
+    menu:
+        "Też się martwię":
+            jump choice2chapter1_1
+        "Przekonamy się.":
+            jump choice2chapter1_2
+    label choice2chapter1_1:
+    a "Też się martwię."
+    a "Boję się, że nagle coś się zmieni i Nicość zacznie działać również na ciebie."
+    a "Że odbierze mi nawet tę pewność, którą teraz mam."
+    a "Ale… przekonamy się, gdy dojdziemy do Kwiecistej Nicości."
 
-    Cotard:
-    Nie
-    …i właśnie to powinno cię martwić.
+    "Cotard patrzy na nią długo."
+    "Jego twarz pozostaje niemal nieruchoma, ale głos staje się cichszy."
 
-    Alysia:
-    Jesteś jedyną osobą, która może tam wejść i wrócić.
 
-    Cotard przekrzywia głowę jakby analizował coś czego nie da się zrozumieć
+    c "…"
+    c "Nie martw się o mnie."
+    c "Na mnie już Nicość wypróbowała wszystko, co mogła."
+    c "…"
 
-    Cotard:
-    Boje się, jak na Ciebie zadziała to otoczenie.
+    a "Nieprawda."
+    a "Gdyby zrobiła wszystko, nie szedłbyś teraz obok mnie."
+
+    "Cotard milknie."
+    "Jakby nie potrafił znaleźć odpowiedzi."
+    "Po chwili rusza dalej."
 
-    #Alysia:
-    #1> Też się martwię
-    #2> Przekonamy się.
-    #OPCJA 1
-    #Alysia:
-    #Też się martwię.
-    #Boję się, że nagle coś się zmieni i Nicość zacznie działać również na ciebie.
-    #Że odbierze mi nawet tę pewność, którą teraz mam.
-    #Ale… przekonamy się, gdy dojdziemy do Kwiecistej Nicości.
+    c "…to nie jest argument."
 
-    #Cotard patrzy na nią długo.
-    #Jego twarz pozostaje niemal nieruchoma, ale głos staje się cichszy.
+    "Alysia lekko się uśmiecha."
+    a "Jest."
+    jump choice2chapter1_done
+
+    label choice2chapter1_2:
+    a "Przekonamy się z czasem."
+    a "Mam nadzieję, że po prostu nic nam się nie stanie"
+    a "Może to miejsce tylko tylko próbuje nas przestraszyć."
 
+    "Spogląda w nicość"
 
-    #Cotard:
-    #…
-    #Nie martw się o mnie.
-    #Na mnie już Nicość wypróbowała wszystko, co mogła.
-    #…
+    c "Dziwne."
+    c "Ludzie zawsze próbują nadać sens temu, czego się boją."
+    c "Jakby nazwanie lęku czyniło go mniejszym."
 
+    a "A ty?"
+    a "Na czym budujesz strój spokój"
 
-    #Alysia:
-    #Nieprawda.
-    #Gdyby zrobiła wszystko, nie szedłbyś teraz obok mnie.
+    c "Na pustce."
+    c "Nie oczekuję już niczego dobrego."
 
-    #Cotard milknie.
-    #Jakby nie potrafił znaleźć odpowiedzi.
-    #Po chwili rusza dalej.
+    a "A ja właśnie odwrotnie."
+    a "Oczekuje, że damy sobie radę."
+    a "Dlatego dobrze, że idziemy razem."
+    jump choice2chapter1_done
 
-    #Cotard:
-    #…to nie jest argument.
+    label choice2chapter1_done:
+    c "Nie odwracaj się."
+    c "Już tego nie ma."
 
-    #Alysia lekko się uśmiecha.
-    #Alysia: 
-    #Jest.
+    a "Czego?"
+
+    c "Góry."
+    c "Zapomniałem jak wyglądała."
+
+    menu:
+        "Co?! To się dzieje za szybko…":
+            jump choice3chapter1_1
+        "Zauważyłam już… i to mnie przeraża.":
+            jump choice3chapter1_2
+
+    label choice3chapter1_1:
+    c "Nie przesadzaj"
+    c "To normalne."
+    jump choice3chapter1_done
+
+    label choice3chapter1_2:
+    c "To normalne."
+    c "Przyzwyczaisz się."
+    jump choice3chapter1_done
 
-    #OPCJA 2
-    #Alysia:
-    #Przekonamy się z czasem.
-    #Mam nadzieję, że po prostu nic nam się nie stanie
-    #Może to miejsce tylko tylko próbuje nas przestraszyć.
+    label choice3chapter1_done:
+    "Po tych słowach Cotard rusza dalej."
+    "Jego kroki są ciche."
+    "Nie dlatego, że stawia je lekko,"
+    "Po prostu Nicość nie oddaje dźwięku"
+    "Alysia idzie tuż za nim"
+    "Im niżej schodzą, tym bardziej powietrze staje się…"
+    "inne"
+    "Nie cięższe."
+    "Nie rzadsze."
+    "Po prostu obce."
+    "Jakby nie należało do świata."
 
-    #Spogląda w nicość
+    a "Cotard…"
+    a "Czy to tylko mi sie wydaje, czy powietrze tutaj pachnie inaczej?"
 
-    #Cotard:
-    #Dziwne.
-    #Ludzie zawsze próbują nadać sens temu, czego się boją.
-    #Jakby nazwanie lęku czyniło go mniejszym.
+    "Cotard zatrzymuje się na moment" 
+    "Unosi głowę."
 
-    #Alysia:
-    #A ty?
-    #Na czym budujesz strój spokój
 
-    #Cotard:
-    #Na pustce.
-    #Nie oczekuję już niczego dobrego.
+    c "Tak."
+    c "Wszystko zaczyna się tutaj."
 
-    #Alysia:
-    #A ja właśnie odwrotnie.
-    #Oczekuje, że damy sobie radę.
-    #Dlatego dobrze, że idziemy razem.
+    a "Co takiego?"
+
+    c "Pierwszy poziom."
+    c "Kwiecista Nicość."
 
+    "Powietrze robi się słodkie."
+    "Zbyt słodkie."
+    "Duszące."
+    "W oddali zaczynają się wyłaniać pierwsze kwiaty."
+    "Delikatne."
+    "Białe."
+    "Ich płatki poruszają się mimo, że nie ma wiatru"
 
+    scene bg flower plain
+    "Z zachwytem"
+    a "Och…"
+    a "Cotard!"
+    a "spójrz tylko"
+    a "Jak tu pięknie!"
 
-    #JAKIEŚ PÓŁ H ZEJŚCIA
+    "Na jej twarzy pojawia się prawdziwy, ciepły uśmiech."
+    "Pierwszy od wejścia."
 
+    c "{size=+20}Nie podchodź!{/size}"
 
-    Cotard:
-    Nie odwracaj się.
-    Już tego nie ma.
+    menu:
+        "Dlaczego? Są niebezpieczne?":
+            jump choice4chapter1_1
+        "Chcesz powiedzieć, że to…?":
+            jump choice4chapter1_2
 
-    Alysia:
-    Czego?
+    label choice4chapter1_1:
+    "Cotard patrzy na kwiaty."
 
-    Cotard:
-    Góry.
-    Zapomniałem jak wyglądała.
+    "Jeden z płatków drży"
+    "Potem cofa się."
+    "Jakby czas na moment się załamał."
 
-    #Alysia:
-    #1> Co?! To się dzieje za szybko…
-    #2> Zauważyłam już… i to mnie przeraża.
+    c "Nie."
+    c "Gorzej."
+    c "Chcą, abyś została."
 
+    a "Kwiaty?"
 
-    #Cotard:
-    #1> Nie przesadzaj
-    #To normalne.
-    #2> To normalne.
-    #Przyzwyczaisz się.
+    c "Nie."
+    c "Całe to miejsce."
+    jump choice4chapter1_done
 
-    Po tych słowach Cotard rusza dalej.
-    Jego kroki są ciche.
-    Nie dlatego, że stawia je lekko,
-    Po prostu Nicość nie oddaje dźwięku
-    Alysia idzie tuż za nim
-    Im niżej schodzą, tym bardziej powietrze staje się…
-    inne
-    Nie cięższe.
-    Nie rzadsze.
-    Po prostu obce.
-    Jakby nie należało do świata.
+    label choice4chapter1_2:
+    "Dotyka jednego z kwiatów."
 
-    Alysia:
-    Cotard…
-    Czy to tylko mi sie wydaje, czy powietrze tutaj pachnie inaczej?
+    "Jeden z płatków drży"
+    "Potem cofa się."
+    "Jakby czas na moment się załamał."
+    
+    c "Tak samo jak ja." 
+    c "Też powoli znikam."
 
-    Cotard zatrzymuje się na moment 
-    Unosi głowę.
+    a "Nie mów tak."
 
+    c "Dlaczego?"
+    c "Ty jedyna nie próbujesz mi wmówić, że żyję."
+    jump choice4chapter1_done
 
-    Cotard:
-    Tak.
-    Wszystko zaczyna się tutaj.
+    label choice4chapter1_done:
 
-    Alysia:
-    Co takiego?
+    "{size=+20}Dziennik Alysii Wpis 002{/size}"
 
-    Cotard:
-    Pierwszy poziom.
-    Kwiecista Nicość.
+    "Kwiaty."
+    "Nie potrafię opisać ich piękna."
+    "Są zbyt doskonałe."
+    "A przez to nienaturalne."
 
-    Powietrze robi się słodkie.
-    Zbyt słodkie.
-    Duszące.
-    W oddali zaczynają się wyłaniać pierwsze kwiaty.
-    Delikatne.
-    Białe.
-    Ich płatki poruszają się mimo, że nie ma wiatru
+    "Cotard twierdzi, że nie są prawdziwe."
+    "I co najgorsze…"
 
-    Z zachwytem
-    Alysia:
-    Och…
-    Cotard!
-    spójrz tylko
-    Jak tu pięknie!
+    "wierzę mu."
 
-    Na jej twarzy pojawia się prawdziwy, ciepły uśmiech.
-    Pierwszy od wejścia.
+    "Mam jednak dziwne wrażenie, że to miejsce reaguje na emocje."
+    "Na zachwyt."
+    "Na lęk."
+    "Na wspomnienia."
 
+    "Im bardziej chcę coś zrozumieć, tym bardziej rzeczywistość wydaje się miękka."
+    "Jakby można ją było rozerwać palcami."
 
-    Cotard:
-    Nie podchodź!
+    nvl clear
 
-    #Alysia:
-    #1>Dlaczego?
-    #Są niebezpieczne?
-    #2>Chcesz powiedzieć, że to…?
+    "Kwiaty drżą."
+    "Pył unosi się w powietrzu jak złoty dym."
+    "Z głębi łąki dobiega dźwięk."
+    "Coś bardziej pomiędzy śmiechem a buczeniem"
+    unon "PRRRRRRRRRRR."
+
+    "Coś małego przelatuje tuż przed twarzą Alysii."
+    "Odruchowo cofa się o krok."
+    "Przed nimi zawisa drobna istota."
 
-    #1>Cotard patrzy na kwiaty.
-    #2> Dotyka jednego z kwiatów.
+    bee "Prrr–prrrr!"
+    bee "OoooOOOO, goście!"
+    bee "Żywi goście!"
 
-    Jeden z płatków drży
-    Potem cofa się.
-    Jakby czas na moment się załamał.
+    "Przekrzywia głowę."
+    "Patrzy na Cotarda."
 
+    c "…"
 
+    bee "Hhahahahahahahahha"
+    bee "A nie."
+    bee "nie wszyscy"
+    bee "PRRRR."
 
-    #Cotard:
-    #1>Nie.
-    #Gorzej.
-    #Chcą, abyś została.
-    #2>Tak samo jak ja. 
-    #Też powoli znikam.
+    "Zaczyna latać wokół niego."
 
-    #Alysia:
-    #1>Kwiaty?
-    #2> Nie mów tak.
+    bee "Ty śmierdzisz!"
+    bee "Fuj FUJ FUUUJJJ"
+    bee "Jak stare liście."
+    bee "Jak mokry grób."
+    bee "Jak coś, co już dawno powinno zostać na dole."
+    bee "Prawda Cotard?"
 
+    "Cotard patrzy na nią pustym wzrokiem."
 
-    #Cotard:
-    #1>Nie.
-    #Całe to miejsce.
-    #2>Dlaczego?
-    #Ty jedyna nie próbujesz mi wmówić, że żyję.
+    c "Odejdź."
 
-    #Dziennik Alysii Wpis 002
+    bee "Oooodejdź."
+    bee "Ooooo odeeejdźź"
+    bee "Prrrrrrr."
 
-    Kwiaty.
-    Nie potrafię opisać ich piękna.
-    Są zbyt doskonałe.
-    A przez to nienaturalne.
+    "Alysia mimowolnie się uśmiecha."
+    "Trochę nerwowo"
+    "Trochę rozbawiona"
 
-    Cotard twierdzi, że nie są prawdziwe.
-    I co najgorsze…
+    a "Jesteś… mieszkanką tego miejsca?"
 
-    wierzę mu.
+    bee "A ty jesteś śmieszna."
+    bee "Prrr."
+    bee "Pytasz tak, jakby to miejsce miało mieszkańców."
+    bee "To miejsce ma tylko to, co zostało"
+    bee "I to jest SUUUUUUUUUUUUPER"
 
-    Mam jednak dziwne wrażenie, że to miejsce reaguje na emocje.
-    Na zachwyt.
-    Na lęk.
-    Na wspomnienia.
+    a "A co to znaczy… “ to, co zostało”?"
 
-    Im bardziej chcę coś zrozumieć, tym bardziej rzeczywistość wydaje się miękka.
-    Jakby można ją było rozerwać palcami.
+    bee "To, czego Nicość nie połknęła."
+    bee "Jeszcze."
+    bee "Wspomnienia… żale"
+    bee "Resztki ludzi."
 
-    Kwiaty drżą.
-    Pył unosi się w powietrzu jak złoty dym.
-    Z głębi łąki dobiega dźwięk.
-    Coś bardziej pomiędzy śmiechem a buczeniem
-    PRRRRRRRRRRR.
+    "Pszczółka znów patrzy na Cotarda"
 
-    Coś małego przelatuje tuż przed twarzą Alysii.
-    Odruchowo cofa się o krok.
-    Przed nimi zawisa drobna istota.
+    bee "Albo resztki życia."
+    bee "Prrrrrrrrrrrr"
 
-    Pszczółka:
-    Prrr–prrrr!
-    OoooOOOO, goście!
-    Żywi goście!
+    a "Przepraszam, że spytam ale…"
+    a "Widziałaś może naszych rodziców?"
+    a "Badaczy."
+    a "Byli tu lata temu"
 
-    Przekrzywia głowę.
-    Patrzy na Cotarda.
-
-    …
 
-    Hhahahahahahahahha
-    A nie.
-    nie wszyscy
-    PRRRR.
+    bee "OoooooOOOo."
+    bee "Tych."
+    bee "Prrrrr."
+    bee "Tak."
+    bee "Widziałam."
 
-    Zaczyna latać wokół niego.
+    a "Co?! Naprawdę?!"
+    a "Gdzie?!"
+    a "Co się z nimi stało?!"
 
-    Ty śmierdzisz!
-    Fuj FUJ FUUUJJJ
-    Jak stare liście.
-    Jak mokry grób.
-    Jak coś, co już dawno powinno zostać na dole.
-    Prawda Cotard?
-
-    Cotard patrzy na nią pustym wzrokiem.
+    "Pszczółka wykonuje kilka chaotycznych obrotów w powietrzu."
+    bee "Pachniesz jak oni."
+    bee "Zeszli niżej."
+    bee "Niżej."
+    bee "Niżej."
+    bee "Zawsze niżej."
+    bee "Szukali."
+    bee "tak jak ty."
 
-    Cotard:
-    Odejdź.
+    bee "…"
+    bee "Aleeee"
+    bee "PRRRR"
+    bee "Źródło patrzy też w górę."
 
-    Pszczółka:
-    Oooodejdź.
-    Ooooo odeeejdźź
-    Prrrrrrr.
+    "Cotard patrzy na nią chłodno."
+    c "Wiesz coś więcej o rodzicach?."
 
-    Alysia mimowolnie się uśmiecha.
-    Trochę nerwowo
-    Trochę rozbawiona
+    "Pszczółka śmieje się."
+    bee "Prr."
+    bee "Czyli jednak ci zależy."
+    bee "…"
+    bee "Przeszli przez łąkę."
+    bee "Kłócili się."
+    bee "O to, które z nich zaczęło znikać pierwsze."
 
-    Alysia:
-    Jesteś… mieszkanką tego miejsca?
+    "Cotard spogląda na Alyssie."
+    "W jego oczach po raz pierwszy pojawia się cień napięcia."
 
-    Pszczółka:
-    A ty jesteś śmieszna.
-    Prrr.
-    Pytasz tak, jakby to miejsce miało mieszkańców.
-    To miejsce ma tylko to, co zostało
-    I to jest SUUUUUUUUUUUUPER
+    c "Kiedy?"
 
+    bee "Tutaj?"
+    bee "Tu czas nie istnieje."
+    bee "Prr."
+    bee "Ale dla Was?"
+    bee "DAWNO."
 
-    Alysia:
-    A co to znaczy… “ to, co zostało”?
+    bee "Miło się gadało, lecę zapylać kwiatkiiiii!!!!"
+    bee "Prrrrrrrrr!"
 
-    Pszczółka:
-    To, czego Nicość nie połknęła.
-    Jeszcze.
-    Wspomnienia… żale
-    Resztki ludzi.
+    "Pszczółka odlatuje i znika w oddali."
 
-    Pszczółka znów patrzy na Cotarda
+    "Alysia i Cotard stoją dłuższą chwilę w ciszy."
+    nvl clear
+    "…"
+    nvl clear
+    "Patrzą na siebie"
+    "Alysia przerywa ciszę"
+    "Zaciska notes przy piersi."
 
-    Albo resztki życia.
-    Prrrrrrrrrrrr
+    a "Więc…"
+    a "Naprawdę tu byli"
 
-    Alysia:
-    Przepraszam, że spytam ale…
-    Widziałaś może naszych rodziców?
-    Badaczy.
-    Byli tu lata temu
+    "Cotard patrzy na nią."
 
-    Pszczółka:
-    OoooooOOOo.
-    Tych.
-    Prrrrr.
-    Tak.
-    Widziałam.
+    c "Albo to miejsce chce, żebyś w to uwierzyła."
 
-    Alysia:
-    Co?! Naprawdę?!
-    Gdzie?!
-    Co się z nimi stało?!
+    a "A jeśli choć raz nie masz racji?"
 
-    Pszczółka wykonuje kilka chaotycznych obrotów w powietrzu.
-    Pszczółka:
-    Pachniesz jak oni.
-    Zeszli niżej.
-    Niżej.
-    Niżej.
-    Zawsze niżej.
-    Szukali.
-    tak jak ty.
+    c "…"
 
-    …
-    Aleeee
-    PRRRR
-    Źródło patrzy też w górę.
+    "Nagle znów słychać bzyczenie"
 
-    Cotard patrzy na nią chłodno.
-    Cotard:
-    Wiesz coś więcej o rodzicach?.
+    bee "Prrrrr!"
+    bee "Jeśli chcecie znaleźć odpowiedzi…"
+    bee "schodźcie niżej."
+    bee "Ale uważajcie."
+    bee "Na następnym poziomie Nicość nie pokazuje już kwiatów."
+    bee "Pokazuje prawdę."
+    bee "Czyli to, czego najbardziej się boicie."
 
-    Pszczółka śmieje się.
-    Pszczółka:
-    Prr.
-    Czyli jednak ci zależy.
-    …
-    Przeszli przez łąkę.
-    Kłócili się.
-    O to, które z nich zaczęło znikać pierwsze.
+    "Nie zdążyli zareagować."
+    "Odleciała."
 
-    Cotard spogląda na Alyssie.
-    W jego oczach po raz pierwszy pojawia się cień napięcia.
+    "Z głębi łąki dobiega śmiech."
 
-    Cotard:
-    Kiedy?
+    "Dziecięcy."
 
-    Pszczółka:
-    Tutaj?
-    Tu czas nie istnieje.
-    Prr.
-    Ale dla Was?
-    DAWNO.
+    "Znajomy."
 
-    Miło się gadało, lecę zapylać kwiatkiiiii!!!!
-    Prrrrrrrrr!
+    "Alysia zamiera."
 
-    Pszczółka odlatuje i znika w oddali.
+    unon "Pani Alysio!"
 
-    Alysia i Cotard stoją dłuższą chwilę w ciszy.
-    …
-    Patrzą na siebie
-    Alysia przerywa ciszę
-    Zaciska notes przy piersi.
+    "Na końcu ścieżki stoją dzieci."
+    "Jej uczniowie."
 
-    Alysia:
-    Więc…
-    Naprawdę tu byli
+    u "Wróci Pani?"
+    u "Brakuje nam Pani…"
 
-    Cotard patrzy na nią.
+    "Cotard gwałtownie łapie ją za nadgarstek"
+    "Jego dłoń jest lodowata."
 
-    Cotard:
-    Albo to miejsce chce, żebyś w to uwierzyła.
+    c "Nie patrz na nich!"
 
-    Alysia:
-    A jeśli choć raz nie masz racji?
+    a "To moi uczniowie!"
+    a "Musieli się o mnie martwić!"
 
-    Cotard:
-    …
+    "Alysia próbuje się wyrwać."
+    "Cotard zaciska dłoń mocniej."
 
-    Nagle znów słychać bzyczenie
+    a "{size=+20}Puść mnie Cotard!!!{/size}"
 
-    Pszczółka:
-    Prrrrr!
-    Jeśli chcecie znaleźć odpowiedzi…
-    schodźcie niżej.
-    Ale uważajcie.
-    Na następnym poziomie Nicość nie pokazuje już kwiatów.
-    Pokazuje prawdę.
-    Czyli to, czego najbardziej się boicie.
+    "Pierwszy raz w jego głosie słychać… GNIEW."
 
-    Nie zdążyli zareagować.
-    Odleciała.
+    c "{size=+20}NIE.{/size}"
+    c "{size=+20}to nie oni{/size}"
+    c "{size=+20}NICOŚĆ wie, czego najbardziej ci brakuje.{/size}"
+    c "{size=+20}I użyje tego przeciwko tobie.{/size}"
 
+    "Głos."
+    "Rozbrzmiewa wszędzie."
 
+    unon "{size=+30}Jedno. Musi. Zniknąć.{/size}"
 
-    #IDĄ W DÓŁ
+    "Alysia patrzy na Cotarda."
+    a "Słyszysz to?"
 
-    Z głębi łąki dobiega śmiech.
+    c "Tak."
+    c "…"
+    c "To nie głos."
+    c "To brak czegoś, co powinno istnieć."
 
-    Dziecięcy.
+    "Wszystko cichnie."
+    "Nawet kwiaty przestają drżeć."
 
-    Znajomy.
+    "Przed nimi ziemia pęka na dwie ścieżki"
+    "Lewa - skąpana w jasnym miękkim świetle"
+    "Prawa - ciemna, pozbawiona koloru."
 
-    Alysia zamiera.
+    unon "{size=+30}Lewo - Zostań.{/size}" 
 
-    Uczeń:
-    Pani Alysio!
+    unon "{size=+30}Prawo - Zejdź niżej. Ale stracisz.{/size}"
 
-    Na końcu ścieżki stoją dzieci.
-    Jej uczniowie.
+    unon "{size=+30}Alysio.{/size}"
+    unon "{size=+30}Decyzja zależy od Ciebie.{/size}"
 
-    Uczeń:
-    Wróci Pani?
-    Brakuje nam Pani…
+    "Zapada cisza."
+    "Alysia patrzy na swoje dłonie."
+    "Drżą."
 
-    Cotard gwałtownie łapie ją za nadgarstek
-    Jego dłoń jest lodowata.
+    c "Alysio, musisz odpocząć."
 
-    Cotard:
-    Nie patrz na nich!
+    a "Ja…"
+    a "Nie wiem, co mam zrobić,"
+    a "Nie wiem, czy to w ogóle jest wybór."
+    a "Ale czuję, że nie ma tu dobrej decyzji."
+    a "Nie chcę ich stracić…"
 
-    Alysia:
-    To moi uczniowie!
-    Musieli się o mnie martwić!
+    "Cotard patrzy na iluzje uczniów."
+    "Na twarzy Alysii maluje się ból."
 
-    Alysia próbuje się wyrwać.
-    Cotard zaciska dłoń mocniej.
+    a "Nie mogę."
+    a "Nie mogę ich tak po prostu usunąć!"
 
-    Puść mnie Cotard!!!
+    c "To nie oni!"
 
-    Pierwszy raz w jego głosie słychać… GNIEW.
+    a "Skąd wiesz?!!!"
 
-    Cotard:
-    NIE.
-    to nie oni
-    NICOŚĆ wie, czego najbardziej ci brakuje.
-    I użyje tego przeciwko tobie.
+    c "Bo Nicość nie daje."
+    c "Ona tylko odbiera."
+    c "Nie tworzy życia."
 
-    Głos.
-    Rozbrzmiewa wszędzie.
+    a "A jeśli odbierze mi ich wspomnienia?!"
 
-    NICOŚĆ:
-    Jedno.
-    Musi.
-    Zniknąć.
+    c "Już zaczęła."
+    c "Pamiętasz ich twarze?!"
+    c "Pamiętasz jak wyglądała góra?!"
 
-    Alysia patrzy na Cotarda.
-    Alysia:
-    Słyszysz to?
+    "Alysia milknie."
+    "Oczy jej drżą."
+    "Próbuje sobie przypomnieć."
+    "I nie potrafi."
+    "To ją łamie."
 
-    Cotard:
-    Tak.
-    …
-    To nie głos.
-    To brak czegoś, co powinno istnieć.
+    a "…"
+    a "nie."
 
-    Wszystko cichnie.
-    Nawet kwiaty przestają drżeć.
+    c "No właśnie."
 
-    Przed nimi ziemia pęka na dwie ścieżki
-    Lewa - skąpana w jasnym miękkim świetle
-    Prawa - ciemna, pozbawiona koloru.
+    a "Mówisz, że Oni nie istnieją…"
+    a "To dlaczego o sobie mówisz to samo?"
 
-    Nicość:
-    Lewo - Zostań. 
+    c "Jeśli tego nie usuniesz…"
+    c "Nigdy stąd nie wyjdziesz."
 
-    Prawo - Zejdź niżej. Ale stracisz.
+    menu:
+        "ZOSTAŃ":
+            jump choice5chapter1_1
+        "IDŹ DALEJ":
+            jump choice5chapter1_2    
 
-    Alysio.
-    Decyzja zależy od Ciebie.
-
-    Zapada cisza.
-    Alysia patrzy na swoje dłonie.
-    Drżą.
-
-    Cotard:
-    Alysio, musisz odpocząć.
-
-    Alysia:
-    Ja…
-    Nie wiem, co mam zrobić,
-    Nie wiem, czy to w ogóle jest wybór.
-    Ale czuję, że nie ma tu dobrej decyzji.
-    Nie chcę ich stracić…
-
-    Cotard patrzy na iluzje uczniów.
-    Na twarzy Alysii maluje się ból.
-
-    Alysia:
-    Nie mogę.
-    Nie mogę ich tak po prostu usunąć!
-
-
-    Cotard:
-    To nie oni!
-
-    Alysia:
-    Skąd wiesz?!!!
-
-    Cotard:
-    Bo Nicość nie daje.
-    Ona tylko odbiera.
-    Nie tworzy życia.
-
-    Alysia:
-    A jeśli odbierze mi ich wspomnienia?!
-
-    Cotard:
-    Już zaczęła.
-    Pamiętasz ich twarze?!
-    Pamiętasz jak wyglądała góra?!
-
-    Alysia milknie.
-    Oczy jej drżą.
-    Próbuje sobie przypomnieć.
-    I nie potrafi.
-    To ją łamie.
-
-    Alysia:
-    …
-    nie.
-
-    Cotard:
-    No właśnie.
-
-    Alysia:
-    Mówisz, że Oni nie istnieją…
-    To dlaczego o sobie mówisz to samo?
-
-    Cotard:
-    Jeśli tego nie usuniesz…
-    Nigdy stąd nie wyjdziesz.
-
-    #WYBÓR GRACZA
-    #1> ZOSTAŃ
-    #2> IDŹ DALEJ
-
-    #1>
-    #Alysia patrzy na swoich uczniów.
-    #Ich głosy są miękkie.
-    #Znajome.
-    #Pełne ciepła
-    #Dotyka świetlistej chmury.
-    #W tej samej chwili świat mięknie.
-    #Kwiaty rozkwitają gwałtownie.
-    #Światło zalewa ekran
-    #Jej twarz rozluźnia się.
-    #Uśmiecha
-#
-    #Uczeń:
-    #Gdzie pani była?
-    #Martwiliśmy się.
-#
-    #Alysia:
-    #Ja…
-    #chyba się zgubiłam.
-    #Ale już wszystko dobrze.
-    #Możemy wracać.
-#
-    #Powoli siada na łące.
-    #Kładzie się między kwiatami.
-    #Oczy same się zamykają.
-#
-    #Cotard rzuca się do Alysii
-    #Po raz pierwszy jego głos
-    #drży.
-#
-    #Cotard:
-    #Alysia…
-    #Nie…
-    #Proszę…
-    #Po jego policzku spływa łza.
-#
-    #Nie zostawiaj mnie tutaj samego
-    #…
-    #Nie znikaj.
-#
-    #Alysia nie odpowiada.
-    #Zostaje na łące.
-    #Uśpiona przez Nicość.
-#
-    #Cotard zaczyna płakać.
-
-    ##2> 
-    #Alysia zamyka oczy.
-    #Łzy zbierają się pod powiekami.
-#
-    #Alysia:
-    #To nie oni.
-#
-    #Iluzja zaczyna pękać.
-    #Światło przygasa.
-    #Sylwetki uczniów powoli znikają
-#
-    #Uczeń:
-    #Pani Alysio… dlaczego…?
-#
-    #Alysia odwraca wzrok
-    #Nie potrafi patrzeć.
-#
-    #Alysia:
-    #Przepraszam…
-#
-    #Uczniowie znikają.
-    #Zaczyna płakać
-#
-    #Świat wokół nich traci kolory.
-    #Kwiaty stają się niemal szare.
-
-    Cotard:
-    Dobrze
-    …
-    To jest prawdziwe.
-
-    Alysia:
-    Co?
-
-    Cotard:
-    To, że ich nie ma
-    Wolałem się upewnić.
-    … Chodź.
-    Idziemy niżej
-    Alysia ociera łzy.
-
-
-    Alysia:
-    Zaczynam rozumieć, dlaczego ludzie nie chcą wiedzieć.
-    Jeśli każde zejście wymaga poświęcenia to…
-    ile z naszych wspomnień zostanie na końcu?
-    A jeśli na samym końcu nie zostanie nic?
-    to kim będę.
-
-
-
-    #KONIEC AKTU 1
+    label choice5chapter1_1:
+    "Alysia patrzy na swoich uczniów."
+    "Ich głosy są miękkie."
+    "Znajome."
+    "Pełne ciepła"
+    "Dotyka świetlistej chmury."
+    "W tej samej chwili świat mięknie."
+    "Kwiaty rozkwitają gwałtownie."
+    "Światło zalewa ekran"
+    "Jej twarz rozluźnia się."
+    "Uśmiecha"
 
+    u "Gdzie pani była?"
+    u "Martwiliśmy się."
 
+    a "Ja…"
+    a "chyba się zgubiłam."
+    a "Ale już wszystko dobrze."
+    a "Możemy wracać."
 
+    "Powoli siada na łące."
+    "Kładzie się między kwiatami."
+    "Oczy same się zamykają."
+
+    "Cotard rzuca się do Alysii"
+    "Po raz pierwszy jego głos"
+    "drży."
+
+    c "{size=+20}Alysia…{/size}"
+    c "Nie…"
+    c "Proszę…"
+    c "Po jego policzku spływa łza."
+
+    c "Nie zostawiaj mnie tutaj samego"
+    c "…"
+    c "Nie znikaj."
+
+    "Alysia nie odpowiada."
+    "Zostaje na łące."
+    "Uśpiona przez Nicość."
+    nvl clear
+
+    "Cotard zaczyna płakać."
+    return
+
+    label choice5chapter1_2:
+    "Alysia zamyka oczy."
+    "Łzy zbierają się pod powiekami."
+
+    a "To nie oni."
+
+    "Iluzja zaczyna pękać."
+    "Światło przygasa."
+    "Sylwetki uczniów powoli znikają"
+
+    u "Pani Alysio… dlaczego…?"
+
+    "Alysia odwraca wzrok"
+    "Nie potrafi patrzeć."
+
+    a "Przepraszam…"
+
+    "Uczniowie znikają."
+    "Zaczyna płakać"
+
+    "Świat wokół nich traci kolory."
+    "Kwiaty stają się niemal szare."
+
+    c "Dobrze"
+    c "…"
+    c "To jest prawdziwe."
+
+    a "Co?"
+
+    c "To, że ich nie ma"
+    c "Wolałem się upewnić."
+    c "… Chodź."
+    c "Idziemy niżej"
+    c "Alysia ociera łzy."
+
+    a "Zaczynam rozumieć, dlaczego ludzie nie chcą wiedzieć."
+    a "Jeśli każde zejście wymaga poświęcenia to…"
+    a "ile z naszych wspomnień zostanie na końcu?"
+    a "A jeśli na samym końcu nie zostanie nic?"
+    a "to kim będę."
+    jump Chapter_2
+
+
+
+label Chapter_2:
+
+
+    "tu zaczyna się akt 2"
     # This ends the game.
 
     return
