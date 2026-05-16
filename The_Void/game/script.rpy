@@ -3,12 +3,23 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define narrator = nvl_narrator
+#define narrator = nvl_narrator
+define n = Character("", colour="#00000000", kind=nvl_narrator)
 define a = Character("Alisia", color="#fffd7b")
+define la = Character("Mała Alisia", color="#fffd7b")
 define c = Character("Cotard", color="#9c1908")
+define lc = Character("Mały Cotard", color="#9c1908")
 define bee = Character("Przczułka", color = "#ffa600")
 define unon = Character("???", color = "#ffffff")
 define u = Character("Uczniowie", color = "#a1fd28")
+define f = Character("Ojciec", color="#0077ff")
+define m = Character("Matka", color="#00ffd5")
+define m1 = Character("Mężczyzna 1", color="#ff5050")
+define m2 = Character("Mężczyzna 2", color="#ffae00")
+define om = Character("Stary Mężczyzna", color="#474747")
+define k1 = Character("Kobieta 1", color="#b9009a")
+define k2 = Character("Kobieta 2", color="#7700ff")
+
 
 
 # The game starts here.
@@ -22,185 +33,183 @@ label start:
     scene bg mountain
 
     # These display lines of dialogue.
-    "Jestem osobą, która pyta.{w=1}\ Nie potrafię inaczej, nigdy nie potrafiłam."
-    "Pytam o wszystko, jakby ktoś zapisał we mnie wewnętrzny przymus aby zrozumieć niezrozumiałe."
-    "Pociąga mnie to co jeszcze nienazwane, niewypowiedziane, o których inni boją się nawet pomyśleć."
+    n "Jestem osobą, która pyta.{w=1}\ Nie potrafię inaczej, nigdy nie potrafiłam."
+    n "Pytam o wszystko, jakby ktoś zapisał we mnie wewnętrzny przymus aby zrozumieć niezrozumiałe."
+    n "Pociąga mnie to co jeszcze nienazwane, niewypowiedziane, o których inni boją się nawet pomyśleć."
 
+    n "Dratoc pojawił się w naszym życiu niespodziewanie."
+    n "Pewnego dnia rodzice po prostu przyszli z nim do domu, i tak już zostało."
+    n "Znaleźli go na wybrzeżu, gdzie spacerowali."
+    n "Nigdy nie dowiedziałam się kto go tam porzucił i dlaczego."
+    n "Ale to nieważne."
+    n "Liczyło się dla mnie tylko to, że został."
+    n "Dołączył do naszej rodziny jako jej pełnoprawna część."
 
-    "Dratoc pojawił się w naszym życiu niespodziewanie."
-    "Pewnego dnia rodzice po prostu przyszli z nim do domu, i tak już zostało."
-    "Znaleźli go na wybrzeżu, gdzie spacerowali."
-    "Nigdy nie dowiedziałam się kto go tam porzucił i dlaczego."
-    "Ale to nieważne."
-    "Liczyło się dla mnie tylko to, że został."
-    "Dołączył do naszej rodziny jako jej pełnoprawna część."
+    n "Nie rozumiem tego, co wydarzyło się później.{w=1}\ Przecież było idealnie."
+    n "Ale wtedy rodzice postanowili wyruszyć w Nicość."
+    n "Bez wyjaśnień i bez pożegnań.{w=1}\ Poszli tam, gdzie nikt się nie zapuszcza."
+    n "Po co?"
+    n "W końcu jeszcze nikt stamtąd nie wrócił."
 
-    "Nie rozumiem tego, co wydarzyło się później.{w=1}\ Przecież było idealnie."
-    "Ale wtedy rodzice postanowili wyruszyć w Nicość."
-    "Bez wyjaśnień i bez pożegnań.{w=1}\ Poszli tam, gdzie nikt się nie zapuszcza."
-    "Po co?"
-    "W końcu jeszcze nikt stamtąd nie wrócił."
+    n "To wydarzenie strzaskało moją potrzebę rozumienia wszystkiego."
+    n "Oto bowiem stało się coś, czego zrozumieć nie mogłam i nadal nie mogę."
 
-    "To wydarzenie strzaskało moją potrzebę rozumienia wszystkiego."
-    "Oto bowiem stało się coś, czego zrozumieć nie mogłam i nadal nie mogę."
+    n "Może to okrutne, ale uważam, że moi rodzice nigdy nie myśleli trzeźwo."
+    n "Choć jestem im za to wdzięczna, zabrali do domu obce dziecko i potraktowali jak własne."
+    n "Kto normalny tak robi?!"
 
-    "Może to okrutne, ale uważam, że moi rodzice nigdy nie myśleli trzeźwo."
-    "Choć jestem im za to wdzięczna, zabrali do domu obce dziecko i potraktowali jak własne."
-    "Kto normalny tak robi?!"
+    n "Zawsze wszystko robili po swojemu."
+    n "Nasze wychowanie nie odbiegało od dziwnego schematu, w którym postanowili uczyć nas samodzielnie w domu zamiast posłać do szkoły."
+    n "Gdy skończyłam cztery wiosny uczyli nas zielarstwa i podstawowej pierwszej pomocy."
+    n "Gdy skończyłam szóstą wiosnę umiałam już polować i przyrządzać zwierzęta."
 
-    "Zawsze wszystko robili po swojemu."
-    "Nasze wychowanie nie odbiegało od dziwnego schematu, w którym postanowili uczyć nas samodzielnie w domu zamiast posłać do szkoły."
-    "Gdy skończyłam cztery wiosny uczyli nas zielarstwa i podstawowej pierwszej pomocy."
-    "Gdy skończyłam szóstą wiosnę umiałam już polować i przyrządzać zwierzęta."
+    n "Na Górze nie miałam nikogo, rodzice przypłynęli tu z kontynentu."
+    n "Zostaliśmy więc zupełnie sami."
+    n "Wylądowaliśmy w sierocińcu."
+    n "Było to dobre i bezpieczne miejsce, a nasi opiekunowie pełni pasji i miłości do dzieci."
+    n "Ale nie byli NIMI."
+    n "Samotność i poczucie opuszczenia pożerały nas od środka."
+    n "Dobrze, że mieliśmy choć siebie."
 
-    "Na Górze nie miałam nikogo, rodzice przypłynęli tu z kontynentu."
-    "Zostaliśmy więc zupełnie sami."
-    "Wylądowaliśmy w sierocińcu."
-    "Było to dobre i bezpieczne miejsce, a nasi opiekunowie pełni pasji i miłości do dzieci."
-    "Ale nie byli NIMI."
-    "Samotność i poczucie opuszczenia pożerały nas od środka."
-    "Dobrze, że mieliśmy choć siebie."
+    n "Już dosyć wcześnie interesowałam się pracą społeczną i pomaganiem innym."
+    n "Zaczęłam się przyglądać, a potem uczestniczyć w opiece nad innymi dziećmi."
+    n "Stopniowo dochodziłam do siebie."
+    n "Dorastając znów czułam pociąg do zdobywania wiedzy, by potem dzielić się nią z innymi."
+    n "Było więc oczywiste, że zostanę nauczycielką."
 
-    "Już dosyć wcześnie interesowałam się pracą społeczną i pomaganiem innym."
-    "Zaczęłam się przyglądać, a potem uczestniczyć w opiece nad innymi dziećmi."
-    "Stopniowo dochodziłam do siebie."
-    "Dorastając znów czułam pociąg do zdobywania wiedzy, by potem dzielić się nią z innymi."
-    "Było więc oczywiste, że zostanę nauczycielką."
+    n "Wiedza jest bezcenna - bo pozwala oswoić strach."
 
-    "Wiedza jest bezcenna - bo pozwala oswoić strach."
+    n "Zaś co do Dratoca…"
+    n "Zniknięcie rodziców zmieniło go."
+    n "Nie zauważyłam tego od razu."
+    n "Coś w nim pękło."
+    n "Z czasem ta szczelina rosła i rosła, aż pochłonęła go w całości."
+    n "Zamykał się w sobie, odcinał."
+    n "Przeraziło mnie, gdy pewnego dnia stwierdził, że nie ma go już."
+    n "Że nie istnieje."
 
-    "Zaś co do Dratoca…"
-    "Zniknięcie rodziców zmieniło go."
-    "Nie zauważyłam tego od razu."
-    "Coś w nim pękło."
-    "Z czasem ta szczelina rosła i rosła, aż pochłonęła go w całości."
-    "Zamykał się w sobie, odcinał."
-    "Przeraziło mnie, gdy pewnego dnia stwierdził, że nie ma go już."
-    "Że nie istnieje."
+    n "Oświadczył też, że przestał być Dratocem, a zaczął…"
+    n "Cotardem."
+    n "Reagował wyłącznie na swoje nowe imię."
+    n "Próbowałam walczyć, ale co mogłam zrobić?"
+    n "Mogłam się z nim porozumieć tylko wtedy, gdy ulegałam i zwracałam się do niego tak, jak chciał."
+    n "Inni o dziwo nie zwracali uwagi."
+    n "Nie obchodziło to ich tak, jak mnie."
 
-    "Oświadczył też, że przestał być Dratocem, a zaczął…"
-    "Cotardem."
-    "Reagował wyłącznie na swoje nowe imię."
-    "Próbowałam walczyć, ale co mogłam zrobić?"
-    "Mogłam się z nim porozumieć tylko wtedy, gdy ulegałam i zwracałam się do niego tak, jak chciał."
-    "Inni o dziwo nie zwracali uwagi."
-    "Nie obchodziło to ich tak, jak mnie."
+    n "Stał się chłodny. Cichy."
+    n "Nie był już dzieckiem, które poznałam i uznałam za swojego małego braciszka."
+    n "Dawniej potrafił gadać bez końca, topił mnie w potoku słów."
+    n "Ale już nie."
+    n "Odzywa się tylko wtedy, gdy uzna to za konieczne."
+    n "Czyli prawie nigdy."
 
-    "Stał się chłodny. Cichy."
-    "Nie był już dzieckiem, które poznałam i uznałam za swojego małego braciszka."
-    "Dawniej potrafił gadać bez końca, topił mnie w potoku słów."
-    "Ale już nie."
-    "Odzywa się tylko wtedy, gdy uzna to za konieczne."
-    "Czyli prawie nigdy."
+    n "Ale wciąż uważam go za mojego brata."
+    n "Zawsze będę. Kocham go całym sercem."
 
-    "Ale wciąż uważam go za mojego brata."
-    "Zawsze będę. Kocham go całym sercem."
+    n "To postępuje."
+    n "Zmuszam go do posiłków, sam najchętniej nic by nie jadł."
+    n "Twierdzi, że nie potrzebuje jedzenia."
+    n "Tylko moje łzy i błagania skutkują."
+    n "Choć do straszne, znajduję w tym pocieszenie - oznacza bowiem, że mój brat nadal czuje emocje. Nadal mu zależy."
+    n "To dla mnie znaczy wszystko."
 
-    "To postępuje."
-    "Zmuszam go do posiłków, sam najchętniej nic by nie jadł."
-    "Twierdzi, że nie potrzebuje jedzenia."
-    "Tylko moje łzy i błagania skutkują."
-    "Choć do straszne, znajduję w tym pocieszenie - oznacza bowiem, że mój brat nadal czuje emocje. Nadal mu zależy."
-    "To dla mnie znaczy wszystko."
+    n "Ubrania zużywają się na nim jak drewno w ognisku."
+    n "Wrzucam je potajemnie, żeby nie zobaczył zaschniętych śladów krwi i oderwanych kawałków skóry."
+    n "Przeraża mnie to."
+    n "Cotard ropieje, jego skóra pęka, pokrywa się pęcherzami i liszajem."
+    n "Nie mówi mi skąd się to bierze."
+    n "Ale ja wiem."
 
-    "Ubrania zużywają się na nim jak drewno w ognisku."
-    "Wrzucam je potajemnie, żeby nie zobaczył zaschniętych śladów krwi i oderwanych kawałków skóry."
-    "Przeraża mnie to."
-    "Cotard ropieje, jego skóra pęka, pokrywa się pęcherzami i liszajem."
-    "Nie mówi mi skąd się to bierze."
-    "Ale ja wiem."
+    n "Kiedy próbuje zdecynferkować jego rany, on spokojnie odmawia."
+    n "Mówi, że tego nie potrzebuje."
+    n "Tutaj mój płacz nie pomaga."
+    n "NIC nie pomaga."
+    n "NIC."
 
-    "Kiedy próbuje zdecynferkować jego rany, on spokojnie odmawia."
-    "Mówi, że tego nie potrzebuje."
-    "Tutaj mój płacz nie pomaga."
-    "NIC nie pomaga."
-    "NIC."
+    n "Nigdy nie chodzi z nami do gorących źródeł."
+    n "Pytałam, czy chodzi o rany, ale stwierdził, że nie."
+    n "Po prostu nie chce."
+    n "Myśli, że nie widzę jego reakcji na wodę."
+    n "Unika jej jak trucizny. "
+    n "Nie myje się."
+    n "Cichnie chorobą, ale o dziwo nie jest chory."
+    n "O co w tym chodzi…"
 
-    "Nigdy nie chodzi z nami do gorących źródeł."
-    "Pytałam, czy chodzi o rany, ale stwierdził, że nie."
-    "Po prostu nie chce."
-    "Myśli, że nie widzę jego reakcji na wodę."
-    "Unika jej jak trucizny. "
-    "Nie myje się."
-    "Cichnie chorobą, ale o dziwo nie jest chory."
-    "O co w tym chodzi…"
+    n "Pije tylko grzybowy napar. Dobrze, że chociaż tyle."
 
-    "Pije tylko grzybowy napar. Dobrze, że chociaż tyle."
+    n "Wiem już na pewno, ale nikomu nie powiem."
+    n "On chodzi do Nicości."
+    n "Jest jedynym, który w Niej był i wrócił."
+    n "Próbowałam go o to pytać, ale udaje, że nie słyszy."
+    n "Zamyka się zupełnie i mnie odcina,"
+    n "Nie zaprzecza."
+    n "Po prostu stawia przede mną mur."
 
-    "Wiem już na pewno, ale nikomu nie powiem."
-    "On chodzi do Nicości."
-    "Jest jedynym, który w Niej był i wrócił."
-    "Próbowałam go o to pytać, ale udaje, że nie słyszy."
-    "Zamyka się zupełnie i mnie odcina,"
-    "Nie zaprzecza."
-    "Po prostu stawia przede mną mur."
+    n "Praca w prosektorium mu pomaga."
+    n "Mało kto go tam ogląda, a sam Cotard dobrze się czuje wśród zmarłych."
+    n "Zupełnie, jakby był jednym z nich."
 
-    "Praca w prosektorium mu pomaga."
-    "Mało kto go tam ogląda, a sam Cotard dobrze się czuje wśród zmarłych."
-    "Zupełnie, jakby był jednym z nich."
+    n "Dopiero po czasie zrozumiałam, że Cotard nie ma węchu."
+    n "Do domu wraca uśmiechnięty, zadowolony."
+    n "Zamyka się w szopie i siedzi w niej do następnego dnia."
+    n "Rano idzie do pracy. I tak dzień w dzień."
 
-    "Dopiero po czasie zrozumiałam, że Cotard nie ma węchu."
-    "Do domu wraca uśmiechnięty, zadowolony."
-    "Zamyka się w szopie i siedzi w niej do następnego dnia."
-    "Rano idzie do pracy. I tak dzień w dzień."
+    n "Nieraz próbowałam się włamać do jego kryjówki, ale nic z tego."
+    n "Kłódka jest mocna, a łańcuchy dobrej jakości. Drzwi mocne."
+    n "Z wnętrza dobiega dziwny jęk."
+    n "Boję się."
 
-    "Nieraz próbowałam się włamać do jego kryjówki, ale nic z tego."
-    "Kłódka jest mocna, a łańcuchy dobrej jakości. Drzwi mocne."
-    "Z wnętrza dobiega dziwny jęk."
-    "Boję się."
+    n "Ludzie dziwnie na nas patrzą."
+    n "Gdyby tylko umieli w nim dostrzec, co ja…"
 
-    "Ludzie dziwnie na nas patrzą."
-    "Gdyby tylko umieli w nim dostrzec, co ja…"
-
-    "Wczoraj spytałam go co robi w tej swojej szopie"
-    "Powiedziałam, że chcę wiedzieć BO MAM PRAWO."
-    "Uśmiechnął się tylko i odparł, że to niespodzianka."
-    "NIESPODZIANKA?"
-    "Ile lat to już trwa"
-    "PO CO?"
-    "DLA KOGO?"
-    "Pogłaskał mnie po głowie mówiąc: “Już niedługo siostrzyczko. Zobaczysz. Już niedługo”"
-    "Zaczęłam płakać."
+    n "Wczoraj spytałam go co robi w tej swojej szopie"
+    n "Powiedziałam, że chcę wiedzieć BO MAM PRAWO."
+    n "Uśmiechnął się tylko i odparł, że to niespodzianka."
+    n "NIESPODZIANKA?"
+    n "Ile lat to już trwa"
+    n "PO CO?"
+    n "DLA KOGO?"
+    n "Pogłaskał mnie po głowie mówiąc: “Już niedługo siostrzyczko. Zobaczysz. Już niedługo”"
+    n "Zaczęłam płakać."
     nvl clear
 
 label Chapter_1:
 
     scene bg void entrance
 
-    "{size=+20}Dziennik Alysii Wpis 001{/size}"
+    n "{size=+20}Dziennik Alysii Wpis 001{/size}"
 
-    "Dla moich uczniów"
+    n "Dla moich uczniów"
 
-    "Jeśli czytacie te słowa, to wiecie już, że jestem w miejscu, do którego nikt nie powinien wchodzić."
-    "On… mówił mi, żebym tego nie robiła."
-    "Że nie wszystko jest do odkrycia."
-    "Że niektóre tajemnice istnieją tylko po to, by pozostać tajemnicami."
+    n "Jeśli czytacie te słowa, to wiecie już, że jestem w miejscu, do którego nikt nie powinien wchodzić."
+    n "On… mówił mi, żebym tego nie robiła."
+    n "Że nie wszystko jest do odkrycia."
+    n "Że niektóre tajemnice istnieją tylko po to, by pozostać tajemnicami."
 
-    "Ale jeśli świat ma sens, to musi istnieć jego źródło."
+    n "Ale jeśli świat ma sens, to musi istnieć jego źródło."
 
-    "A jeśli go nie ma…
-    …to chcę wiedzieć dlaczego."
+    n "A jeśli go nie ma…"
+    n "…to chcę wiedzieć dlaczego."
 
-    "Nie idę tam jako bohaterka."
-    "Idę jako nauczycielka, która nie potrafi znieść niewiedzy."
+    n "Nie idę tam jako bohaterka."
+    n "Idę jako nauczycielka, która nie potrafi znieść niewiedzy."
 
-    "Chcę wiedzieć, co się stało z moimi rodzicami."
+    n "Chcę wiedzieć, co się stało z moimi rodzicami."
 
-    "I nie jestem sama."
-    "Nie martwcie się."
-    "{b}On się mną zaopiekuje.{/b}"
+    n "I nie jestem sama."
+    n "Nie martwcie się."
+    n "{b}On się mną zaopiekuje.{/b}"
     nvl clear
-    "{b}{size=+60}Akt Pierwszy{/size}{/b}"
-    nvl clear
-    "Wiatr… jest dziwnie cichy"
-    "Nie zimny. Nie ciepły."
-    "Po prostu… czuć, że pochodzi z Nicości."
+    n "{b}{size=+60}Rozdział Pierwszy{/size}{/b}"
+    n "Wiatr… jest dziwnie cichy"
+    n "Nie zimny. Nie ciepły."
+    n "Po prostu… czuć, że pochodzi z Nicości."
     
-    "Ogromny krater ciągnie się w dół, jakby świat został wyrwany z własnego ciała."
+    n "Ogromny krater ciągnie się w dół, jakby świat został wyrwany z własnego ciała."
     
-    "Alysia staje na krawędzi."
-    "A obok niej "
-    "Cotard."
+    n "Alysia staje na krawędzi."
+    n "A obok niej "
+    n "Cotard."
     nvl clear
 
     a "…to tutaj."
@@ -359,13 +368,14 @@ label Chapter_1:
     c "Pierwszy poziom."
     c "Kwiecista Nicość."
 
-    "Powietrze robi się słodkie."
-    "Zbyt słodkie."
-    "Duszące."
-    "W oddali zaczynają się wyłaniać pierwsze kwiaty."
-    "Delikatne."
-    "Białe."
-    "Ich płatki poruszają się mimo, że nie ma wiatru"
+    n "Powietrze robi się słodkie."
+    n "Zbyt słodkie."
+    n "Duszące."
+    n "W oddali zaczynają się wyłaniać pierwsze kwiaty."
+    n "Delikatne."
+    n "Białe."
+    n "Ich płatki poruszają się mimo, że nie ma wiatru"
+    nvl clear
 
     scene bg flower plain
     "Z zachwytem"
@@ -420,32 +430,33 @@ label Chapter_1:
 
     label choice4chapter1_done:
 
-    "{size=+20}Dziennik Alysii Wpis 002{/size}"
+    n "{size=+20}Dziennik Alysii Wpis 002{/size}"
 
-    "Kwiaty."
-    "Nie potrafię opisać ich piękna."
-    "Są zbyt doskonałe."
-    "A przez to nienaturalne."
+    n "Kwiaty."
+    n "Nie potrafię opisać ich piękna."
+    n "Są zbyt doskonałe."
+    n "A przez to nienaturalne."
 
-    "Cotard twierdzi, że nie są prawdziwe."
-    "I co najgorsze…"
+    n "Cotard twierdzi, że nie są prawdziwe."
+    n "I co najgorsze…"
 
-    "wierzę mu."
+    n "wierzę mu."
 
-    "Mam jednak dziwne wrażenie, że to miejsce reaguje na emocje."
-    "Na zachwyt."
-    "Na lęk."
-    "Na wspomnienia."
+    n "Mam jednak dziwne wrażenie, że to miejsce reaguje na emocje."
+    n "Na zachwyt."
+    n "Na lęk."
+    n "Na wspomnienia."
 
-    "Im bardziej chcę coś zrozumieć, tym bardziej rzeczywistość wydaje się miękka."
-    "Jakby można ją było rozerwać palcami."
+    n "Im bardziej chcę coś zrozumieć, tym bardziej rzeczywistość wydaje się miękka."
+    n "Jakby można ją było rozerwać palcami."
 
     nvl clear
 
-    "Kwiaty drżą."
-    "Pył unosi się w powietrzu jak złoty dym."
-    "Z głębi łąki dobiega dźwięk."
-    "Coś bardziej pomiędzy śmiechem a buczeniem"
+    n "Kwiaty drżą."
+    n "Pył unosi się w powietrzu jak złoty dym."
+    n "Z głębi łąki dobiega dźwięk."
+    n "Coś bardziej pomiędzy śmiechem a buczeniem"
+    nvl clear
     unon "PRRRRRRRRRRR."
 
     "Coś małego przelatuje tuż przed twarzą Alysii."
@@ -565,9 +576,7 @@ label Chapter_1:
     "Pszczółka odlatuje i znika w oddali."
 
     "Alysia i Cotard stoją dłuższą chwilę w ciszy."
-    nvl clear
     "…"
-    nvl clear
     "Patrzą na siebie"
     "Alysia przerywa ciszę"
     "Zaciska notes przy piersi."
@@ -645,12 +654,13 @@ label Chapter_1:
     c "To nie głos."
     c "To brak czegoś, co powinno istnieć."
 
-    "Wszystko cichnie."
-    "Nawet kwiaty przestają drżeć."
+    n "Wszystko cichnie."
+    n "Nawet kwiaty przestają drżeć."
 
-    "Przed nimi ziemia pęka na dwie ścieżki"
-    "Lewa - skąpana w jasnym miękkim świetle"
-    "Prawa - ciemna, pozbawiona koloru."
+    n "Przed nimi ziemia pęka na dwie ścieżki"
+    n "Lewa - skąpana w jasnym miękkim świetle"
+    n "Prawa - ciemna, pozbawiona koloru."
+    nvl clear
 
     unon "{size=+30}Lewo - Zostań.{/size}" 
 
@@ -715,16 +725,18 @@ label Chapter_1:
             jump choice5chapter1_2    
 
     label choice5chapter1_1:
-    "Alysia patrzy na swoich uczniów."
-    "Ich głosy są miękkie."
-    "Znajome."
-    "Pełne ciepła"
-    "Dotyka świetlistej chmury."
-    "W tej samej chwili świat mięknie."
-    "Kwiaty rozkwitają gwałtownie."
-    "Światło zalewa ekran"
-    "Jej twarz rozluźnia się."
-    "Uśmiecha"
+    n "Alysia patrzy na swoich uczniów."
+    n "Ich głosy są miękkie."
+    n "Znajome."
+    n "Pełne ciepła"
+    n "Dotyka świetlistej chmury."
+    n "W tej samej chwili świat mięknie."
+    n "Kwiaty rozkwitają gwałtownie."
+    n "Światło zalewa ekran"
+    #dodać biały ekran
+    n "Jej twarz rozluźnia się."
+    n "Uśmiecha"
+    nvl clear
 
     u "Gdzie pani była?"
     u "Martwiliśmy się."
@@ -734,13 +746,14 @@ label Chapter_1:
     a "Ale już wszystko dobrze."
     a "Możemy wracać."
 
-    "Powoli siada na łące."
-    "Kładzie się między kwiatami."
-    "Oczy same się zamykają."
+    n "Powoli siada na łące."
+    n "Kładzie się między kwiatami."
+    n "Oczy same się zamykają."
 
-    "Cotard rzuca się do Alysii"
-    "Po raz pierwszy jego głos"
-    "drży."
+    n "Cotard rzuca się do Alysii"
+    n "Po raz pierwszy jego głos"
+    n "drży."
+    nvl clear
 
     c "{size=+20}Alysia…{/size}"
     c "Nie…"
@@ -751,12 +764,13 @@ label Chapter_1:
     c "…"
     c "Nie znikaj."
 
-    "Alysia nie odpowiada."
-    "Zostaje na łące."
-    "Uśpiona przez Nicość."
+    n "Alysia nie odpowiada."
+    n "Zostaje na łące."
+    n "Uśpiona przez Nicość."
     nvl clear
 
-    "Cotard zaczyna płakać."
+    n "Cotard zaczyna płakać."
+    nvl clear
     return
 
     label choice5chapter1_2:
@@ -779,6 +793,7 @@ label Chapter_1:
     "Uczniowie znikają."
     "Zaczyna płakać"
 
+    #dodać wyblakłą wersję bg
     "Świat wokół nich traci kolory."
     "Kwiaty stają się niemal szare."
 
@@ -804,9 +819,425 @@ label Chapter_1:
 
 
 label Chapter_2:
+    #dodać czarny ekran
+    n "{size=+60}Rozdział Drugi{/size}"
+    #Lodowa Nicość
+
+    n "Powoli schodzą po schodach."
+    n "Kamienna podłoga stopniowo przekształca się w lodową taflę pokrytą pajęczyną pęknięć."
+    n "Wyczuwają pod stopami delikatny ruch. "
+    nvl clear
+
+    a "Cotard…"
+    a "Zimno mi."
+    a "Ale… Ale nie w ciało."
+    a "Dziwne…"
+
+    "Cotard patrzy na swoje dłonie."
+    "Nie drżą."
+    
+    c "To nie jest zimno."
+    c "To efekt Nicości."
+
+    "Oddech Alysi staje się spokojniejszy."
+
+    a "Czy to normalne, że przestaję się bać?"
+    a "Przecież powinnam."
+    a "Wiem o tym."
+    a "Ale…"
+    a "Jakby ktoś wyciszył mnie w środku."
+
+    "Alysia dotyka klatki piersiowej."
+
+    a "Jakby moje własne serce było gdzieś daleko stąd."
+    a "Powinnam się bać…"
+    a "A jakoś…"
+    a "Nie potrafię."
+    a "To chyba źle? Prawda?"
+
+    "Cotard patrzy przed siebie."
+    "Idzie nie zatrzymując się."
+    "Milczy."
+
+    "Docierają na sam dół schodów."
+    scene bg ice cavern
+    "Przed nimi rozpościera się niekończąca się jaskinia."
+
+    c "Ten lód nie jest przezroczysty."
+    c "Jest zapisany wspomnieniami."
+    c "Tu byłem najniżej, nie wiem co jest dalej."
+
+    n "Spod tafli lodu słychać szepty."
+    n "Nie pojedyncze głosy."
+    n "Dziesiątki. Setki."
+    n "Nakładają się na siebie."
+    n "Rezonują w narastający krzyk rozpaczy."
+    nvl clear
+
+    #SZEPTY:
+    unon "…wróć…"
+    unon "…nie pamiętasz mnie…"
+    unon "…zostań…"
+    unon "…to boli…"
+
+    a "To są ludzie."
+    a "To ich wspomnienia"
+
+    c "Nie."
+    c "To są resztki wspomnień, tych co byli w Nicości."
+
+    n "Dwie ogromne bryły lodu z hukiem przebijają powierzchnię."
+    n "Są idealnie gładkie."
+    n "Ale ich wnętrze… Żyje."
+    nvl clear
+
+    n "{size=+20}Lewa Bryła:{/size}"
+    n "Mały dom."
+    n "Ciepłe światło."
+    n "Śmiech."
+    n "Mała Alysia ucieka z poduszką."
+    n "Mały Cotard goni ją, wyraźnie zirytowany."
+    nvl clear
+
+    n "{size=+20}Prawa Bryła:{/size}"
+    n "Stół."
+    n "Rozłożona mapa Nicości."
+    n "Rodzice kłócą się."
+    n "Atmosfera napięta."
+    n "Strach."
+    nvl clear
+
+    a "To… my."
+    a "To naprawdę my."
+
+    c "Wydaje mi się, że to zapis tego co było."
+    c "Albo tego, co Nicość chcę żebyś pamiętała."
+
+    "Alysia wyciąga rękę."
+    "Dotyka lodu."
+    "Nic."
+    "Patrzy na Cotarda."
+
+    a "Musimy razem."
+    a "Prawda?"
+
+    "Cotard przez chwile się nie rusza."
+    "Potem przykłada dłoń"
+
+    #WYBÓR 
+    menu:
+        "DZIECIŃSTWO":
+            jump choice1chapter2_1
+        "RODZICE":
+            jump choice1chapter2_2
+
+    label choice1chapter2_1:
+        #dodać czarne tło
+    n "Lód pęka"
+    n "Świat zmienia się natychmiast."
+    n "Ciepło."
+    n "Zapach drewna."
+    n "Światło ognia."
+    nvl clear
+
+    #<Czarne tło> -potencjalnie dodać jakieś fajne fullarty
+
+    la "Oddaj! To moja poduszka!"
+
+    lc "Nie jest twoja!"
+    lc "Zabrałaś mi ją pierwsza."
+
+    "Cotard rzuca poduszką w Alysie."
+    "Alysia piszczy i śmieje się."
+
+    lc "Przestań się śmiać!"
+    lc "To nie jest śmieszne!"
+
+    "Alysia rzuca kolejną poduszką."
+    "Trafia go."
+    "Cotard się zatrzymuje"
+    "Przez sekundę wygląda jakby miał się rozpłakać."
+    "Ale zamiast tego…"
+    "Rzuca książką."
+
+    #<Koniec czarnego tła>
+
+    a "To był ten moment…"
+    a "Siniak."
+    a "Ukrywaliśmy to przed rodzicami."
+    a "Bałam się, że zamkną biuro."
+
+    c "Bałaś się bardziej kary, czy tego, że stracisz dostęp do wiedzy?"
+
+    "Alysia patrzy na niego zaskoczona"
+
+    a "…" 
+    a "obu."
+
+    c "To nie było całe wspomnienie."
+    c "Tylko fragment."
+
+    a "…"
+    jump choice1chapter2_done
+
+    label choice1chapter2_2:
+        #dodać czarne tło
+    n "Lód pęka."
+    n "Zimno uderza natychmiast."
+    n "Stół."
+    n "Mapa Nicości."
+    n "Zaznaczone poziomy."
+    n "Niektóre przekreślone."
+    nvl clear
+    #<Czarne tło> -potencjalnie dodać jakieś fajne fullarty
+
+    f "To nie jest tylko struktura!"
+    f "To system!"
+
+    m "System?!"
+    m "Czego?!"
+    m "Znikania?!"
+
+    f "Każdy poziom coś zabiera!"
+    f "Najpierw zmysły!"
+    f "Potem pamięć!"
+    f "Potem…"
+
+    #<Koniec czarnego tła>
+    #<Czarne tło> -potencjalnie dodać jakieś fajne fullarty
+
+    m "A jeśli to miejsce nie odbiera…"
+    m "tylko odsłania?"
+
+    #<Koniec czarnego tła>
+
+    a "Oni wiedzieli…"
+    a "więcej niż mówili…"
+
+    c "Dobrze wiedzieli, co ich czeka."
+    jump choice1chapter2_done
+
+    label choice1chapter2_done:
+    n "Obydwie bryły lodu zostały zniszczone."
+    n "Na ich miejscu pojawiły się jedna, nowa."
+    nvl clear
+    #czarne tło
+    n "Sala."
+    n "Dziesiątki ludzi."
+    n "Zatrzymani w ruchu."
+    nvl clear
+
+    n "Cotard i Alysia dotykają razem bryłę lodu."
+    n "Lód pęka."
+    nvl clear
+
+    #<Czarne tło> -potencjalnie dodać jakieś fajne fullarty
+    m1 "To nie jest teoria."
+    m1 "Mamy dowód."
+
+    k1 "Nie powinniśmy byli go sprowadzac z powrotem."
+
+    om "Musieliśmy."
+    om "To jedyna osoba, która wróciła."
+
+    m2 "To NIE jest osoba."
+
+    k2 "Nie ma reakcji emocjonalnych."
+    k2 "Nie reaguje na bodźce."
+    k2 "Nie rozpoznaje części własnych wspomnień."
+
+    m1 "Twierdzi, że nie istnieje."
+
+    k2 "To klasyczny rozpad tożsamości."
+
+    om "Nie."
+
+    "Wszyscy milkną"
+
+    om "To adaptacja."
 
 
-    "tu zaczyna się akt 2"
-    # This ends the game.
+    m2 "Adaptacja?!"
+    m2 "Czego?!"
+
+    om "Milczeć!"
+    om "Spełnił to czego Nicość wymaga"
+    om "Stracił emocje."
+    om "Stracił poczucie istnienia."
+    om "Ale dzięki temu…"
+    om "Przetrwał."
+
+    om "Musimy wysłać kogoś głębiej."
+
+    #<Koniec czarnego tła>
+
+    "Bryła się nie rozpadła, jest zmieniona."
+
+
+    "Dotykają jej ponownie."
+
+    #<Czarne tło> -potencjalnie dodać jakieś fajne fullarty
+
+    "Na ziemi leży blade, rozkładające się ciało."
+
+    "To Cotard."
+
+    #<Koniec czarnego tła>
+
+    c "To ten moment,"
+    c "w którym przestałem istnieć."
+
+    a "Nie możesz tak mówić!"
+    a "Przecież stoisz tutaj!"
+    a "Oddychasz!!!"
+
+    c "Nie."
+    c "To co widzisz…"
+    c "To kontynuacja mojej śmierci."
+    c "Po tym… "
+    c "Nagle znów mogłem się ruszać…"
+
+    a "Jeśli to wspomnienie jest prawdziwe…to kim jesteś?"
+
+    "Cotard patrzy na nią bez emocji."
+
+    #<Czarne tło> -potencjalnie dodać jakieś fajne fullarty
+
+    "Cotard jest w sali narad."
+
+    m1 "…"
+    m1 "on nie oddycha."
+
+    k1 "Nie ma pulsu"
+
+    m2 "Więc o czym my w ogóle rozmawiamy?"
+    m2 "To ciało."
+
+    om "Milcz."
+
+    om "Notuj."
+    om "Brak reakcji na bodźce."
+    om "Brak funkcji życiowych."
+
+    "Nagle palec martwego Cotarda drga."
+
+    k1 "Widzieliście to?!"
+
+    "Martwy Cotard otwiera oczy."
+
+    "Nie łapie oddechu."
+    "Nie reaguje."
+    "Nie porusza się gwałtownie."
+
+    "Po prostu…"
+    "Patrzy."
+
+    m1 "…czy on nas widzi?"
+
+    "Cotard powoli podnosi głowę."
+    "Siada."
+
+    c "…"
+    c "to nie ma znaczenia."
+
+    k1 "On… mówi"
+
+    m2 "Nie."
+    m2 "Nie, nie nie…"
+
+    om "Cisza!"
+
+    "Starszy mężczyzna podchodzi do Cotarda."
+    "Patrzy mu prosto w oczy."
+
+    om "Jak się nazywasz?"
+
+    c "To nie ma znaczenia."
+
+    om "To dziecko spełniło warunek."
+    om "Oddał wszystko, co było zbędne."
+
+    om "Musimy spróbować ponownie."
+    om "Zobaczyć co się stanie."
+
+    k1 "Oszalałeś?!"
+
+    om "Musimy, inaczej nie dowiemy się dlaczego."
+
+
+    #<Koniec czarnego tła>
+
+    c "Ja tego nie pamiętam."
+    c "Nie wiem kim są ci ludzie."
+
+    a "Oni… patrzyli na Ciebie jak na narzędzie."
+    a "Mówili o tobie jak o wyniku."
+    a "Nie jak o człowieku."
+
+    c "Bo człowiekiem przestałem być dla nich w momencie, kiedy przestałem reagować."
+    c "Dla siebie również."
+
+    a "Pamiętasz swoje pierwsze zejście do Nicości?"
+
+    c "Nie."
+
+    a "Dlaczego tam chodziłeś, jak już stałeś się sobą?"
+
+    c "Bo ja nie wiem, co tracę."
+    c "Więc nie mam czego żałować."
+
+    n "Hałas wokół nich milknie,"
+    n "Żadnych szeptów."
+    n "Żadnych ruchów."
+
+    n "Jakby wszystko…"
+    n "Zostało już zapisane"
+    n "i zamknięte."
+    nvl clear
+
+    a "Cotard…"
+    a "Co się teraz stanie?"
+
+    "Nie odpowiada od razu."
+
+    c "…"
+    c "Myślę, że to moment…"
+    c "W którym jesteśmy sprawdzani."
+
+    n "Lód pod ich stopami zaczyna drżeć."
+    n "Nie pęka."
+    n "Nie rozpada się."
+    nvl clear
+
+    unon "{size=+30}Wystarczająco. Oddaliście.{/size}"
+
+    a "Nie chcieliśmy niczego oddawać."
+
+    unon "{size=+30}Nicość{/size}"
+    unon "{size=+30}Nie ma różnicy.{/size}"
+
+    "Te słowa…"
+    "Uderzają mocniej niż powinny."
+
+    "Cotard stoi spokojnie"
+    "Jakby wszystko było logiczne"
+
+    "Lód przed nimi topi się, a rozgrzana woda paruje."
+    "Pojawia się tunel do wnętrza wodnej czeluści."
+
+    unon "{size=+30}Możecie zejść niżej.{/size}"
+
+    a "Ile jeszcze…"
+
+    unon "{size=+30}Tyle ile pozostało.{/size}"
+
+    "Ruszają"
+
+    n "Lód zamyka się nad nimi."
+    n "Cisza wraca."
+    n "Jakby nic nigdy się tu nie wydarzyło."
+    nvl clear
+
+    #KONIEC ROZDZIAŁU 2
 
     return
