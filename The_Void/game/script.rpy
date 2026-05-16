@@ -9,7 +9,7 @@ define a = Character("Alisia", color="#fffd7b")
 define la = Character("Mała Alisia", color="#fffd7b")
 define c = Character("Cotard", color="#9c1908")
 define lc = Character("Mały Cotard", color="#9c1908")
-define bee = Character("Przczułka", color = "#ffa600")
+define bee = Character("Pszczółka", color = "#ffa600")
 define unon = Character("???", color = "#ffffff")
 define u = Character("Uczniowie", color = "#a1fd28")
 define f = Character("Ojciec", color="#0077ff")
@@ -19,6 +19,21 @@ define m2 = Character("Mężczyzna 2", color="#ffae00")
 define om = Character("Stary Mężczyzna", color="#474747")
 define k1 = Character("Kobieta 1", color="#b9009a")
 define k2 = Character("Kobieta 2", color="#7700ff")
+image alysia : 
+    "alysia happy.png" 
+    zoom 0.2
+image cotard :
+    "cotard normal" 
+    zoom 0.4
+image uczniowie :
+    "uczniowie" 
+    zoom 0.5
+image pszczolka :
+    "pszczółka" 
+    zoom 0.4
+image meduza :
+    "meduza" 
+    zoom 0.5
 
 
 
@@ -31,8 +46,8 @@ label start:
     # images directory to show it.
 
     scene bg mountain
-
     # These display lines of dialogue.
+
     n "Jestem osobą, która pyta.{w=1}\ Nie potrafię inaczej, nigdy nie potrafiłam."
     n "Pytam o wszystko, jakby ktoś zapisał we mnie wewnętrzny przymus aby zrozumieć niezrozumiałe."
     n "Pociąga mnie to co jeszcze nienazwane, niewypowiedziane, o których inni boją się nawet pomyśleć."
@@ -175,7 +190,7 @@ label start:
 
 label Chapter_1:
 
-    scene bg void entrance
+    scene bg black
 
     n "{size=+20}Dziennik Alysii Wpis 001{/size}"
 
@@ -200,6 +215,9 @@ label Chapter_1:
     n "Nie martwcie się."
     n "{b}On się mną zaopiekuje.{/b}"
     nvl clear
+
+    scene bg void entrance at center
+
     n "{b}{size=+60}Rozdział Pierwszy{/size}{/b}"
     n "Wiatr… jest dziwnie cichy"
     n "Nie zimny. Nie ciepły."
@@ -212,9 +230,15 @@ label Chapter_1:
     n "Cotard."
     nvl clear
 
+    show alysia
+
     a "…to tutaj."
-    c "Nie."
+
     c "…"
+
+    show alysia at right
+    show cotard at left
+
     c "Tu nic nie ma."
 
     "Alysia wybucha lekkim śmiechem"
@@ -368,7 +392,10 @@ label Chapter_1:
     c "Pierwszy poziom."
     c "Kwiecista Nicość."
 
+    scene bg black
+
     n "Powietrze robi się słodkie."
+
     n "Zbyt słodkie."
     n "Duszące."
     n "W oddali zaczynają się wyłaniać pierwsze kwiaty."
@@ -378,10 +405,10 @@ label Chapter_1:
     nvl clear
 
     scene bg flower plain
-    "Z zachwytem"
-    a "Och…"
+    show alysia at right
+    show cotard at left
+
     a "Cotard!"
-    a "spójrz tylko"
     a "Jak tu pięknie!"
 
     "Na jej twarzy pojawia się prawdziwy, ciepły uśmiech."
@@ -430,10 +457,11 @@ label Chapter_1:
 
     label choice4chapter1_done:
 
-    n "{size=+20}Dziennik Alysii Wpis 002{/size}"
+    hide alysia
+    hide cotard
+
 
     n "Kwiaty."
-    n "Nie potrafię opisać ich piękna."
     n "Są zbyt doskonałe."
     n "A przez to nienaturalne."
 
@@ -457,11 +485,19 @@ label Chapter_1:
     n "Z głębi łąki dobiega dźwięk."
     n "Coś bardziej pomiędzy śmiechem a buczeniem"
     nvl clear
+    show alysia at right
+    show cotard at left
     unon "PRRRRRRRRRRR."
 
+
+
     "Coś małego przelatuje tuż przed twarzą Alysii."
+
+
     "Odruchowo cofa się o krok."
     "Przed nimi zawisa drobna istota."
+
+    show pszczolka
 
     bee "Prrr–prrrr!"
     bee "OoooOOOO, goście!"
@@ -573,6 +609,8 @@ label Chapter_1:
     bee "Miło się gadało, lecę zapylać kwiatkiiiii!!!!"
     bee "Prrrrrrrrr!"
 
+    hide pszczolka
+
     "Pszczółka odlatuje i znika w oddali."
 
     "Alysia i Cotard stoją dłuższą chwilę w ciszy."
@@ -594,6 +632,8 @@ label Chapter_1:
 
     "Nagle znów słychać bzyczenie"
 
+    show pszczolka
+
     bee "Prrrrr!"
     bee "Jeśli chcecie znaleźć odpowiedzi…"
     bee "schodźcie niżej."
@@ -601,6 +641,8 @@ label Chapter_1:
     bee "Na następnym poziomie Nicość nie pokazuje już kwiatów."
     bee "Pokazuje prawdę."
     bee "Czyli to, czego najbardziej się boicie."
+
+    hide pszczolka
 
     "Nie zdążyli zareagować."
     "Odleciała."
@@ -613,11 +655,12 @@ label Chapter_1:
 
     "Alysia zamiera."
 
+
     unon "Pani Alysio!"
 
     "Na końcu ścieżki stoją dzieci."
     "Jej uczniowie."
-
+    
     u "Wróci Pani?"
     u "Brakuje nam Pani…"
 
@@ -732,6 +775,9 @@ label Chapter_1:
     n "Dotyka świetlistej chmury."
     n "W tej samej chwili świat mięknie."
     n "Kwiaty rozkwitają gwałtownie."
+
+    scene bg white
+
     n "Światło zalewa ekran"
     #dodać biały ekran
     n "Jej twarz rozluźnia się."
@@ -819,7 +865,10 @@ label Chapter_1:
 
 
 label Chapter_2:
+
     #dodać czarny ekran
+    scene bg black
+
     n "{size=+60}Rozdział Drugi{/size}"
     #Lodowa Nicość
 
@@ -861,6 +910,9 @@ label Chapter_2:
 
     "Docierają na sam dół schodów."
     scene bg ice cavern
+    show alysia at right
+    show cotard at left
+
     "Przed nimi rozpościera się niekończąca się jaskinia."
 
     c "Ten lód nie jest przezroczysty."
@@ -932,7 +984,10 @@ label Chapter_2:
             jump choice1chapter2_2
 
     label choice1chapter2_1:
+
         #dodać czarne tło
+    scene bg black
+
     n "Lód pęka"
     n "Świat zmienia się natychmiast."
     n "Ciepło."
@@ -962,6 +1017,10 @@ label Chapter_2:
 
     #<Koniec czarnego tła>
 
+    scene bg ice cavern
+    show alysia at right
+    show cotard at left
+
     a "To był ten moment…"
     a "Siniak."
     a "Ukrywaliśmy to przed rodzicami."
@@ -981,7 +1040,10 @@ label Chapter_2:
     jump choice1chapter2_done
 
     label choice1chapter2_2:
+
         #dodać czarne tło
+    scene bg black
+
     n "Lód pęka."
     n "Zimno uderza natychmiast."
     n "Stół."
@@ -1011,6 +1073,10 @@ label Chapter_2:
 
     #<Koniec czarnego tła>
 
+    scene bg ice cavern
+    show alysia at right
+    show cotard at left
+
     a "Oni wiedzieli…"
     a "więcej niż mówili…"
 
@@ -1018,6 +1084,9 @@ label Chapter_2:
     jump choice1chapter2_done
 
     label choice1chapter2_done:
+
+    scene bg black
+
     n "Obydwie bryły lodu zostały zniszczone."
     n "Na ich miejscu pojawiły się jedna, nowa."
     nvl clear
@@ -1084,6 +1153,10 @@ label Chapter_2:
 
     #<Koniec czarnego tła>
 
+    scene bg ice cavern
+    show alysia at right
+    show cotard at left
+
     c "To ten moment,"
     c "w którym przestałem istnieć."
 
@@ -1102,6 +1175,8 @@ label Chapter_2:
     "Cotard patrzy na nią bez emocji."
 
     #<Czarne tło> -potencjalnie dodać jakieś fajne fullarty
+
+    scene bg black
 
     "Cotard jest w sali narad."
 
@@ -1164,8 +1239,11 @@ label Chapter_2:
 
     om "Musimy, inaczej nie dowiemy się dlaczego."
 
-
     #<Koniec czarnego tła>
+
+    scene bg ice cavern
+    show alysia at right
+    show cotard at left
 
     c "Ja tego nie pamiętam."
     c "Nie wiem kim są ci ludzie."
@@ -1240,7 +1318,10 @@ label Chapter_2:
 
     #KONIEC ROZDZIAŁU 2
 label chapter_3: 
+
     #czarne tło
+    scene bg black
+
     n "{b}{size=+60}Rozdział 3{/size}{/b}"
     n "Schodzą."
     n "Długo."
@@ -1296,6 +1377,8 @@ label chapter_3:
     "Jej ruch jest wolniejszy."
     "Ale… naturalny."
 
+    show alysia
+
     a "Ja…" 
     "Alysia próbuje oddychać."
     "Nic. "
@@ -1305,12 +1388,17 @@ label chapter_3:
 
     a "{size=-10}Mogę oddychać, ale nie w pełni.{/size}"
 
+    show alysia
+    show cotard
+
     "Cotard patrzy na nią."
 
     c "Zobaczymy co będzie dalej."
 
     "W oddali"
     "coś się porusza."
+
+
     "Organiczna forma życia"
     "płynie w ich stronę."
     "Wygląda jak niebieska ośmiornica."
@@ -1662,6 +1750,8 @@ label chapter_3:
 
     #Alysia (gwałtownie):
     a "Nie mogę…"
+
+    scene bg black
 
     n "Ale zamiast ich topić…"
  
