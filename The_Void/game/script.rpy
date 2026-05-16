@@ -1239,5 +1239,447 @@ label Chapter_2:
     nvl clear
 
     #KONIEC ROZDZIAŁU 2
+label chapter_3: 
+    #czarne tło
+    n "{b}{size=+60}Rozdział 3{/size}{/b}"
+    n "Schodzą."
+    n "Długo."
+    n "Za długo."
+    n "Lód znika."
+    n "Nie pęka."
+    n "Nie topnieje."
+    n "Po prostu… przestaje istnieć."
+    n "Pod nimi:"
+    n "ciemność."
+    n "A potem"
+    n "woda."
+    n "Ale nie taka jak na powierzchni."
+    n "Nie ma fal."
+    n "Nie ma dźwięku."
+    n "Nie ma oporu."
+    n "Wygląda jak ocean."
+    n "Ale nie zachowuje się jak ocean."
+    n "…"
+    n "Alysia robi krok."
+    n "Ale... zatrzymuje się."
+    nvl clear
+
+
+    a "…Cotard."
+    "Dotyka powierzchni wody."
+
+    "Nie rozlewa się."
+    "Nie reaguje."
+
+    a "To nie jest woda. "
+    a "Jest jak powietrze."
+
+    "Alysia bierze głęboki oddech."
+
+    a "Musimy…?" 
+
+    c "Tak."
+    "Robią krok."
+    "Zapadają się w wodę."
+    scene bg void sea
+
+    n "Nie ma szoku."
+    n "Nie ma duszenia się."
+    n "Jest tylko—"
+    n "cisza."
+    nvl clear
+    "Alysia otwiera oczy. "
+    "Widoczność jest dziwna."
+    "Nie ma światła."
+    "A jednak widzi."
+    "Porusza ręką. "
+    "Jej ruch jest wolniejszy."
+    "Ale… naturalny."
+
+    a "Ja…" 
+    "Alysia próbuje oddychać."
+    "Nic. "
+    "..."
+    #Panika
+    #- ale tylko przez sekundę.
+
+    a "{size=-10}Mogę oddychać, ale nie w pełni.{/size}"
+
+    "Cotard patrzy na nią."
+
+    c "Zobaczymy co będzie dalej."
+
+    "W oddali"
+    "coś się porusza."
+    "Organiczna forma życia"
+    "płynie w ich stronę."
+    "Wygląda jak niebieska ośmiornica."
+    "Jej ciało pluska miękkim światłem"
+    "Gdy zbliża się, słychać szept"
+    "Nie słów a uczuć."
+
+    "Czuć ciepło, spokój, zgodę."
+
+    "Alysia wyciąga rękę"
+
+    c "{size=+20}Nie!{/size}"
+
+    "Za późno."
+    "Alysia dotyka jednej macki."
+    "Ośmiornica przykleja się do jej dłoni."
+    "A potem"
+    "przesuwa się wyżej"
+    "na szyje"
+    "Alysia zastyga."
+
+    a "Cotard…" 
+
+    n "Meduza delikatnie „otwiera się” przy jej gardle."
+    n "Wnika w nią."
+    nvl clear
+
+    "Alysia bierze oddech. "
+    "Głęboki, spokojny"
+    #Alysia (zaskoczona):
+    a "…czuje się lekko, łatwiej mi oddychać."
+    "Cotard patrzy."
+    "Nie rusza się."
+
+    c "Adaptujesz się do tego."
+    c "Ale koszt tego jeszcze nie przyszedł."
+
+    #WYBÓR 1  MEDUZA
+    menu:
+        "Dotykasz meduzy":
+            jump choice1chapter3_1
+        "Odsuwasz się":
+            jump choice1chapter3_2
+    #OPCJA 1 — ADAPTACJA
+    label choice1chapter3_1:
+    "Cotard w końcu sięga ręką."
+    "Dotyka meduzy."
+    "Meduza przywiera do jego dłoni."
+    "Ale nic się nie zmienia."
+
+    a "Co czujesz?" 
+
+    c "Nic nowego. "
+    c "Ale działa - łatwiej mi oddychać."
+    jump choice1chapter3_done
+
+    #OPCJA 2 OPÓR
+    label choice1chapter3_2:
+    "Cotard odsuwa się."
+    "Próbuje oddychać. "
+    "Sekundy mijają. "
+    "Alysia patrzy na niego z niepokojem."
+
+    a "Cotard… "
+
+    "Jego ruchy zwalniają." 
+
+    "W końcu"
+    "łapie meduzę."
+    "Pozwala jej się przyczepić." 
+
+    c "To nie było opcjonalne."
+    jump choice1chapter3_done
+
+    label choice1chapter3_done:
+    "Alysia nie już patrzy na niego."
+    "Patrzy w dół. "
+    "Coś leży na dnie. "
+
+    c "Widzę."
+    c "Zbliżają się. "
+    c "To nie jest część oceanu. "
+    c "To coś obcego."
+    n "Metal."
+    n "Zardzewiały."
+    n "Ale nie zniszczony."
+    n "Częściowo wbity w „dno”, które nie jest dnem."
+    n "Alysia przyspiesza."
+    nvl clear
+    a "{size=-10}Nie… {/size}"
+
+    "Podpływa bliżej." 
+
+    "Zbliża swoją dłoń do przedmiotu"
+    "Ale jej dłoń zatrzymuje się"
+    "Drży."
+
+    a "To…" 
+
+    "Dotyka przedmiotu"
+    "Obraca powoli kawałek metalu."
+    "Na powierzchni widać wyryty znak." 
+    "Znajomy"
+
+    a "{size=-10}…to narzędzie ojca.{/size}"
+
+    "Cotard patrzy. "
+    "Nie reaguje emocjonalne, ale od razu widać po nim, że analizuje całą sytuację."
+    "W ostatniej chwili powstrzymuje się."
+
+    c "Jesteś pewna? "
+    c "Alysia kiwa głową. "
+
+    a "On zawsze znakował sprzęt."
+    a "Żeby go nie zgubić w terenie."
+
+    "Przesuwa palcem po znaku." 
+
+
+    a "To jego." 
+
+    c "Nie jestem tego pewien."
+
+    a "Dlaczego?" 
+
+    c "Bo to poziom niżej niż ten, na którym ja byłem."
+    "Alysia zaczyna rozglądać się nerwowo." 
+    
+    a "Jeśli to tu jest… to musi być więcej."
+    "W oddali"
+    "coś świeci."
+    "Podpływają. "
+    "To fragment materiału. "
+    "Część ubrania."
+    "Znów znajomy. "
+    "Alysia dotyka go. "
+    #TU BĘDZIE WIZJA TAKI FLASHBACK CZY COŚ BOOM
+    n "Matka. "
+    n "Oddycha ciężko. "
+    n "Patrzy w dół. "
+    nvl clear
+    m "…jeszcze niżej…" 
+    "Obraz się urywa." 
+
+    a "Oni… schodzili dalej." 
+
+    c "Świadomie." 
+
+    a "Jeśli oni zeszli niżej niż ty…" 
+
+    a "…to znaczy, że istnieje coś jeszcze." 
+
+    c "Zawsze istnieje coś jeszcze." 
+
+    c "Pytanie brzmi… "
+    c "…czy powinniśmy to zobaczyć." 
+
+
+    n "Płyną dalej. "
+    n "Ich ciała zaczynają się zmieniać."
+    n "Skóra Alyssii:"
+    n "delikatnie przezroczysta."
+    n "Jej ruchy:"
+    n "bardziej płynne."
+    n "Jej oddech:"
+    n "zbyt spokojny"
+    nvl clear
+
+    a "To… nie boli."
+    a "Powinno?"
+
+    c "Nie wszystko tutaj boli."
+    #WYBÓR 2  ZMIANY CIAŁA
+    menu:
+        "Akceptujesz zmiany":
+            jump choice2chapter3_1
+        "Próbujesz się im opierać":
+            jump choice2chapter3_2
+
+    #OPCJA 1  AKCEPTACJA
+    label choice2chapter3_1:
+
+    "Alysia zamyka oczy."
+
+    a "Jeśli to pozwala nam iść dalej…" 
+
+    "Oddycha głębiej." 
+
+    "Zmiany przyspieszają." 
+
+    a "To… nawet przyjemne." 
+    jump choice2chapter3_done
+
+    #OPCJA 2  OPÓR
+    label choice2chapter3_2:
+
+    "Alysia próbuje zdjąć meduzę."
+
+    "Nie da się."
+    "Im bardziej próbuje"
+    "tym bardziej się wtapia."
+
+    a "Nie chcę tego!" 
+    "Jej ruchy stają się chaotyczne."
+    "Na chwilę traci kontrolę nad oddechem."
+    "Cotard łapie ją. "
+
+    c "Przestań." 
+    jump choice2chapter3_done
+
+    label choice2chapter3_done:
+    n "Ocean zmienia się. "
+    n "Nie ma już kierunku."
+    n "Nie ma góry."
+    n "Nie ma dołu."
+    n "Alysia patrzy wokół. "
+    nvl clear
+
+    a "Cotard… "
+    a "Nie chcę iść dalej. "
+
+    c "Dlaczego?" 
+
+    a "Bo tutaj… wszystko jest prostsze. "
+    a "Nie boli."
+
+    #WYBÓR 3  PRZYWIĄZANIE DO POWIERZCHNI
+    menu:
+        "Chce iść dalej.":
+            jump choice3chapter3_1
+        "Chce zostać.":
+            jump choice3chapter3_2
+
+    #OPCJA 1  TRZYMANIE SIĘ
+    label choice3chapter3_1:
+
+    a "Nie."
+    a "To zły pomysł."
+    a "Musimy iść."
+    a "Mamy powód."
+    a "Mamy siebie. "
+    jump choice3chapter3_done
+
+    #OPCJA 2  ODPUSZCZENIE
+    label choice3chapter3_2:
+
+    "Alysia uśmiecha się lekko."
+
+    a "A po co? "
+    a "Po co iść dalej"
+    a "Tam… wszystko boli"
+
+    "Dotyka wody."
+
+    a "Tutaj… nie."
+
+    "Cotard patrzy na nią długo. "
+
+    c "To nie jest brak bólu. "
+    c "Tracisz kawałki siebie."
+    c "Przestajesz się czuć sobą."
+    jump choice3chapter3_done
+
+    #DECYZJA GŁÓWNA 
+    label choice3chapter3_done:
+    n "Ocean zatrzymuje się. "
+    n "Wszystko zamiera. "
+    n "Ośmiornica zaczyna bardzo mocno świecić"
+    nvl clear
+
+
+    unon "{size=+30}Wybierz.{/size}" 
+    n "Dwie przestrzenie otwierają się przed nimi." 
+
+    n "Jedna:"
+    n "ciemniejsza."
+    n "cięższa."
+    n "Druga:"
+    n "lekka."
+    n "spokojna."
+    nvl clear
+
+    menu:
+        "Usuń ból.":
+            jump choice4chapter3_1
+        "Lub usuń uczucia.": 
+            jump choice4chapter3_2
+
+    #WYBÓR KOŃCOWY
+    label choice4chapter3_1:
+    
+    n "Alysia zamyka oczy."
+    nvl clear
+
+    a "Nie chcę już cierpieć."
+    n "Świat cichnie."
+    n "Wszystko staje się…"
+    n "spokojne."
+    n "Ale"
+    n "Jej oczy pustoszeją"
+    n "Patrzy na Cotarda."
+    nvl clear
+
+    a "…kim jesteś?" 
+    "Cotard patrzy na nią. "
+    "Cisza."
+    jump choice4chapter3_done
+
+    label choice4chapter3_2:
+    n "Alysia patrzy na Cotarda."
+    n "Długo. "
+    nvl clear
+
+    a "Przepraszam."
+    "Uśmiecha się."
+
+    "Ostatni raz."
+
+    a "To nie ma sensu trzymać się czegoś, co i tak zniknie."
+    a "Teraz będziemy podobni do siebie."
+
+    n "Jej wyraz twarzy mięknie. "
+    n "emocje znikają."
+    n "Patrzy na niego spokojnie." 
+
+    n "Bez miłości"
+
+    n "Bez uśmiechu"
+    nvl clear
+
+    a "Możemy iść dalej." 
+
+
+    #KONIEC ROZDZIAŁU
+    label choice4chapter3_done:
+    n "Ocean otwiera się. "
+    n "Droga prowadzi niżej."
+    n "Jeszcze głębiej."
+    n "Zanurzają się dalej. "
+    n "Bez oporu. "
+
+    n "Ośmiornica odkleja się od nich"
+    n "Jej światło gaśnie."
+
+    n "Alysia nagle próbuje nabrać powietrza"
+    n "i tym razem"
+    n "czuje opór."
+    nvl clear
+
+    #Alysia (gwałtownie):
+    a "Nie mogę…"
+
+    n "Ale zamiast ich topić…"
+ 
+    n "woda znika. "
+
+    n "Nie odpływa."
+    n "Nie opada."
+    n "przestaje istnieć. "
+    n "Upadają. "
+    n "Zatrzymują się w pół ruchu. "
+    n "Jakby coś ich trzymało. "
+    n "A potem "
+    n "grunt. "
+    n "Twardy."
+    n "Wilgotny."
+    n "Ciemność. "
+    nvl clear
+
+    n "{size=+40}KONIEC ROZDZIAŁU 3{/size}"
 
     return
