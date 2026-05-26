@@ -173,6 +173,8 @@ label start:
     n "Ludzie dziwnie na nas patrzą."
     n "Gdyby tylko umieli w nim dostrzec, co ja…"
 
+    scene bg mountain
+
     n "Wczoraj spytałam go co robi w tej swojej szopie"
     n "Powiedziałam, że chcę wiedzieć BO MAM PRAWO."
     n "Uśmiechnął się tylko i odparł, że to niespodzianka."
@@ -186,7 +188,7 @@ label start:
 
 label Chapter_1:
 
-    scene bg black
+    scene bg book
 
     n "{size=+20}Dziennik Alysii Wpis 001{/size}"
 
@@ -465,7 +467,7 @@ label Chapter_1:
 
     hide alysia
     hide Cotard
-
+    scene bg book
 
     n "Kwiaty."
     n "Są zbyt doskonałe."
@@ -485,6 +487,8 @@ label Chapter_1:
     n "Jakby można ją było rozerwać palcami."
 
     nvl clear
+    
+    scene bg flower plain
 
     n "Kwiaty drżą."
     n "Pył unosi się w powietrzu jak złoty dym."
@@ -503,7 +507,7 @@ label Chapter_1:
     "Odruchowo cofa się o krok."
     "Przed nimi zawisa drobna istota."
 
-    show pszczolka at day
+    show pszczolka at center,day
 
     bee "Prrr–prrrr!"
     bee "OoooOOOO, goście!"
@@ -638,7 +642,7 @@ label Chapter_1:
 
     "Nagle znów słychać bzyczenie"
 
-    show pszczolka at day
+    show pszczolka at center , day
 
     bee "Prrrrr!"
     bee "Jeśli chcecie znaleźć odpowiedzi…"
