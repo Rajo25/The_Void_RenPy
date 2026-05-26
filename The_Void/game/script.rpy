@@ -22,9 +22,9 @@ define k2 = Character("Kobieta 2", color="#7700ff")
 image alysia : 
     "alysia happy.png" 
     zoom 0.2
-image cotard :
-    "cotard normal" 
-    zoom 0.4
+#image cotard :
+#    "cotard normal" 
+#    zoom 0.4
 image uczniowie :
     "uczniowie" 
     zoom 0.5
@@ -34,6 +34,12 @@ image pszczolka :
 image meduza :
     "meduza" 
     zoom 0.5
+
+
+
+
+
+
 
 
 
@@ -230,28 +236,38 @@ label Chapter_1:
     n "Cotard."
     nvl clear
 
-    show alysia
+
+    show alysia 
 
     a "…to tutaj."
 
     c "…"
 
-    show alysia at right
-    show cotard at left
-
+    show alysia at right,
+    show Cotard crossed_arms notspeak Lost Not_Happy night at left
+    
     c "Tu nic nie ma."
 
+    show Cotard speak Bitch Speak_Not_Happy at left
+    
+
     "Alysia wybucha lekkim śmiechem"
+
+    show Cotard notspeak Not_Happy
 
     a "Właśnie dlatego tu jesteśmy."
 
     "Cotard patrzy w dół."
     "Długo."
     "Zbyt długo."
+    
+    show Cotard speak Speak_Not_Happy
 
     c "Nie czuję strachu."
     c "…"
     c "To nie jest odwaga."
+
+    show Cotard notspeak Not_Happy
 
     menu:
         "Wiem, to głupota.":
@@ -405,13 +421,13 @@ label Chapter_1:
     nvl clear
 
     scene bg flower plain
-    show alysia at right
-    show cotard at left
+    show alysia at right, day_tint
+    show cotard at left, day_tint
 
     a "Cotard!"
     a "Jak tu pięknie!"
 
-    "Na jej twarzy pojawia się prawdziwy, ciepły uśmiech."
+    "Na jej twarzy pojawia się prawdziwy, ciepł uśmiech."
     "Pierwszy od wejścia."
 
     c "{size=+20}Nie podchodź!{/size}"
@@ -485,8 +501,8 @@ label Chapter_1:
     n "Z głębi łąki dobiega dźwięk."
     n "Coś bardziej pomiędzy śmiechem a buczeniem"
     nvl clear
-    show alysia at right
-    show cotard at left
+    show alysia at right , day_tint
+    show cotard at left, day_tint
     unon "PRRRRRRRRRRR."
 
 
@@ -497,7 +513,7 @@ label Chapter_1:
     "Odruchowo cofa się o krok."
     "Przed nimi zawisa drobna istota."
 
-    show pszczolka
+    show pszczolka at day_tint
 
     bee "Prrr–prrrr!"
     bee "OoooOOOO, goście!"
@@ -632,7 +648,7 @@ label Chapter_1:
 
     "Nagle znów słychać bzyczenie"
 
-    show pszczolka
+    show pszczolka at day_tint
 
     bee "Prrrrr!"
     bee "Jeśli chcecie znaleźć odpowiedzi…"
@@ -910,8 +926,8 @@ label Chapter_2:
 
     "Docierają na sam dół schodów."
     scene bg ice cavern
-    show alysia at right
-    show cotard at left
+    show alysia at right , crystal_tint
+    show cotard at left, crystal_tint
 
     "Przed nimi rozpościera się niekończąca się jaskinia."
 
@@ -1018,8 +1034,8 @@ label Chapter_2:
     #<Koniec czarnego tła>
 
     scene bg ice cavern
-    show alysia at right
-    show cotard at left
+    show alysia at right , rystal_tint
+    show cotard at left,  crystal_tint
 
     a "To był ten moment…"
     a "Siniak."
@@ -1154,8 +1170,8 @@ label Chapter_2:
     #<Koniec czarnego tła>
 
     scene bg ice cavern
-    show alysia at right
-    show cotard at left
+    show alysia at right , crystal_tint
+    show cotard at left, crystal_tint
 
     c "To ten moment,"
     c "w którym przestałem istnieć."
@@ -1242,8 +1258,8 @@ label Chapter_2:
     #<Koniec czarnego tła>
 
     scene bg ice cavern
-    show alysia at right
-    show cotard at left
+    show alysia at right , crystal_tint
+    show cotard at left , crystal_tint
 
     c "Ja tego nie pamiętam."
     c "Nie wiem kim są ci ludzie."
@@ -1388,8 +1404,8 @@ label chapter_3:
 
     a "{size=-10}Mogę oddychać, ale nie w pełni.{/size}"
 
-    show alysia
-    show cotard
+    show alysia at right, water_tint
+    show cotard at left, water_tint
 
     "Cotard patrzy na nią."
 
