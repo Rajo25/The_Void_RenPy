@@ -63,23 +63,23 @@ transform grad_water:
 
 
 #połaczone
-transform night_sh:
+transform night:
     grad_night
     night_tint
 
-transform sunset_sh:
+transform sunset:
     grad_sunset
     sunset_tint
 
-transform day_sh:
+transform day:
     grad_day
     day_tint
 
-transform crystal_sh:
+transform crystal:
     grad_crystal
     crystal_tint
 
 
-transform water_sh:
+transform water:
     grad_water
     water_tint

@@ -237,18 +237,18 @@ label Chapter_1:
     nvl clear
 
 
-    show alysia 
+    show alysia at night
 
     a "…to tutaj."
 
     c "…"
 
-    show alysia at right,
-    show Cotard crossed_arms notspeak Lost Not_Happy night at left
+    show alysia at right
+    show Cotard crossed_arms notspeak Lost Not_Happy night at left,night
     
     c "Tu nic nie ma."
 
-    show Cotard speak Bitch Speak_Not_Happy at left
+    show Cotard speak Bitch Speak_Not_Happy 
     
 
     "Alysia wybucha lekkim śmiechem"
@@ -421,8 +421,8 @@ label Chapter_1:
     nvl clear
 
     scene bg flower plain
-    show alysia at right, day_tint
-    show cotard at left, day_tint
+    show alysia at right, day
+    show Cotard at left, day
 
     a "Cotard!"
     a "Jak tu pięknie!"
@@ -474,7 +474,7 @@ label Chapter_1:
     label choice4chapter1_done:
 
     hide alysia
-    hide cotard
+    hide Cotard
 
 
     n "Kwiaty."
@@ -501,8 +501,8 @@ label Chapter_1:
     n "Z głębi łąki dobiega dźwięk."
     n "Coś bardziej pomiędzy śmiechem a buczeniem"
     nvl clear
-    show alysia at right , day_tint
-    show cotard at left, day_tint
+    show alysia at right , day
+    show Cotard at left, day
     unon "PRRRRRRRRRRR."
 
 
@@ -513,7 +513,7 @@ label Chapter_1:
     "Odruchowo cofa się o krok."
     "Przed nimi zawisa drobna istota."
 
-    show pszczolka at day_tint
+    show pszczolka at day
 
     bee "Prrr–prrrr!"
     bee "OoooOOOO, goście!"
@@ -648,7 +648,7 @@ label Chapter_1:
 
     "Nagle znów słychać bzyczenie"
 
-    show pszczolka at day_tint
+    show pszczolka at day
 
     bee "Prrrrr!"
     bee "Jeśli chcecie znaleźć odpowiedzi…"
@@ -926,8 +926,8 @@ label Chapter_2:
 
     "Docierają na sam dół schodów."
     scene bg ice cavern
-    show alysia at right , crystal_tint
-    show cotard at left, crystal_tint
+    show alysia at right , crystal
+    show Cotard at left, crystal
 
     "Przed nimi rozpościera się niekończąca się jaskinia."
 
@@ -1034,8 +1034,8 @@ label Chapter_2:
     #<Koniec czarnego tła>
 
     scene bg ice cavern
-    show alysia at right , rystal_tint
-    show cotard at left,  crystal_tint
+    show alysia at right , crystal
+    show Cotard at left,  crystal
 
     a "To był ten moment…"
     a "Siniak."
@@ -1090,8 +1090,8 @@ label Chapter_2:
     #<Koniec czarnego tła>
 
     scene bg ice cavern
-    show alysia at right
-    show cotard at left
+    show alysia at right, crystal
+    show Cotard at left, crystal
 
     a "Oni wiedzieli…"
     a "więcej niż mówili…"
@@ -1170,8 +1170,8 @@ label Chapter_2:
     #<Koniec czarnego tła>
 
     scene bg ice cavern
-    show alysia at right , crystal_tint
-    show cotard at left, crystal_tint
+    show alysia at right , crystal
+    show Cotard at left, crystal
 
     c "To ten moment,"
     c "w którym przestałem istnieć."
@@ -1258,8 +1258,8 @@ label Chapter_2:
     #<Koniec czarnego tła>
 
     scene bg ice cavern
-    show alysia at right , crystal_tint
-    show cotard at left , crystal_tint
+    show alysia at right , crystal
+    show Cotard at left , crystal
 
     c "Ja tego nie pamiętam."
     c "Nie wiem kim są ci ludzie."
@@ -1404,8 +1404,8 @@ label chapter_3:
 
     a "{size=-10}Mogę oddychać, ale nie w pełni.{/size}"
 
-    show alysia at right, water_tint
-    show cotard at left, water_tint
+    show alysia at right, water
+    show Cotard at left, water
 
     "Cotard patrzy na nią."
 

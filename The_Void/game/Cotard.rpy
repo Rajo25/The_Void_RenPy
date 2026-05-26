@@ -1,11 +1,8 @@
 transform scale_cotard:
     zoom 0.4
 
-#image wyciete_swiatlo = AlphaMask("moje_swiatlo.png", "cotard_pose_normal.png")
-
 layeredimage Cotard:
     at scale_cotard
-    
 
     #body
     group body:
@@ -66,16 +63,4 @@ layeredimage Cotard:
         attribute Speak_Angry:
             "Cotard/Speak_Angry.png"
 
-
-
-    #shader
-    group shader:
-        attribute night:
-            night_sh
-        attribute sunset:
-            sunset_sh
-        attribute day:
-            day_sh
-        attribute crystal:
-            crystal_sh
   
