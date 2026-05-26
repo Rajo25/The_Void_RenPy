@@ -22,9 +22,6 @@ define k2 = Character("Kobieta 2", color="#7700ff")
 image alysia : 
     "alysia happy.png" 
     zoom 0.2
-#image cotard :
-#    "cotard normal" 
-#    zoom 0.4
 image uczniowie :
     "uczniowie" 
     zoom 0.5
@@ -36,13 +33,6 @@ image meduza :
     zoom 0.5
 
 
-
-
-
-
-
-
-
 # The game starts here.
 
 label start:
@@ -51,7 +41,7 @@ label start:
     # add a file (named either "bg mountain.png" or "bg mountain.jpg") to the
     # images directory to show it.
 
-    scene bg mountain
+    scene bg home
     # These display lines of dialogue.
 
     n "Jestem osobą, która pyta.{w=1}\ Nie potrafię inaczej, nigdy nie potrafiłam."

@@ -39,27 +39,27 @@ transform apply_grad(t="#ffffff", b="#000000"):
 
 #tint
 transform night_tint:
-    matrixcolor TintMatrix("#132f4b8e")
+    matrixcolor TintMatrix("#385e853f")
 transform day_tint:
-    matrixcolor TintMatrix("#ffe08b50")
+    matrixcolor TintMatrix("#ffffff00")
 transform sunset_tint:
-    matrixcolor TintMatrix("#a3642a")
+    matrixcolor TintMatrix("#ad7643")
 transform crystal_tint:
     matrixcolor TintMatrix("#9668d35d")
 transform water_tint:
-    matrixcolor TintMatrix("#35806442")
+    matrixcolor TintMatrix("#0b412f7c")
 
 #gradient
 transform grad_night:
-    apply_grad(t="#83e6ff67", b="#0d0e41")
+    apply_grad(t="#def8ff81", b="#161861a2")
 transform grad_sunset:
     apply_grad(t="#ffaa5588", b="#331100")
 transform grad_day:
-    apply_grad(t="#44444466", b="#000000")
+    apply_grad(t="#ffffff3f", b="#ff893a2f")
 transform grad_crystal:
-    apply_grad(t="#ff00f24f", b="#00b7ff63")
+    apply_grad(t="#ff2cf483", b="#00b7ff88")
 transform grad_water:
-    apply_grad(t="#ff00f24f", b="#00b7ff63")
+    apply_grad(t="#56a5ff93", b="#0b221598")
 
 
 #połaczone
