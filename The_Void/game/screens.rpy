@@ -292,45 +292,63 @@ screen navigation():
     vbox:
         style_prefix "navigation"
 
-        xpos gui.navigation_xpos
-        yalign 0.5
+        xalign 0.5
+        yalign 0.7
 
         spacing gui.navigation_spacing
 
         if main_menu:
+            imagebutton:
+                idle "gui/New_game.png"
+                hover Transform("gui/New_game.png", matrixcolor=TintMatrix("#8ac7ff9d"))
+                action Start()
+                at Transform(zoom=0.1)
+                
+                
+            #textbutton _("Start") action Start()
+            imagebutton:
+                idle "gui/Continue.png"
+                hover Transform("gui/Continue.png", matrixcolor=TintMatrix("#8ac7ff9d"))
+                action ShowMenu("load")
+                at Transform(zoom=0.2)
+            imagebutton:
+                idle "gui/Options.png"
+                hover Transform("gui/Options.png", matrixcolor=TintMatrix("#8ac7ff9d"))
+                action ShowMenu("preferences")
+                at Transform(zoom=0.2)
 
-            textbutton _("Start") action Start()
+        #     textbutton _("History") action ShowMenu("history")
 
-        else:
+        #     textbutton _("Save") action ShowMenu("save")
 
-            textbutton _("History") action ShowMenu("history")
+        # textbutton _("Load") action ShowMenu("load")
 
-            textbutton _("Save") action ShowMenu("save")
-
-        textbutton _("Load") action ShowMenu("load")
-
-        textbutton _("Preferences") action ShowMenu("preferences")
+        # textbutton _("Preferences") action ShowMenu("preferences")
 
         if _in_replay:
 
             textbutton _("End Replay") action EndReplay(confirm=True)
 
-        elif not main_menu:
+        imagebutton: 
+            idle "gui/Info.png"
+            hover Transform("gui/Info.png", matrixcolor=TintMatrix("#8ac7ff9d"))
+            action ShowMenu("about")
+            at Transform(zoom=0.2)
 
-            textbutton _("Main Menu") action MainMenu()
+        # if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
-        textbutton _("About") action ShowMenu("about")
-
-        if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
-
-            ## Help isn't necessary or relevant to mobile devices.
-            textbutton _("Help") action ShowMenu("help")
+        #     ## Help isn't necessary or relevant to mobile devices.
+        #     textbutton _("Help") action ShowMenu("help")
 
         if renpy.variant("pc"):
 
             ## The quit button is banned on iOS and unnecessary on Android and
             ## Web.
-            textbutton _("Quit") action Quit(confirm=not main_menu)
+            imagebutton:
+                idle "gui/Quit.png"
+                hover Transform("gui/Quit.png", matrixcolor=TintMatrix("#8ac7ff9d"))
+                action Quit(confirm=not main_menu)
+                at Transform(zoom=0.1)
 
 
 style navigation_button is gui_button
@@ -357,24 +375,29 @@ screen main_menu():
 
     add gui.main_menu_background
 
+    add "gui/title.png":
+        xalign 0.5  
+        yalign 0.05
+        zoom 0.15
+
     ## This empty frame darkens the main menu.
-    frame:
-        style "main_menu_frame"
+    #frame:
+    #    style "main_menu_frame"
 
     ## The use statement includes another screen inside this one. The actual
     ## contents of the main menu are in the navigation screen.
     use navigation
 
-    if gui.show_name:
-
-        vbox:
-            style "main_menu_vbox"
-
-            text "[config.name!t]":
-                style "main_menu_title"
-
-            text "[config.version]":
-                style "main_menu_version"
+    #if gui.show_name:
+#
+#        vbox:
+#            style "main_menu_vbox"
+#
+#            text "[config.name!t]":
+#               style "main_menu_title"
+#
+#            text "[config.version]":
+#                style "main_menu_version"
 
 
 style main_menu_frame is empty
@@ -473,7 +496,7 @@ screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
 
                     transclude
 
-    use navigation
+    #use navigation
 
     textbutton _("Return"):
         style "return_button"
