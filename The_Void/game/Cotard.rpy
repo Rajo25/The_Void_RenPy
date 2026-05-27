@@ -17,9 +17,9 @@ layeredimage Cotard:
   
     #face
     group face:
-        attribute speak default:
+        attribute speak:
             "Cotard/Head_N_Speak.png"
-        attribute notspeak:
+        attribute notspeak default:
             "Cotard/Head_Speak.png"
         
    
@@ -29,7 +29,7 @@ layeredimage Cotard:
             "Cotard/Eyes_Lost.png"
         attribute Angry:
             "Cotard/Eyes_Angry.png"
-        attribute Bitch:
+        attribute Bitch default:
             "Cotard/Eyes_Bitch.png"
         attribute Crying:
             "Cotard/Eyes_Crying.png"
@@ -48,7 +48,7 @@ layeredimage Cotard:
         #emotion not sepak
         attribute Digust:
             "Cotard/Disgust.png"
-        attribute Sad:
+        attribute Sad default:
             "Cotard/Sad.png"
         attribute Smile:
             "Cotard/Smile.png"
