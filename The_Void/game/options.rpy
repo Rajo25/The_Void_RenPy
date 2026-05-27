@@ -12,6 +12,8 @@
 ##
 ## The _() surrounding the string marks it as eligible for translation.
 
+define _game_menu_screen = "pause_menu"
+
 define config.name = _("The_Void")
 
 

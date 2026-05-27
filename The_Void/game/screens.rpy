@@ -1642,3 +1642,110 @@ style slider_vbox:
 style slider_slider:
     variant "small"
     xsize 900
+
+
+screen pause_menu():
+    
+    #transform hover_tint:
+    #    matrixcolor TintMatrix("#0b412f7c")
+
+    tag menu # Mówi silnikowi, że to jest menu i ma zatrzymać grę
+
+    # 1. Czarne, półprzezroczyste tło przyciemniające grę
+    add Solid("#000000a7")
+
+    # 2. Kwadrat na środku ekranu
+
+    add "gui/Pause_Menu/Pause_Menu.png":
+        xalign 0.5
+        yalign 0.5
+        zoom 0.5
+       
+    vbox:
+        xalign 0.5
+        yalign 0.47
+        spacing 15
+
+        button:
+            action Return()
+            xysize (250, 70)
+            
+            idle_background Transform("gui/Pause_Menu/Button.png", size=(250, 70))
+            hover_background Transform("gui/Pause_Menu/Button.png", size=(250, 70), alpha=0.6)
+            
+            text "Return":
+                align (0.48, 0.5)
+                #font "gui/twoj_font.ttf"
+                size 40
+                idle_color "#FEEDC4"
+                hover_color "#edcf9e"
+
+        button:
+            action ShowMenu("save")
+            xysize (250, 70)
+       
+            idle_background Transform("gui/Pause_Menu/Button.png", size=(250, 70))
+            hover_background Transform("gui/Pause_Menu/Button.png", size=(250, 70), alpha=0.6)
+            
+            text "Save":
+                align (0.48, 0.5)
+                #font "gui/twoj_font.ttf"
+                size 35
+                idle_color "#FEEDC4"
+                hover_color "#edcf9e"
+        button:
+            action ShowMenu("load")
+            xysize (250, 70)
+            
+            idle_background Transform("gui/Pause_Menu/Button.png", size=(250, 70))
+            hover_background Transform("gui/Pause_Menu/Button.png", size=(250, 70), alpha=0.6)
+            
+            text "Load":
+                align (0.48, 0.5)
+                #font "gui/twoj_font.ttf"
+                size 35
+                idle_color "#FEEDC4"
+                hover_color "#edcf9e"
+
+        button:
+            action ShowMenu("preferences")
+            xysize (250, 70)
+        
+            idle_background Transform("gui/Pause_Menu/Button.png", size=(250, 70))
+            hover_background Transform("gui/Pause_Menu/Button.png", size=(250, 70), alpha=0.6)
+            
+            text "Options":
+                align (0.48, 0.5)
+                #font "gui/twoj_font.ttf"
+                size 35
+                idle_color "#FEEDC4"
+                hover_color "#edcf9e"
+
+        button:
+            action MainMenu()
+            xysize (250, 70)
+         
+            idle_background Transform("gui/Pause_Menu/Button.png", size=(250, 70))
+            hover_background Transform("gui/Pause_Menu/Button.png", size=(250, 70), alpha=0.6)
+            
+            text "Main Menu":
+                align (0.48, 0.5)
+                #font "gui/twoj_font.ttf"
+                size 35
+                idle_color "#FEEDC4"
+                hover_color "#edcf9e"
+
+        
+        button:
+            action Quit(confirm=True)
+            xysize (250, 70)
+    
+            idle_background Transform("gui/Pause_Menu/Button.png", size=(250, 70))
+            hover_background Transform("gui/Pause_Menu/Button.png", size=(250, 70), alpha=0.6)
+            
+            text "Quit":
+                align (0.48, 0.5)
+                #font "gui/twoj_font.ttf"
+                size 35
+                idle_color "#FEEDC4"
+                hover_color "#edcf9e"
