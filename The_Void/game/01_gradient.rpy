@@ -7,24 +7,36 @@ init python:
     """, vertex_300="""
         v_tex_coord = a_tex_coord;
     """, fragment_300="""
+        vec4 orig = gl_FragColor;
+        
+        
+        if (orig.a < 0.0001) {
+            discard;
+        }
+
+       
+        vec3 base = clamp(orig.rgb / orig.a, 0.0, 1.0);
+
         float pos = v_tex_coord.y;
         vec4 grad = mix(u_gradient_top, u_gradient_bottom, pos);
+        
         vec3 res;
-        
-        
-        if (gl_FragColor.r < 0.5) res.r = 2.0 * gl_FragColor.r * grad.r;
-        else res.r = 1.0 - 2.0 * (1.0 - gl_FragColor.r) * (1.0 - grad.r);
-        
-        if (gl_FragColor.g < 0.5) res.g = 2.0 * gl_FragColor.g * grad.g;
-        else res.g = 1.0 - 2.0 * (1.0 - gl_FragColor.g) * (1.0 - grad.g);
-        
-        if (gl_FragColor.b < 0.5) res.b = 2.0 * gl_FragColor.b * grad.b;
-        else res.b = 1.0 - 2.0 * (1.0 - gl_FragColor.b) * (1.0 - grad.b);
-        
-        gl_FragColor.rgb = mix(gl_FragColor.rgb, res, grad.a);
-        gl_FragColor.rgb = gl_FragColor.rgb * gl_FragColor.a;
-    """)
 
+        if (grad.r < 0.5) res.r = base.r + (2.0 * grad.r - 1.0) * (base.r - base.r * base.r);
+        else res.r = base.r + (2.0 * grad.r - 1.0) * (sqrt(base.r) - base.r);
+        
+        if (grad.g < 0.5) res.g = base.g + (2.0 * grad.g - 1.0) * (base.g - base.g * base.g);
+        else res.g = base.g + (2.0 * grad.g - 1.0) * (sqrt(base.g) - base.g);
+        
+        if (grad.b < 0.5) res.b = base.b + (2.0 * grad.b - 1.0) * (base.b - base.b * base.b);
+        else res.b = base.b + (2.0 * grad.b - 1.0) * (sqrt(base.b) - base.b);
+        
+      
+        vec3 final_rgb = mix(base, res, grad.a);
+        
+        
+        gl_FragColor.rgb = final_rgb * orig.a;
+    """)
     def hex_to_gl(hex_str):
         h = hex_str.lstrip('#')
         if len(h) == 8:
@@ -32,18 +44,18 @@ init python:
         return tuple(int(h[i:i+2], 16)/255.0 for i in (0, 2, 4)) + (1.0,)
 
 # --- SILNIK GRADIENTU ---
-transform apply_grad(t="#ffffff", b="#000000"):
+transform apply_grad(t="#80808000", b="#80808000"):
     shader "gradient_overlay"
     u_gradient_top hex_to_gl(t)
     u_gradient_bottom hex_to_gl(b)
 
 #tint
 transform night_tint:
-    matrixcolor TintMatrix("#385e853f")
+    matrixcolor TintMatrix("#2c4c6b69")
 transform day_tint:
     matrixcolor TintMatrix("#ffffff00")
 transform sunset_tint:
-    matrixcolor TintMatrix("#ad7643")
+    matrixcolor TintMatrix("#0073ff")
 transform crystal_tint:
     matrixcolor TintMatrix("#9668d35d")
 transform water_tint:
@@ -51,15 +63,15 @@ transform water_tint:
 
 #gradient
 transform grad_night:
-    apply_grad(t="#def8ff81", b="#161861a2")
+    apply_grad(t="#def8ff93", b="#121331ff")
 transform grad_sunset:
-    apply_grad(t="#ffaa5588", b="#331100")
+    apply_grad(t="#ff0000ff", b="#22ff00ff")
 transform grad_day:
-    apply_grad(t="#ffffff3f", b="#ff893a2f")
+    apply_grad(t="#f0ddb398", b="#66422469")
 transform grad_crystal:
     apply_grad(t="#ff2cf483", b="#00b7ff88")
 transform grad_water:
-    apply_grad(t="#56a5ff93", b="#0b221598")
+    apply_grad(t="#7ebaffa4", b="#0b221598")
 
 
 #połaczone

@@ -236,7 +236,7 @@ label Chapter_1:
     c "…"
 
     show alysia at right
-    show Cotard crossed_arms notspeak Lost Not_Happy night at left,night
+    show Cotard crossed_arms notspeak Lost Not_Happy at left,night
     
     c "Tu nic nie ma."
 
@@ -373,7 +373,7 @@ label Chapter_1:
     jump choice2chapter1_done
 
     label choice2chapter1_done:
-     show Cotard speak Speak_Not_Happy
+    show Cotard speak Speak_Not_Happy
        
     c "Nie odwracaj się."
     c "Już tego nie ma."
@@ -405,7 +405,7 @@ label Chapter_1:
     jump choice3chapter1_done
 
     label choice3chapter1_2:
-     show Cotard speak Speak_Not_Happy
+    show Cotard speak Speak_Not_Happy
        
     c "To normalne."
     c "Przyzwyczaisz się."
@@ -461,8 +461,8 @@ label Chapter_1:
     nvl clear
 
     scene bg flower plain
-    show alysia at right, day
-    show Cotard crossed_arms notspeak Lost Not_Happy day at left,day
+    show alysia at right,day
+    show Cotard crossed_arms notspeak Lost Not_Happy at left, day
     
 
     a "Cotard!"
@@ -564,7 +564,7 @@ label Chapter_1:
     n "Coś bardziej pomiędzy śmiechem a buczeniem"
     nvl clear
     show alysia at right , day
-    show Cotard crossed_arms notspeak Lost Not_Happy day at left,day
+    show Cotard crossed_arms notspeak Lost Not_Happy at left,day
     unon "PRRRRRRRRRRR."
 
 
@@ -938,7 +938,7 @@ label Chapter_1:
     n "Po raz pierwszy jego głos"
     n "drży."
     nvl clear
-    show Cotard crossed_arms notspeak Lost Not_Happy day at left,day
+    show Cotard crossed_arms notspeak Lost Not_Happy at left,day
     show Cotard speak Speak_Not_Happy
     
     c "{size=+20}Alysia…{/size}"
@@ -1063,7 +1063,7 @@ label Chapter_2:
     "Docierają na sam dół schodów."
     scene bg ice cavern
     show alysia at right , crystal
-    show Cotard crossed_arms notspeak Lost Not_Happy crystal at left,crystal
+    show Cotard crossed_arms notspeak Lost Not_Happy at left,crystal
 
     "Przed nimi rozpościera się niekończąca się jaskinia."
 
@@ -1247,7 +1247,7 @@ label Chapter_2:
 
     scene bg ice cavern
     show alysia at right, crystal
-    show Cotard crossed_arms notspeak Lost Not_Happy day at left,day
+    show Cotard crossed_arms notspeak Lost Not_Happy at left, crystal
 
     a "Oni wiedzieli…"
     a "więcej niż mówili…"
@@ -1331,7 +1331,7 @@ label Chapter_2:
 
     scene bg ice cavern
     show alysia at right , crystal
-    show Cotard crossed_arms notspeak Lost Not_Happy crystal at left,crystal
+    show Cotard crossed_arms notspeak Lost Not_Happy at left,crystal
 
     show Cotard speak Speak_Not_Happy
     
@@ -1429,7 +1429,7 @@ label Chapter_2:
 
     scene bg ice cavern
     show alysia at right , crystal
-    show Cotard crossed_arms notspeak Lost Not_Happy crystal at left,crystal
+    show Cotard crossed_arms notspeak Lost Not_Happy at left,crystal
 
     show Cotard speak Speak_Not_Happy
    
@@ -1596,7 +1596,7 @@ label chapter_3:
     a "{size=-10}Mogę oddychać, ale nie w pełni.{/size}"
 
     show alysia at right, water
-    show Cotard crossed_arms notspeak Lost Not_Happy water at left,water
+    show Cotard crossed_arms notspeak Lost Not_Happy at left,water
 
     "Cotard patrzy na nią."
 
