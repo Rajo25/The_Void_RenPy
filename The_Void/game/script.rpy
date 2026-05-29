@@ -189,29 +189,12 @@ label start:
 label Chapter_1:
 
     scene bg book
-
-    n "{size=+20}Dziennik Alysii Wpis 001{/size}"
-
-    n "Dla moich uczniów"
-
-    n "Jeśli czytacie te słowa, to wiecie już, że jestem w miejscu, do którego nikt nie powinien wchodzić."
-    n "On… mówił mi, żebym tego nie robiła."
-    n "Że nie wszystko jest do odkrycia."
-    n "Że niektóre tajemnice istnieją tylko po to, by pozostać tajemnicami."
-
-    n "Ale jeśli świat ma sens, to musi istnieć jego źródło."
-
-    n "A jeśli go nie ma…"
-    n "…to chcę wiedzieć dlaczego."
-
-    n "Nie idę tam jako bohaterka."
-    n "Idę jako nauczycielka, która nie potrafi znieść niewiedzy."
-
-    n "Chcę wiedzieć, co się stało z moimi rodzicami."
-
-    n "I nie jestem sama."
-    n "Nie martwcie się."
-    n "{b}On się mną zaopiekuje.{/b}"
+   
+    show screen diary_page
+   
+    pause
+   
+    hide screen diary_page
     nvl clear
 
     scene bg void entrance at center
@@ -254,13 +237,13 @@ label Chapter_1:
     "Długo."
     "Zbyt długo."
     
-    show Cotard speak Speak_Not_Happy
+    show Cotard Arm_On_Body Lost speak Speak_Not_Happy
 
     c "Nie czuję strachu."
     c "…"
     c "To nie jest odwaga."
 
-    show Cotard notspeak Not_Happy
+    show Cotard Bitch notspeak Not_Happy
 
     menu:
         "Wiem, to głupota.":
@@ -269,7 +252,7 @@ label Chapter_1:
             jump choice1chapter1_2
 
     label choice1chapter1_1:
-    show Cotard speak Speak_Smile
+    show Cotard Happy speak Speak_Smile
     c "To dobrze."
     c "Przynajmniej to się nie zmieniło"  
     show Cotard notspeak Not_Happy  
@@ -291,7 +274,7 @@ label Chapter_1:
 
     a "Słyszysz to?"
     
-    show Cotard speak Speak_Not_Happy
+    show Cotard Bitch speak Speak_Not_Happy
     
     c "Nie"
     c "…i właśnie to powinno cię martwić."
@@ -301,9 +284,9 @@ label Chapter_1:
     a "Jesteś jedyną osobą, która może tam wejść i wrócić."
 
     "Cotard przekrzywia głowę jakby analizował coś czego nie da się zrozumieć"
-    show Cotard speak Speak_Not_Happy
+    show Cotard Small_Cry speak Speak_Not_Happy
     c "Boje się, jak na Ciebie zadziała to otoczenie."
-    show Cotard notspeak Not_Happy
+    show Cotard notspeak  Not_Happy
 
     menu:
         "Też się martwię":
@@ -319,7 +302,7 @@ label Chapter_1:
     "Cotard patrzy na nią długo."
     "Jego twarz pozostaje niemal nieruchoma, ale głos staje się cichszy."
 
-    show Cotard speak Speak_Not_Happy
+    show Cotard Arm_Pocket Bitch speak Speak_Not_Happy
     c "…"
     c "Nie martw się o mnie."
     c "Na mnie już Nicość wypróbowała wszystko, co mogła."
@@ -332,11 +315,11 @@ label Chapter_1:
     "Jakby nie potrafił znaleźć odpowiedzi."
     "Po chwili rusza dalej."
 
-    show Cotard speak Speak_Not_Happy
+    show Cotard speak Angry Speak_Not_Happy
     
     c "…to nie jest argument."
 
-    show Cotard notspeak Not_Happy
+    show Cotard notspeak Bitch Not_Happy
     
     "Alysia lekko się uśmiecha."
     a "Jest."
@@ -349,7 +332,7 @@ label Chapter_1:
 
     "Spogląda w nicość"
 
-    show Cotard speak Speak_Not_Happy
+    show Cotard speak Bitch Speak_Not_Happy
     
     c "Dziwne."
     c "Ludzie zawsze próbują nadać sens temu, czego się boją."
@@ -360,7 +343,7 @@ label Chapter_1:
     a "A ty?"
     a "Na czym budujesz strój spokój"
 
-    show Cotard speak Speak_Not_Happy
+    show Cotard Arm_On_Body speak Speak_Not_Happy
    
     c "Na pustce."
     c "Nie oczekuję już niczego dobrego."
@@ -373,7 +356,7 @@ label Chapter_1:
     jump choice2chapter1_done
 
     label choice2chapter1_done:
-    show Cotard speak Speak_Not_Happy
+    show Cotard speak Pain_2 Speak_Not_Happy
        
     c "Nie odwracaj się."
     c "Już tego nie ma."
@@ -382,12 +365,12 @@ label Chapter_1:
     
     a "Czego?"
 
-    show Cotard speak Speak_Not_Happy
+    show Cotard speak Bitch Speak_Not_Happy
     
     c "Góry."
     c "Zapomniałem jak wyglądała."
 
-    show Cotard notspeak Not_Happy
+    show Cotard notspeak  Not_Happy
     
     menu:
         "Co?! To się dzieje za szybko…":

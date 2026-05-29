@@ -1749,3 +1749,92 @@ screen pause_menu():
                 size 35
                 idle_color "#FEEDC4"
                 hover_color "#edcf9e"
+
+screen diary_page():
+
+    add "bg book"
+
+    # LEWA STRONA
+    frame:
+        background None
+
+        xpos 200
+        ypos 120
+        xsize 520
+        ysize 700
+
+        vbox:
+            spacing 18
+
+            text "Dziennik Alysii Wpis 001":
+                size 50
+                color "#f5f0e8"
+
+            text "Dla moich uczniów":
+                size 34
+                color "#f5f0e8"
+
+            text "Jeśli czytacie te słowa, to wiecie już, że jestem w miejscu, do którego nikt nie powinien wchodzić.":
+                size 30
+                color "#f5f0e8"
+
+            text "On… mówił mi, żebym tego nie robiła.":
+                size 30
+                color "#f5f0e8"
+
+            text "Że nie wszystko jest do odkrycia.":
+                size 30
+                color "#f5f0e8"
+
+            text "Że niektóre tajemnice istnieją tylko po to, by pozostać tajemnicami.":
+                size 30
+                color "#f5f0e8"
+
+            text "Ale jeśli świat ma sens, to musi istnieć jego źródło.":
+                size 30
+                color "#f5f0e8"
+
+            text "A jeśli go nie ma…":
+                size 30
+                color "#f5f0e8"
+
+            text "…to chcę wiedzieć dlaczego.":
+                size 30
+                color "#f5f0e8"
+
+
+    # PRAWA STRONA
+    frame:
+        background None
+
+        xpos 1000
+        ypos 140
+        xsize 520
+        ysize 700
+
+        vbox:
+            spacing 18
+
+            text "Nie idę tam jako bohaterka.":
+                size 30
+                color "#f5f0e8"
+
+            text "Idę jako nauczycielka, która nie potrafi znieść niewiedzy.":
+                size 30
+                color "#f5f0e8"
+
+            text "Chcę wiedzieć, co się stało z moimi rodzicami.":
+                size 30
+                color "#f5f0e8"
+
+            text "I nie jestem sama.":
+                size 30
+                color "#f5f0e8"
+
+            text "Nie martwcie się.":
+                size 30
+                color "#f5f0e8"
+
+            text "{b}On się mną zaopiekuje.{/b}":
+                size 30
+                color "#f5f0e8"
