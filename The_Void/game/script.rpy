@@ -41,13 +41,15 @@ label start:
     # add a file (named either "bg mountain.png" or "bg mountain.jpg") to the
     # images directory to show it.
 
-<<<<<<< HEAD
-    scene bg town
-=======
+#<<<<<<< HEAD
+    
+#=======
     play music 'audio/Prolog.mp3'
-    scene bg home
->>>>>>> origin/main
+    
+#>>>>>>> origin/main
     # These display lines of dialogue.
+
+    scene bg town
 
     n "Jestem osobą, która pyta.{w=1}\ Nie potrafię inaczej, nigdy nie potrafiłam."
     n "Pytam o wszystko, jakby ktoś zapisał we mnie wewnętrzny przymus aby zrozumieć niezrozumiałe."
@@ -73,7 +75,7 @@ label start:
     n "Może to okrutne, ale uważam, że moi rodzice nigdy nie myśleli trzeźwo."
     n "Choć jestem im za to wdzięczna, zabrali do domu obce dziecko i potraktowali jak własne."
     n "Kto normalny tak robi?!"
-
+ 
     n "Zawsze wszystko robili po swojemu."
     n "Nasze wychowanie nie odbiegało od dziwnego schematu, w którym postanowili uczyć nas samodzielnie w domu zamiast posłać do szkoły."
     n "Gdy skończyłam cztery wiosny uczyli nas zielarstwa i podstawowej pierwszej pomocy."
