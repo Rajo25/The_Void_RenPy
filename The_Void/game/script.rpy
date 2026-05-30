@@ -41,12 +41,10 @@ label start:
     # add a file (named either "bg mountain.png" or "bg mountain.jpg") to the
     # images directory to show it.
 
-#<<<<<<< HEAD
     
-#=======
     play music 'audio/Prolog.mp3'
     
-#>>>>>>> origin/main
+
     # These display lines of dialogue.
 
     scene bg town
