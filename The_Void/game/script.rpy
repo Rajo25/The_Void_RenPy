@@ -41,7 +41,7 @@ label start:
     # add a file (named either "bg mountain.png" or "bg mountain.jpg") to the
     # images directory to show it.
 
-    scene bg home
+    scene bg town
     # These display lines of dialogue.
 
     n "Jestem osobą, która pyta.{w=1}\ Nie potrafię inaczej, nigdy nie potrafiłam."
@@ -173,7 +173,7 @@ label start:
     n "Ludzie dziwnie na nas patrzą."
     n "Gdyby tylko umieli w nim dostrzec, co ja…"
 
-    scene bg mountain
+    scene bg home
 
     n "Wczoraj spytałam go co robi w tej swojej szopie"
     n "Powiedziałam, że chcę wiedzieć BO MAM PRAWO."
@@ -294,6 +294,10 @@ label Chapter_1:
         "Przekonamy się.":
             jump choice2chapter1_2
     label choice2chapter1_1:
+    scene bg flower plain dark 
+    show alysia at right , day
+    show Cotard crossed_arms notspeak Lost Not_Happy at left,day
+    
     a "Też się martwię."
     a "Boję się, że nagle coś się zmieni i Nicość zacznie działać również na ciebie."
     a "Że odbierze mi nawet tę pewność, którą teraz mam."
@@ -301,7 +305,7 @@ label Chapter_1:
 
     "Cotard patrzy na nią długo."
     "Jego twarz pozostaje niemal nieruchoma, ale głos staje się cichszy."
-
+    
     show Cotard Arm_Pocket Bitch speak Speak_Not_Happy
     c "…"
     c "Nie martw się o mnie."
