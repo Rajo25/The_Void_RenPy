@@ -20,7 +20,7 @@ define om = Character("Stary Mężczyzna", color="#474747")
 define k1 = Character("Kobieta 1", color="#b9009a")
 define k2 = Character("Kobieta 2", color="#7700ff")
 image alysia : 
-    "alysia happy.png" 
+    "alysia_concerned.png" 
     zoom 0.2
 image uczniowie :
     "uczniowie" 
@@ -41,6 +41,7 @@ label start:
     # add a file (named either "bg mountain.png" or "bg mountain.jpg") to the
     # images directory to show it.
 
+    play music 'audio/Prolog.mp3'
     scene bg home
     # These display lines of dialogue.
 
@@ -197,6 +198,7 @@ label Chapter_1:
     hide screen diary_page
     nvl clear
 
+    play music 'audio/Chapter 1.mp3'
     scene bg void entrance at center
 
     n "{b}{size=+60}Rozdział Pierwszy{/size}{/b}"
@@ -212,13 +214,13 @@ label Chapter_1:
     nvl clear
 
 
-    show alysia at night
 
     a "…to tutaj."
 
     c "…"
 
     show alysia at right
+    show alysia at night
     show Cotard crossed_arms notspeak Lost Not_Happy at left,night
     
     c "Tu nic nie ma."
@@ -1000,6 +1002,7 @@ label Chapter_1:
 label Chapter_2:
 
     #dodać czarny ekran
+    play music 'audio/Chapter 2.mp3'
     scene bg black
 
     n "{size=+60}Rozdział Drugi{/size}"
@@ -1509,6 +1512,7 @@ label Chapter_2:
 label chapter_3: 
 
     #czarne tło
+    play music 'audio/Chapter 3.mp3'
     scene bg black
 
     n "{b}{size=+60}Rozdział 3{/size}{/b}"
