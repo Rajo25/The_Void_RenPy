@@ -138,19 +138,25 @@ style window:
     background Image("gui/textbox.png", xalign=0.5, yalign=1.0)
 
 style namebox:
-    xpos gui.name_xpos
-    xanchor gui.name_xalign
-    xsize gui.namebox_width
-    ypos gui.name_ypos
-    ysize gui.namebox_height
+    xpos 0.15
+    ypos -89
+    
+    xminimum 300   # Minimalna szerokość (dla krótkich imion)
+    xsize None     # Zdejmujemy sztywny kaganiec szerokości! (Pudełko może rosnąć)
+    ysize 100      # Wysokość zostaje sztywna
+    
+    # Używamy Frame. Cyferki (np. 15, 15) to marginesy lewy/prawy Twojego obrazka, 
+    # których silnik ma NIE rozciągać (żeby nie zepsuć krawędzi ramki).
+    background Frame("gui/namebox.png", 0, 0) 
+    
+    padding (30, 0) # Margines dla tekstu, żeby nie dotykał ramki
 
-    background Frame("gui/namebox.png", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
-    padding gui.namebox_borders.padding
+    #padding gui.namebox_borders.padding
 
 style say_label:
     properties gui.text_properties("name", accent=True)
-    xalign gui.name_xalign
-    yalign 0.5
+    xalign 0.5
+    yalign 0.2
 
 style say_dialogue:
     properties gui.text_properties("dialogue")
@@ -235,6 +241,43 @@ style choice_button_text is default:
 ## The quick menu is displayed in-game to provide easy access to the out-of-game
 ## menus.
 
+screen history_menu(title, scroll=None, yinitial=0.0, spacing=0):
+    
+    # 1. TWOJE TŁO
+    add "gui/main_menu.png"
+
+    # 2. PRZYCISK RETURN W NOWYM MIEJSCU
+    button:
+        action Return()
+        xalign 0.03
+        yalign 0.96
+        xysize (250, 70)
+                    
+        idle_background Transform("gui/Pause_Menu/Button.png", size=(250, 70))
+        hover_background Transform("gui/Pause_Menu/Button.png", size=(250, 70), alpha=0.6)
+                    
+        text "Return":
+            align (0.48, 0.5)
+            size 40
+            idle_color "#ffffff"
+            hover_color "#ffffff60"
+
+    frame:
+        style "game_menu_content_frame"  
+        
+        viewport:
+            yinitial yinitial
+            scrollbars "vertical"
+            mousewheel True
+            draggable True
+            pagekeys True
+            side_yfill True
+            
+            vbox:
+                spacing spacing
+                transclude
+
+
 screen quick_menu():
 
     ## Ensure this appears on top of other screens.
@@ -243,17 +286,70 @@ screen quick_menu():
     if quick_menu:
 
         hbox:
-            style_prefix "quick"
-            style "quick_menu"
 
-            textbutton _("Back") action Rollback()
-            textbutton _("History") action ShowMenu('history')
-            textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
-            textbutton _("Auto") action Preference("auto-forward", "toggle")
-            textbutton _("Save") action ShowMenu('save')
-            textbutton _("Q.Save") action QuickSave()
-            textbutton _("Q.Load") action QuickLoad()
-            textbutton _("Prefs") action ShowMenu('preferences')
+            xalign 0.93
+            yalign 0.985
+            spacing 10
+            textbutton _("Cofnij"):
+                action Rollback()
+                xysize (100,50) 
+                text_align (0.5, 0.5) 
+                text_size 22
+                text_idle_color "#ffffffff"
+                text_hover_color "#ffffff60"
+                
+                
+                idle_background Transform("gui/Pause_Menu/Button.png", size=(100,50))
+                hover_background Transform("gui/Pause_Menu/Button.png", size=(100,50), alpha=0.7)
+            # style_prefix "quick"
+            #style "quick_menu"
+
+            textbutton _("Historia"):
+                action ShowMenu('history')
+                xysize (100,50) 
+                text_align (0.5, 0.5) 
+                text_size 22
+                text_idle_color "#ffffffff"
+                text_hover_color "#ffffff60"
+                
+               
+                idle_background Transform("gui/Pause_Menu/Button.png", size=(100,50))
+                hover_background Transform("gui/Pause_Menu/Button.png", size=(100,50), alpha=0.7)
+           
+            textbutton _("Pomiń"):
+                action Skip() alternate Skip(fast=True, confirm=True)
+                xysize (100,50) 
+                text_align (0.5, 0.5) 
+                text_size 22
+                text_idle_color "#ffffffff"
+                text_hover_color "#ffffff60"
+                
+              
+                idle_background Transform("gui/Pause_Menu/Button.png", size=(100,50))
+                hover_background Transform("gui/Pause_Menu/Button.png", size=(100,50), alpha=0.7)
+
+            textbutton _("Auto"):
+                action Preference("auto-forward", "toggle")
+                xysize (100,50) 
+                text_align (0.5, 0.5) 
+                text_size 22
+                text_idle_color "#ffffffff"
+                text_hover_color "#ffffff60"
+                
+              
+                idle_background Transform("gui/Pause_Menu/Button.png", size=(100,50))
+                hover_background Transform("gui/Pause_Menu/Button.png", size=(100,50), alpha=0.7)
+        
+            
+
+            # textbutton _("Back") action Rollback()
+            # textbutton _("History") action ShowMenu('history')
+            # textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
+            # textbutton _("Auto") action Preference("auto-forward", "toggle")
+            # textbutton _("Save") action ShowMenu('save')
+            # textbutton _("Q.Save") action QuickSave()
+            # textbutton _("Q.Load") action QuickLoad()
+            # textbutton _("Prefs") action ShowMenu('preferences')
 
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever
@@ -438,72 +534,145 @@ style main_menu_version:
 ## This screen is intended to be used with one or more children, which are
 ## transcluded (placed) inside it.
 
-screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
+screen game_menu(title, scroll=None, yscrollbar=True):
+    tag menu
 
-    style_prefix "game_menu"
+    add "gui/game_menu.png":
+        xalign 0.5
+        yalign 0.5
 
-    if main_menu:
-        add gui.main_menu_background
-    else:
-        add gui.game_menu_background
+    if title == "Save":
+        add "gui/save.png" xalign 0.5 yalign 0.05
+    elif title == "Load":
+        add "gui/load.png" xalign 0.5 yalign 0.05
+    elif title == "Preferences":
+        add "gui/load.png" xalign 0.5 yalign 0.05
+    elif title == "About":
+        add "gui/load.png" xalign 0.5 yalign 0.05
+    button:
+        action Return()
+        xalign 0.2
+        yalign 0.87
+        xysize (250, 70)
+                    
+        idle_background Transform("gui/Pause_Menu/Button.png", size=(250, 70))
+        hover_background Transform("gui/Pause_Menu/Button.png", size=(250, 70), alpha=0.6)
+                    
+        text "Return":
+            align (0.48, 0.5)
+            size 40
+            idle_color "#ffffff"
+            hover_color "#ffffff60"
 
     frame:
-        style "game_menu_outer_frame"
+        xalign 0.5
+        yalign 0.53
+        background None
+        padding (0, 0)
+        margin (0, 0)
 
-        hbox:
+        if scroll:
+            viewport:
+                scrollbars scroll
+                vscrollbar_unscrollable "hide"
+                mousewheel True
+                draggable True
+                has vbox
+                transclude
+        else:
+            transclude
 
-            ## Reserve space for the navigation section.
-            frame:
-                style "game_menu_navigation_frame"
+# screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
 
-            frame:
-                style "game_menu_content_frame"
+#     style_prefix "game_menu"
 
-                if scroll == "viewport":
+#     if main_menu:
+#         add gui.main_menu_background
+#     else:
+#         add gui.game_menu_background
+#         xalign 0.5
+#         yalign 0.5
 
-                    viewport:
-                        yinitial yinitial
-                        scrollbars "vertical"
-                        mousewheel True
-                        draggable True
-                        pagekeys True
+#     frame:
+#         style "game_menu_outer_frame"
+#         background None
 
-                        side_yfill True
+#         hbox:
 
-                        vbox:
-                            spacing spacing
+#             ## Reserve space for the navigation section.
+#             frame:
+#                 style "game_menu_navigation_frame"
 
-                            transclude
+#             frame:
+#                 style "game_menu_content_frame"
 
-                elif scroll == "vpgrid":
+#                 if scroll == "viewport":
 
-                    vpgrid:
-                        cols 1
-                        yinitial yinitial
+#                     viewport:
+#                         yinitial yinitial
+#                         scrollbars "vertical"
+#                         mousewheel True
+#                         draggable True
+#                         pagekeys True
 
-                        scrollbars "vertical"
-                        mousewheel True
-                        draggable True
-                        pagekeys True
+#                         side_yfill True
 
-                        side_yfill True
+#                         vbox:
+#                             spacing spacing
 
-                        spacing spacing
+#                             transclude
 
-                        transclude
+#                 elif scroll == "vpgrid":
 
-                else:
+#                     vpgrid:
+#                         cols 1
+#                         yinitial yinitial
 
-                    transclude
+#                         scrollbars "vertical"
+#                         mousewheel True
+#                         draggable True
+#                         pagekeys True
 
-    #use navigation
+#                         side_yfill True
 
-    textbutton _("Return"):
-        style "return_button"
+#                         spacing spacing
 
-        action Return()
+#                         transclude
 
-    label title
+#                 else:
+
+#                     transclude
+
+#     #use navigation
+
+#     button:
+#         action Return()
+#         xalign 0.1
+#         yalign 0.95 
+#         xysize (250, 70)
+                    
+#         idle_background Transform("gui/Pause_Menu/Button.png", size=(250, 70))
+#         hover_background Transform("gui/Pause_Menu/Button.png", size=(250, 70), alpha=0.6)
+                    
+#         text "Return":
+#             align (0.48, 0.5)
+#             size 40
+#             idle_color "#FEEDC4"
+#             hover_color "#ffffff67"
+
+    #label title
+    if title == "Save":
+                add "gui/save.png":
+                    xalign 0.5
+                    yalign 0.05 # Lekki margines od góry
+    elif title == "Load":
+                add "gui/load.png":
+                    xalign 0.5
+                    yalign 0.05
+    elif title == "Preferences":
+                add "gui/load.png":
+                    xalign 0.5
+                    yalign 0.05
 
     if main_menu:
         key "game_menu" action ShowMenu("main_menu")
@@ -569,26 +738,51 @@ style return_button:
 ## example of how to make a custom screen.
 
 screen about():
-
     tag menu
 
-    ## This use statement includes the game_menu screen inside this one. The
-    ## vbox child is then included inside the viewport inside the game_menu
-    ## screen.
-    use game_menu(_("About"), scroll="viewport"):
-
-        style_prefix "about"
-
+    use game_menu("About"):
+        
+        # Główny kontener
         vbox:
+            xalign 0.5
+            yalign 0.1  
+            spacing 20
+            xmaximum 1000  
 
-            label "[config.name!t]"
-            text _("Version [config.version!t]\n")
+    
+            text "Barbara Skowron\nMichał Chojak\nIzabela Olszewska\nOskar Mroziewicz" size 50 xalign 0.5 text_align 0.5 color "#ffffff" #font "gui/twoj_font.ttf"
+            null height 40
 
-            ## gui.about is usually set in options.rpy.
+            
+            #text "[config.name!t]" size 45 xalign 0.5 text_align 0.5 color "#FEEDC4" #font "gui/twoj_font.ttf"
+            text _("Wersja [config.version!t]") size 30 xalign 0.5 text_align 0.5 color "#ffffff" #font "gui/twoj_font.ttf"
+            
             if gui.about:
-                text "[gui.about!t]\n"
+                text "[gui.about!t]" size 30 xalign 0.5 text_align 0.5 color "#ffffff"# font "gui/twoj_font.ttf"
+            
+            # Ten długi tekst licencji teraz automatycznie się zawinie dzięki xmaximum w vboxie
+            text _("Stworzono w Ren'Py [renpy.version_only].\n\n[renpy.license!t]") size 30 xalign 0.5 text_align 0.5 color "#ffffff" #font "gui/twoj_font.ttf"
+# screen about():
 
-            text _("Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
+#     tag menu
+
+#     ## This use statement includes the game_menu screen inside this one. The
+#     ## vbox child is then included inside the viewport inside the game_menu
+#     ## screen.
+#     use game_menu(_("About"), scroll="viewport"):
+
+#         style_prefix "about"
+
+#         vbox:
+
+#             label "[config.name!t]"
+#             text _("Version [config.version!t]\n")
+
+#             ## gui.about is usually set in options.rpy.
+#             if gui.about:
+#                 text "[gui.about!t]\n"
+
+#             text _("Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
 
 
 style about_label is gui_label
@@ -626,6 +820,7 @@ screen file_slots(title):
 
     default page_name_value = FilePageNameInputValue(pattern=_("Page {}"), auto=_("Automatic saves"), quick=_("Quick saves"))
 
+    
     use game_menu(title):
 
         fixed:
@@ -640,11 +835,15 @@ screen file_slots(title):
 
                 key_events True
                 xalign 0.5
+                yalign 0.8
                 action page_name_value.Toggle()
 
                 input:
                     style "page_label_text"
                     value page_name_value
+                    color "#ffffff"            
+                    #font "gui/twoj_font.ttf"   
+                    size 35                    
 
             ## The grid of file slots.
             grid gui.file_slot_cols gui.file_slot_rows:
@@ -668,9 +867,11 @@ screen file_slots(title):
 
                         text FileTime(slot, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("empty slot")):
                             style "slot_time_text"
+                            idle_color "#ffffff"
 
                         text FileSaveName(slot):
                             style "slot_name_text"
+                            idle_color "#ffffff"
 
                         key "save_delete" action FileDelete(slot)
 
@@ -679,37 +880,50 @@ screen file_slots(title):
                 style_prefix "page"
 
                 xalign 0.5
-                yalign 1.0
+                yalign 0.9
+                #spacing 50
 
                 hbox:
                     xalign 0.5
+                    yalign 0.5
+                    #spacing 30
 
                     spacing gui.page_spacing
 
-                    textbutton _("<") action FilePagePrevious()
+                    textbutton _("<") action FilePagePrevious():
+                        text_idle_color "#ffffff"
                     key "save_page_prev" action FilePagePrevious()
 
                     if config.has_autosave:
-                        textbutton _("{#auto_page}A") action FilePage("auto")
+                        textbutton _("{#auto_page}A"):
+                            action FilePage("auto")
+                            text_idle_color "#ffffff"
 
                     if config.has_quicksave:
-                        textbutton _("{#quick_page}Q") action FilePage("quick")
+                        textbutton _("{#quick_page}Q"):
+                            action FilePage("quick")
+                            text_idle_color "#ffffff"
 
                     ## range(1, 10) gives the numbers from 1 to 9.
-                    for page in range(1, 10):
-                        textbutton "[page]" action FilePage(page)
+                    for page in range(1, 5):
+                        textbutton "[page]":
+                            action FilePage(page)
+                            text_idle_color "#ffffff"
 
-                    textbutton _(">") action FilePageNext()
-                    key "save_page_next" action FilePageNext()
+                    textbutton _(">")action FilePageNext(max=4):
+                        text_idle_color "#ffffff"
+                    key "save_page_next" action FilePageNext(max=4)
 
                 if config.has_sync:
                     if CurrentScreenName() == "save":
                         textbutton _("Upload Sync"):
                             action UploadSync()
+                            text_idle_color "#ffffff"
                             xalign 0.5
                     else:
                         textbutton _("Download Sync"):
                             action DownloadSync()
+                            text_idle_color "#ffffff"
                             xalign 0.5
 
 
@@ -757,9 +971,10 @@ screen preferences():
 
     tag menu
 
-    use game_menu(_("Preferences"), scroll="viewport"):
+    use game_menu("Preferences"):
 
         vbox:
+            
 
             hbox:
                 box_wrap True
@@ -767,17 +982,30 @@ screen preferences():
                 if renpy.variant("pc") or renpy.variant("web"):
 
                     vbox:
+                        
+                   
+
                         style_prefix "radio"
-                        label _("Display")
-                        textbutton _("Window") action Preference("display", "window")
-                        textbutton _("Fullscreen") action Preference("display", "fullscreen")
+                        label _("Display") 
+                        textbutton _("Okno"):
+                            action Preference("display", "window")
+                            text_idle_color "#ffffff"
+                        textbutton _("Pełen ekran"):
+                            action Preference("display", "fullscreen")
+                            text_idle_color "#ffffff"
 
                 vbox:
                     style_prefix "check"
-                    label _("Skip")
-                    textbutton _("Unseen Text") action Preference("skip", "toggle")
-                    textbutton _("After Choices") action Preference("after choices", "toggle")
-                    textbutton _("Transitions") action InvertSelected(Preference("transitions", "toggle"))
+                    label _("Pomiń")
+                    textbutton _("Unseen Text"):
+                        action Preference("skip", "toggle")
+                        text_idle_color "#ffffff"
+                    textbutton _("After Choices"):
+                        action Preference("after choices", "toggle")
+                        text_idle_color "#ffffff"
+                    textbutton _("Transitions"):
+                        action InvertSelected(Preference("transitions", "toggle"))
+                        text_idle_color "#ffffff"
 
                 ## Additional vboxes of type "radio_pref" or "check_pref" can be
                 ## added here, to add additional creator-defined preferences.
@@ -817,14 +1045,14 @@ screen preferences():
                                 textbutton _("Test") action Play("sound", config.sample_sound)
 
 
-                    if config.has_voice:
-                        label _("Voice Volume")
+                    # if config.has_voice:
+                    #     label _("Voice Volume")
 
-                        hbox:
-                            bar value Preference("voice volume")
+                    #     hbox:
+                    #         bar value Preference("voice volume")
 
-                            if config.sample_voice:
-                                textbutton _("Test") action Play("voice", config.sample_voice)
+                    #         if config.sample_voice:
+                    #             textbutton _("Test") action Play("voice", config.sample_voice)
 
                     if config.has_music or config.has_sound or config.has_voice:
                         null height gui.pref_spacing
@@ -832,6 +1060,7 @@ screen preferences():
                         textbutton _("Mute All"):
                             action Preference("all mute", "toggle")
                             style "mute_all_button"
+                            text_idle_color "#ffffff"
 
 
 style pref_label is gui_label
@@ -920,7 +1149,8 @@ screen history():
     ## Avoid predicting this screen, as it can be very large.
     predict False
     
-    use game_menu(_("History"), scroll=("vpgrid" if gui.history_height else "viewport"), yinitial=1.0, spacing=gui.history_spacing):
+
+    use history_menu(_("History"), scroll=("vpgrid" if gui.history_height else "viewport"), yinitial=1.0, spacing=gui.history_spacing):
 
         style_prefix "history"
 
@@ -1768,15 +1998,15 @@ screen diary_page():
 
             text "Dziennik Alysii Wpis 001":
                 size 50
-                color "#f5f0e8"
+                color "#000000"
 
             text "Dla moich uczniów":
                 size 34
-                color "#f5f0e8"
+                color "#000000"
 
             text "Jeśli czytacie te słowa, to wiecie już, że jestem w miejscu, do którego nikt nie powinien wchodzić.":
                 size 30
-                color "#f5f0e8"
+                color "#000000"
 
             text "On… mówił mi, żebym tego nie robiła.":
                 size 30

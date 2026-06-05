@@ -974,7 +974,11 @@ label Chapter_1:
     "Uczniowie znikają."
     "Zaczyna płakać"
 
-    #dodać wyblakłą wersję bg
+    scene bg flower plain dark
+
+    show Cotard crossed_arms notspeak Lost Not_Happy at left,day
+    show alysia at right , day
+
     "Świat wokół nich traci kolory."
     "Kwiaty stają się niemal szare."
 
