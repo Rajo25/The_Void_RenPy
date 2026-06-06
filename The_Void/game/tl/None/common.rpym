@@ -419,19 +419,19 @@ translate None strings:
 
     # renpy/common/00director.rpy:1662
     old "Change"
-    new "Change"
+    new "Zmień"
 
     # renpy/common/00director.rpy:1664
     old "Add"
-    new "Add"
+    new "Dodaj"
 
     # renpy/common/00director.rpy:1667
     old "Cancel"
-    new "Cancel"
+    new "Anuluj"
 
     # renpy/common/00director.rpy:1670
     old "Remove"
-    new "Remove"
+    new "Usuń"
 
     # renpy/common/00director.rpy:1705
     old "Statement:"
@@ -495,31 +495,31 @@ translate None strings:
 
     # renpy/common/00gui.rpy:448
     old "Are you sure?"
-    new "Are you sure?"
+    new "Jesteś pewien?"
 
     # renpy/common/00gui.rpy:449
     old "Are you sure you want to delete this save?"
-    new "Are you sure you want to delete this save?"
+    new "Czy na pewno chcesz usunąć ten zapis?"
 
     # renpy/common/00gui.rpy:450
     old "Are you sure you want to overwrite your save?"
-    new "Are you sure you want to overwrite your save?"
+    new "Czy na pewno chcesz nadpisać ten zapis?"
 
     # renpy/common/00gui.rpy:451
     old "Loading will lose unsaved progress.\nAre you sure you want to do this?"
-    new "Loading will lose unsaved progress.\nAre you sure you want to do this?"
+    new "Czy na pewno chcesz wczytać grę?\nNiezapisane postępy zostaną utracone."
 
     # renpy/common/00gui.rpy:452
     old "Are you sure you want to quit?"
-    new "Are you sure you want to quit?"
+    new "Czy na pewno chcesz wyjść z gry?"
 
     # renpy/common/00gui.rpy:453
     old "Are you sure you want to return to the main menu?\nThis will lose unsaved progress."
-    new "Are you sure you want to return to the main menu?\nThis will lose unsaved progress."
+    new "Czy na pewno chcesz wrócić do menu głównego?\nNiezapisane postępy zostaną utracone."
 
     # renpy/common/00gui.rpy:454
     old "Are you sure you want to continue where you left off?"
-    new "Are you sure you want to continue where you left off?"
+    new "Czy na pewno chcesz kontynuować od miejsca, w którym skończyłeś?"
 
     # renpy/common/00gui.rpy:455
     old "Are you sure you want to end the replay?"
@@ -527,15 +527,15 @@ translate None strings:
 
     # renpy/common/00gui.rpy:456
     old "Are you sure you want to begin skipping?"
-    new "Are you sure you want to begin skipping?"
+    new "Jesteś pewien, że chcesz zacząć skipować?"
 
     # renpy/common/00gui.rpy:457
     old "Are you sure you want to skip to the next choice?"
-    new "Are you sure you want to skip to the next choice?"
+    new "Jeteś pewien, że chcesz pominąć ten wybór?"
 
     # renpy/common/00gui.rpy:458
     old "Are you sure you want to skip unseen dialogue to the next choice?"
-    new "Are you sure you want to skip unseen dialogue to the next choice?"
+    new "Czy jesteś pewien, że chcesz pominać dialog którego nie przeczytałeś?"
 
     # renpy/common/00gui.rpy:459
     old "This save was created on a different device. Maliciously constructed save files can harm your computer. Do you trust this save's creator and everyone who could have changed the file?"
@@ -547,11 +547,11 @@ translate None strings:
 
     # renpy/common/00keymap.rpy:325
     old "Failed to save screenshot as %s."
-    new "Failed to save screenshot as %s."
+    new "Coś poszło nie tak"
 
     # renpy/common/00keymap.rpy:346
     old "Saved screenshot as %s."
-    new "Saved screenshot as %s."
+    new "Screen zapisany."
 
     # renpy/common/00library.rpy:257
     old "Skip Mode"
@@ -563,7 +563,7 @@ translate None strings:
 
     # renpy/common/00preferences.rpy:295
     old "display"
-    new "display"
+    new "Wyświetlanie"
 
     # renpy/common/00preferences.rpy:315
     old "transitions"
@@ -827,31 +827,31 @@ translate None strings:
 
     # renpy/common/00sync.rpy:70
     old "Sync downloaded."
-    new "Sync downloaded."
+    new "Pobrane"
 
     # renpy/common/00sync.rpy:184
     old "Could not connect to the Ren'Py Sync server."
-    new "Could not connect to the Ren'Py Sync server."
+    new "Nie można połączyć się z serewrem"
 
     # renpy/common/00sync.rpy:186
     old "The Ren'Py Sync server timed out."
-    new "The Ren'Py Sync server timed out."
+    new "Serwer umarł"
 
     # renpy/common/00sync.rpy:188
     old "An unknown error occurred while connecting to the Ren'Py Sync server."
-    new "An unknown error occurred while connecting to the Ren'Py Sync server."
+    new "Serwer umarł"
 
     # renpy/common/00sync.rpy:204
     old "The Ren'Py Sync server does not have a copy of this sync. The sync ID may be invalid, or it may have timed out."
-    new "The Ren'Py Sync server does not have a copy of this sync. The sync ID may be invalid, or it may have timed out."
+    new "Serwer nie ma takiej kopi. cync ID jest złe lub wygasło"
 
     # renpy/common/00sync.rpy:305
     old "Please enter the sync ID you generated.\nNever enter a sync ID you didn't create yourself."
-    new "Please enter the sync ID you generated.\nNever enter a sync ID you didn't create yourself."
+    new "Podaj swoje ID.\nNIGDY nie podawaj Id które nie jest twoje"
 
     # renpy/common/00sync.rpy:324
     old "The sync ID is not in the correct format."
-    new "The sync ID is not in the correct format."
+    new "Złe ID"
 
     # renpy/common/00sync.rpy:344
     old "The sync could not be decrypted."
@@ -859,23 +859,23 @@ translate None strings:
 
     # renpy/common/00sync.rpy:367
     old "The sync belongs to a different game."
-    new "The sync belongs to a different game."
+    new "Sace z innej gry"
 
     # renpy/common/00sync.rpy:372
     old "The sync contains a file with an invalid name."
-    new "The sync contains a file with an invalid name."
+    new "Nieznana nazwa"
 
     # renpy/common/00sync.rpy:425
     old "This will upload your saves to the {a=https://sync.renpy.org}Ren'Py Sync Server{/a}.\nDo you want to continue?"
-    new "This will upload your saves to the {a=https://sync.renpy.org}Ren'Py Sync Server{/a}.\nDo you want to continue?"
+    new " Twoje zapisy zostaną załadowane do  {a=https://sync.renpy.org}Ren'Py Sync Server{/a}.\nKontynuować?"
 
     # renpy/common/00sync.rpy:433
     old "Yes"
-    new "Yes"
+    new "Tak"
 
     # renpy/common/00sync.rpy:434
     old "No"
-    new "No"
+    new "Nie"
 
     # renpy/common/00sync.rpy:457
     old "Enter Sync ID"
@@ -883,11 +883,11 @@ translate None strings:
 
     # renpy/common/00sync.rpy:468
     old "This will contact the {a=https://sync.renpy.org}Ren'Py Sync Server{/a}."
-    new "This will contact the {a=https://sync.renpy.org}Ren'Py Sync Server{/a}."
+    new "Zosaniesz złączony z {a=https://sync.renpy.org}Ren'Py Sync Server{/a}."
 
     # renpy/common/00sync.rpy:498
     old "Sync Success"
-    new "Sync Success"
+    new "Połączenie zakończone sukcesem"
 
     # renpy/common/00sync.rpy:501
     old "The Sync ID is:"
@@ -895,15 +895,15 @@ translate None strings:
 
     # renpy/common/00sync.rpy:507
     old "You can use this ID to download your save on another device.\nThis sync will expire in an hour.\nRen'Py Sync is supported by {a=https://www.renpy.org/sponsors.html}Ren'Py's Sponsors{/a}."
-    new "You can use this ID to download your save on another device.\nThis sync will expire in an hour.\nRen'Py Sync is supported by {a=https://www.renpy.org/sponsors.html}Ren'Py's Sponsors{/a}."
+    new "Możesz używać tego ID do pobieranie zapisów na innym urządzeniu.\nKOD WYGAŚNIE ZA GODZINĘ\nRen'Py Sync is supported by {a=https://www.renpy.org/sponsors.html}Ren'Py's Sponsors{/a}."
 
     # renpy/common/00sync.rpy:511
     old "Continue"
-    new "Continue"
+    new "Kontynuj"
 
     # renpy/common/00sync.rpy:536
     old "Sync Error"
-    new "Sync Error"
+    new "Sync padł na zawał"
 
     # renpy/common/00translation.rpy:63
     old "Translation identifier: [identifier]"
@@ -971,7 +971,7 @@ translate None strings:
 
     # renpy/common/00updater.rpy:1935
     old "An error has occurred:"
-    new "An error has occurred:"
+    new "Gra nieżyje:"
 
     # renpy/common/00updater.rpy:1937
     old "Checking for updates."
@@ -1043,7 +1043,7 @@ translate None strings:
 
     # renpy/common/00compat.rpy:467
     old "Fullscreen"
-    new "Fullscreen"
+    new "Pełen ekran"
 
     # renpy/common/00gallery.rpy:676
     old "Image [index] of [count] locked."
@@ -1051,11 +1051,11 @@ translate None strings:
 
     # renpy/common/00gallery.rpy:696
     old "prev"
-    new "prev"
+    new "wróc"
 
     # renpy/common/00gallery.rpy:697
     old "next"
-    new "next"
+    new "dalej"
 
     # renpy/common/00gallery.rpy:698
     old "slideshow"
@@ -1063,7 +1063,7 @@ translate None strings:
 
     # renpy/common/00gallery.rpy:699
     old "return"
-    new "return"
+    new "powrót"
 
     # renpy/common/00gltest.rpy:89
     old "Renderer"
@@ -1231,7 +1231,7 @@ translate None strings:
 
     # renpy/common/_errorhandling.rpym:834
     old "Ignore"
-    new "Ignore"
+    new "Ignoruj"
 
     # renpy/common/_errorhandling.rpym:838
     old "Ignores the exception, allowing you to continue."

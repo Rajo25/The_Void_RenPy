@@ -256,7 +256,7 @@ screen history_menu(title, scroll=None, yinitial=0.0, spacing=0):
         idle_background Transform("gui/Pause_Menu/Button.png", size=(250, 70))
         hover_background Transform("gui/Pause_Menu/Button.png", size=(250, 70), alpha=0.6)
                     
-        text "Return":
+        text "Wróć":
             align (0.48, 0.5)
             size 40
             idle_color "#ffffff"
@@ -546,9 +546,9 @@ screen game_menu(title, scroll=None, yscrollbar=True):
     elif title == "Load":
         add "gui/load.png" xalign 0.5 yalign 0.05
     elif title == "Preferences":
-        add "gui/load.png" xalign 0.5 yalign 0.05
+        add "gui/opcje.png" xalign 0.5 yalign 0.05
     elif title == "About":
-        add "gui/load.png" xalign 0.5 yalign 0.05
+        add "gui/credits.png" xalign 0.5 yalign 0.05
     button:
         action Return()
         xalign 0.2
@@ -558,7 +558,7 @@ screen game_menu(title, scroll=None, yscrollbar=True):
         idle_background Transform("gui/Pause_Menu/Button.png", size=(250, 70))
         hover_background Transform("gui/Pause_Menu/Button.png", size=(250, 70), alpha=0.6)
                     
-        text "Return":
+        text "Wróć":
             align (0.48, 0.5)
             size 40
             idle_color "#ffffff"
@@ -661,18 +661,18 @@ screen game_menu(title, scroll=None, yscrollbar=True):
 #             hover_color "#ffffff67"
 
     #label title
-    if title == "Save":
-                add "gui/save.png":
-                    xalign 0.5
-                    yalign 0.05 # Lekki margines od góry
-    elif title == "Load":
-                add "gui/load.png":
-                    xalign 0.5
-                    yalign 0.05
-    elif title == "Preferences":
-                add "gui/load.png":
-                    xalign 0.5
-                    yalign 0.05
+    # if title == "Save":
+    #             add "gui/save.png":
+    #                 xalign 0.5
+    #                 yalign 0.05 # Lekki margines od góry
+    # elif title == "Load":
+    #             add "gui/load.png":
+    #                 xalign 0.5
+    #                 yalign 0.05
+    # elif title == "Preferences":
+    #             add "gui/load.png":
+    #                 xalign 0.5
+    #                 yalign 0.05
 
     if main_menu:
         key "game_menu" action ShowMenu("main_menu")
@@ -818,7 +818,7 @@ screen load():
 
 screen file_slots(title):
 
-    default page_name_value = FilePageNameInputValue(pattern=_("Page {}"), auto=_("Automatic saves"), quick=_("Quick saves"))
+    default page_name_value = FilePageNameInputValue(pattern=_("Strona {}"), auto=_("Automatyczny zapis"), quick=_("Szybki zapis"))
 
     
     use game_menu(title):
@@ -900,7 +900,7 @@ screen file_slots(title):
                             text_idle_color "#ffffff"
 
                     if config.has_quicksave:
-                        textbutton _("{#quick_page}Q"):
+                        textbutton _("{#szybkie_zapisy}Q"):
                             action FilePage("quick")
                             text_idle_color "#ffffff"
 
@@ -916,12 +916,12 @@ screen file_slots(title):
 
                 if config.has_sync:
                     if CurrentScreenName() == "save":
-                        textbutton _("Upload Sync"):
+                        textbutton _("Wgraj Sync"):
                             action UploadSync()
                             text_idle_color "#ffffff"
                             xalign 0.5
                     else:
-                        textbutton _("Download Sync"):
+                        textbutton _("Pobierz Sync"):
                             action DownloadSync()
                             text_idle_color "#ffffff"
                             xalign 0.5
@@ -986,7 +986,7 @@ screen preferences():
                    
 
                         style_prefix "radio"
-                        label _("Display") 
+                        label _("Wyświetlanie") 
                         textbutton _("Okno"):
                             action Preference("display", "window")
                             text_idle_color "#ffffff"
@@ -997,13 +997,13 @@ screen preferences():
                 vbox:
                     style_prefix "check"
                     label _("Pomiń")
-                    textbutton _("Unseen Text"):
+                    textbutton _("Nieczytany tekst"):
                         action Preference("skip", "toggle")
                         text_idle_color "#ffffff"
-                    textbutton _("After Choices"):
+                    textbutton _("Po wyborach"):
                         action Preference("after choices", "toggle")
                         text_idle_color "#ffffff"
-                    textbutton _("Transitions"):
+                    textbutton _("Przejścia"):
                         action InvertSelected(Preference("transitions", "toggle"))
                         text_idle_color "#ffffff"
 
@@ -1018,25 +1018,25 @@ screen preferences():
 
                 vbox:
 
-                    label _("Text Speed")
+                    label _("Szybkość tekstu")
 
                     bar value Preference("text speed")
 
-                    label _("Auto-Forward Time")
+                    label _("Czas autoodtwarzania")
 
                     bar value Preference("auto-forward time")
 
                 vbox:
 
                     if config.has_music:
-                        label _("Music Volume")
+                        label _("Głośność muzyki")
 
                         hbox:
                             bar value Preference("music volume")
 
                     if config.has_sound:
 
-                        label _("Sound Volume")
+                        label _("Głośność dźwięków")
 
                         hbox:
                             bar value Preference("sound volume")
@@ -1057,7 +1057,7 @@ screen preferences():
                     if config.has_music or config.has_sound or config.has_voice:
                         null height gui.pref_spacing
 
-                        textbutton _("Mute All"):
+                        textbutton _("Wycisz wszystko"):
                             action Preference("all mute", "toggle")
                             style "mute_all_button"
                             text_idle_color "#ffffff"
@@ -1893,92 +1893,91 @@ screen pause_menu():
        
     vbox:
         xalign 0.5
-        yalign 0.47
-        spacing 15
+        yalign 0.57
+        spacing 20
 
         button:
             action Return()
-            xysize (250, 70)
+            xysize (260, 80)
             
-            idle_background Transform("gui/Pause_Menu/Button.png", size=(250, 70))
-            hover_background Transform("gui/Pause_Menu/Button.png", size=(250, 70), alpha=0.6)
+            idle_background Transform("gui/Pause_Menu/Button.png", size=(260, 80))
+            hover_background Transform("gui/Pause_Menu/Button.png", size=(260, 80), alpha=0.6)
             
-            text "Return":
+            text "Powrót":
                 align (0.48, 0.5)
                 #font "gui/twoj_font.ttf"
                 size 40
-                idle_color "#FEEDC4"
-                hover_color "#edcf9e"
-
+                idle_color "#ffffff"
+                hover_color "#ffffff"
         button:
             action ShowMenu("save")
-            xysize (250, 70)
+            xysize (260, 80)
        
-            idle_background Transform("gui/Pause_Menu/Button.png", size=(250, 70))
-            hover_background Transform("gui/Pause_Menu/Button.png", size=(250, 70), alpha=0.6)
+            idle_background Transform("gui/Pause_Menu/Button.png", size=(260, 80))
+            hover_background Transform("gui/Pause_Menu/Button.png", size=(260, 80), alpha=0.6)
             
-            text "Save":
+            text "Zapisz":
                 align (0.48, 0.5)
                 #font "gui/twoj_font.ttf"
                 size 35
-                idle_color "#FEEDC4"
-                hover_color "#edcf9e"
+                idle_color "#ffffff"
+                hover_color "#ffffff"
         button:
             action ShowMenu("load")
-            xysize (250, 70)
+            xysize (260, 80)
             
-            idle_background Transform("gui/Pause_Menu/Button.png", size=(250, 70))
-            hover_background Transform("gui/Pause_Menu/Button.png", size=(250, 70), alpha=0.6)
+            idle_background Transform("gui/Pause_Menu/Button.png", size=(260, 80))
+            hover_background Transform("gui/Pause_Menu/Button.png", size=(260, 80), alpha=0.6)
             
-            text "Load":
+            text "Wczytaj":
                 align (0.48, 0.5)
                 #font "gui/twoj_font.ttf"
                 size 35
-                idle_color "#FEEDC4"
-                hover_color "#edcf9e"
+                idle_color"#ffffff"
+                hover_color "#ffffff"
 
         button:
             action ShowMenu("preferences")
-            xysize (250, 70)
+            xysize (260, 80)
         
-            idle_background Transform("gui/Pause_Menu/Button.png", size=(250, 70))
-            hover_background Transform("gui/Pause_Menu/Button.png", size=(250, 70), alpha=0.6)
+            idle_background Transform("gui/Pause_Menu/Button.png", size=(260, 80))
+            hover_background Transform("gui/Pause_Menu/Button.png", size=(260, 80), alpha=0.6)
             
-            text "Options":
+            text "Opcje":
                 align (0.48, 0.5)
                 #font "gui/twoj_font.ttf"
                 size 35
-                idle_color "#FEEDC4"
-                hover_color "#edcf9e"
+                idle_color "#ffffff"
+                hover_color "#ffffff"
 
         button:
             action MainMenu()
-            xysize (250, 70)
+            xysize (260, 80)
          
-            idle_background Transform("gui/Pause_Menu/Button.png", size=(250, 70))
-            hover_background Transform("gui/Pause_Menu/Button.png", size=(250, 70), alpha=0.6)
+            idle_background Transform("gui/Pause_Menu/Button.png", size=(260, 80))
+            hover_background Transform("gui/Pause_Menu/Button.png", size=(260, 80), alpha=0.6)
             
-            text "Main Menu":
+            text "Menu główne":
                 align (0.48, 0.5)
                 #font "gui/twoj_font.ttf"
                 size 35
-                idle_color "#FEEDC4"
-                hover_color "#edcf9e"
+                idle_color "#ffffff"
+                hover_color "#ffffff"
 
         
         button:
             action Quit(confirm=True)
-            xysize (250, 70)
+            xysize (260, 80)
     
-            idle_background Transform("gui/Pause_Menu/Button.png", size=(250, 70))
-            hover_background Transform("gui/Pause_Menu/Button.png", size=(250, 70), alpha=0.6)
+            idle_background Transform("gui/Pause_Menu/Button.png", size=(260, 80))
+            hover_background Transform("gui/Pause_Menu/Button.png", size=(260, 80), alpha=0.6)
             
-            text "Quit":
+            text "Wyjdź":
                 align (0.48, 0.5)
                 #font "gui/twoj_font.ttf"
                 size 35
-                idle_color "#FEEDC4"
-                hover_color "#edcf9e"
+                idle_color "#ffffff"
+                hover_color "#ffffff"
 
 screen diary_page():
 
@@ -2068,3 +2067,4 @@ screen diary_page():
             text "{b}On się mną zaopiekuje.{/b}":
                 size 30
                 color "#f5f0e8"
+
