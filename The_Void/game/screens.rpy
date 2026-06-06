@@ -283,7 +283,7 @@ screen quick_menu():
     ## Ensure this appears on top of other screens.
     zorder 100
 
-    if quick_menu:
+    if quick_menu and not renpy.get_screen("choice"):
 
         hbox:
 
@@ -2068,3 +2068,63 @@ screen diary_page():
                 size 30
                 color "#f5f0e8"
 
+
+
+
+screen end_game_menu():
+    
+    modal True 
+
+   
+    add "images/bg end.png"
+
+    
+    vbox:
+        xalign 0.5
+        yalign 0.87
+        spacing 30
+
+        button:
+            action MainMenu()
+            xysize (400, 120)
+         
+            idle_background Composite(
+                (400, 120),                                                   
+                (0, 0), Solid("#141414"),                                     
+                (0, 0), Transform("gui/Pause_Menu/Button.png", size=(400, 120)) 
+            )
+
+            hover_background Composite(
+                (400, 120),                                                   
+                (0, 0), Solid("#141414"),                                     
+                (0, 0), Transform("gui/Pause_Menu/Button.png", size=(400, 120), alpha=0.6) 
+            )
+
+            
+            text "Zagraj ponownie":
+                align (0.48, 0.5)           
+                size 35
+                idle_color "#ffffff"
+                hover_color "#ffffff60"
+
+        button:
+            action MainMenu()
+            xysize (400, 120)
+         
+            idle_background Composite(
+                (400, 120),                                                   
+                (0, 0), Solid("#141414"),                                     
+                (0, 0), Transform("gui/Pause_Menu/Button.png", size=(400, 120)) 
+            )
+
+            hover_background Composite(
+                (400, 120),                                                   
+                (0, 0), Solid("#141414"),                                     
+                (0, 0), Transform("gui/Pause_Menu/Button.png", size=(400, 120), alpha=0.6) 
+            )
+            
+            text "Menu główne":
+                align (0.48, 0.5)
+                size 35
+                idle_color "#ffffff"
+                hover_color "#ffffff60"

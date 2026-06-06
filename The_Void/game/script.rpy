@@ -2036,6 +2036,11 @@ label chapter_3:
     n "Ciemność. "
     nvl clear
 
+    #scene bg end
+    
+
     n "{size=+40}KONIEC ROZDZIAŁU 3{/size}"
 
+    $ quick_menu = False
+    call screen end_game_menu
     return
