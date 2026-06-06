@@ -155,155 +155,155 @@ translate None strings:
 
     # renpy/common/00action_file.rpy:26
     old "{#weekday}Monday"
-    new "{#weekday}Monday"
+    new "{#weekday}Poniedziałek"
 
     # renpy/common/00action_file.rpy:26
     old "{#weekday}Tuesday"
-    new "{#weekday}Tuesday"
+    new "{#weekday}Wtorek"
 
     # renpy/common/00action_file.rpy:26
     old "{#weekday}Wednesday"
-    new "{#weekday}Wednesday"
+    new "{#weekday}Środa"
 
     # renpy/common/00action_file.rpy:26
     old "{#weekday}Thursday"
-    new "{#weekday}Thursday"
+    new "{#weekday}Czwartek"
 
     # renpy/common/00action_file.rpy:26
     old "{#weekday}Friday"
-    new "{#weekday}Friday"
+    new "{#weekday}Piątek"
 
     # renpy/common/00action_file.rpy:26
     old "{#weekday}Saturday"
-    new "{#weekday}Saturday"
+    new "{#weekday}Sobota"
 
     # renpy/common/00action_file.rpy:26
     old "{#weekday}Sunday"
-    new "{#weekday}Sunday"
+    new "{#weekday}Niedziela"
 
     # renpy/common/00action_file.rpy:37
     old "{#weekday_short}Mon"
-    new "{#weekday_short}Mon"
+    new "{#weekday_short}Pon"
 
     # renpy/common/00action_file.rpy:37
     old "{#weekday_short}Tue"
-    new "{#weekday_short}Tue"
+    new "{#weekday_short}Wt"
 
     # renpy/common/00action_file.rpy:37
     old "{#weekday_short}Wed"
-    new "{#weekday_short}Wed"
+    new "{#weekday_short}Śr"
 
     # renpy/common/00action_file.rpy:37
     old "{#weekday_short}Thu"
-    new "{#weekday_short}Thu"
+    new "{#weekday_short}Czw"
 
     # renpy/common/00action_file.rpy:37
     old "{#weekday_short}Fri"
-    new "{#weekday_short}Fri"
+    new "{#weekday_short}Pt"
 
     # renpy/common/00action_file.rpy:37
     old "{#weekday_short}Sat"
-    new "{#weekday_short}Sat"
+    new "{#weekday_short}Sob"
 
     # renpy/common/00action_file.rpy:37
     old "{#weekday_short}Sun"
-    new "{#weekday_short}Sun"
+    new "{#weekday_short}Niedz"
 
     # renpy/common/00action_file.rpy:47
     old "{#month}January"
-    new "{#month}January"
+    new "{#month}Styczeń"
 
     # renpy/common/00action_file.rpy:47
     old "{#month}February"
-    new "{#month}February"
+    new "{#month}Luty"
 
     # renpy/common/00action_file.rpy:47
     old "{#month}March"
-    new "{#month}March"
+    new "{#month}Marzec"
 
     # renpy/common/00action_file.rpy:47
     old "{#month}April"
-    new "{#month}April"
+    new "{#month}Kwiecień"
 
     # renpy/common/00action_file.rpy:47
     old "{#month}May"
-    new "{#month}May"
+    new "{#month}Maj"
 
     # renpy/common/00action_file.rpy:47
     old "{#month}June"
-    new "{#month}June"
+    new "{#month}Czerwiec"
 
     # renpy/common/00action_file.rpy:47
     old "{#month}July"
-    new "{#month}July"
+    new "{#month}Lipiec"
 
     # renpy/common/00action_file.rpy:47
     old "{#month}August"
-    new "{#month}August"
+    new "{#month}Sierpień"
 
     # renpy/common/00action_file.rpy:47
     old "{#month}September"
-    new "{#month}September"
+    new "{#month}Wrzesień"
 
     # renpy/common/00action_file.rpy:47
     old "{#month}October"
-    new "{#month}October"
+    new "{#month}Październik"
 
     # renpy/common/00action_file.rpy:47
     old "{#month}November"
-    new "{#month}November"
+    new "{#month}Listopad"
 
     # renpy/common/00action_file.rpy:47
     old "{#month}December"
-    new "{#month}December"
+    new "{#month}Grudzień"
 
     # renpy/common/00action_file.rpy:63
     old "{#month_short}Jan"
-    new "{#month_short}Jan"
+    new "{#month_short}01"
 
     # renpy/common/00action_file.rpy:63
     old "{#month_short}Feb"
-    new "{#month_short}Feb"
+    new "{#month_short}02"
 
     # renpy/common/00action_file.rpy:63
     old "{#month_short}Mar"
-    new "{#month_short}Mar"
+    new "{#month_short}03"
 
     # renpy/common/00action_file.rpy:63
     old "{#month_short}Apr"
-    new "{#month_short}Apr"
+    new "{#month_short}04"
 
     # renpy/common/00action_file.rpy:63
     old "{#month_short}May"
-    new "{#month_short}May"
+    new "{#month_short}05"
 
     # renpy/common/00action_file.rpy:63
     old "{#month_short}Jun"
-    new "{#month_short}Jun"
+    new "{#month_short}06"
 
     # renpy/common/00action_file.rpy:63
     old "{#month_short}Jul"
-    new "{#month_short}Jul"
+    new "{#month_short}07"
 
     # renpy/common/00action_file.rpy:63
     old "{#month_short}Aug"
-    new "{#month_short}Aug"
+    new "{#month_short}08"
 
     # renpy/common/00action_file.rpy:63
     old "{#month_short}Sep"
-    new "{#month_short}Sep"
+    new "{#month_short}09"
 
     # renpy/common/00action_file.rpy:63
     old "{#month_short}Oct"
-    new "{#month_short}Oct"
+    new "{#month_short}10"
 
     # renpy/common/00action_file.rpy:63
     old "{#month_short}Nov"
-    new "{#month_short}Nov"
+    new "{#month_short}11"
 
     # renpy/common/00action_file.rpy:63
     old "{#month_short}Dec"
-    new "{#month_short}Dec"
+    new "{#month_short}12"
 
     # renpy/common/00action_file.rpy:258
     old "%b %d, %H:%M"
@@ -311,15 +311,15 @@ translate None strings:
 
     # renpy/common/00action_file.rpy:395
     old "Save slot %s: [text]"
-    new "Save slot %s: [text]"
+    new "Zapisz slot %s: [text]"
 
     # renpy/common/00action_file.rpy:481
     old "Load slot %s: [text]"
-    new "Load slot %s: [text]"
+    new "Załaduj slot %s: [text]"
 
     # renpy/common/00action_file.rpy:534
     old "Delete slot [text]"
-    new "Delete slot [text]"
+    new "Usuń slot [text]"
 
     # renpy/common/00action_file.rpy:613
     old "File page auto"
