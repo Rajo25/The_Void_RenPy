@@ -1979,7 +1979,7 @@ screen pause_menu():
                 idle_color "#ffffff"
                 hover_color "#ffffff"
 
-screen diary_page():
+screen diary_page_1():
 
     add "bg book"
 
@@ -1996,40 +1996,55 @@ screen diary_page():
             spacing 18
 
             text "Dziennik Alysii Wpis 001":
+                font "fonts/Caveat Regular.ttf"
                 size 50
-                color "#000000"
+                color "#2b1b12"
 
             text "Dla moich uczniów":
-                size 34
-                color "#000000"
+                font "fonts/Caveat Regular.ttf" 
+                size 34 
+                color "#2b1b12"
 
             text "Jeśli czytacie te słowa, to wiecie już, że jestem w miejscu, do którego nikt nie powinien wchodzić.":
-                size 30
-                color "#000000"
+               font "fonts/Caveat Regular.ttf" 
+               size 30 
+               color "#2b1b12"
 
             text "On… mówił mi, żebym tego nie robiła.":
-                size 30
-                color "#f5f0e8"
+                font "fonts/Caveat Regular.ttf" 
+                size 30 
+                color "#2b1b12"
+
 
             text "Że nie wszystko jest do odkrycia.":
-                size 30
-                color "#f5f0e8"
+                font "fonts/Caveat Regular.ttf" 
+                size 30 
+                color "#2b1b12"
+
 
             text "Że niektóre tajemnice istnieją tylko po to, by pozostać tajemnicami.":
-                size 30
-                color "#f5f0e8"
+                font "fonts/Caveat Regular.ttf" 
+                size 30 
+                color "#2b1b12"
+
 
             text "Ale jeśli świat ma sens, to musi istnieć jego źródło.":
-                size 30
-                color "#f5f0e8"
+                font "fonts/Caveat Regular.ttf" 
+                size 30 
+                color "#2b1b12"
+
 
             text "A jeśli go nie ma…":
-                size 30
-                color "#f5f0e8"
+               font "fonts/Caveat Regular.ttf" 
+               size 30 
+               color "#2b1b12"
+
 
             text "…to chcę wiedzieć dlaczego.":
-                size 30
-                color "#f5f0e8"
+                font "fonts/Caveat Regular.ttf" 
+                size 30 
+                color "#2b1b12"
+
 
 
     # PRAWA STRONA
@@ -2045,28 +2060,40 @@ screen diary_page():
             spacing 18
 
             text "Nie idę tam jako bohaterka.":
-                size 30
-                color "#f5f0e8"
+               font "fonts/Caveat Regular.ttf" 
+               size 30 
+               color "#2b1b12"
+
 
             text "Idę jako nauczycielka, która nie potrafi znieść niewiedzy.":
-                size 30
-                color "#f5f0e8"
+                font "fonts/Caveat Regular.ttf" 
+                size 30 
+                color "#2b1b12"
+
 
             text "Chcę wiedzieć, co się stało z moimi rodzicami.":
-                size 30
-                color "#f5f0e8"
+                font "fonts/Caveat Regular.ttf" 
+                size 30 
+                color "#2b1b12"
+
 
             text "I nie jestem sama.":
-                size 30
-                color "#f5f0e8"
+               font "fonts/Caveat Regular.ttf" 
+               size 30 
+               color "#2b1b12"
+
 
             text "Nie martwcie się.":
-                size 30
-                color "#f5f0e8"
+               font "fonts/Caveat Regular.ttf" 
+               size 30 
+               color "#2b1b12"
+
 
             text "{b}On się mną zaopiekuje.{/b}":
-                size 30
-                color "#f5f0e8"
+                font "fonts/Caveat Regular.ttf" 
+                size 30 
+                color "#2b1b12"
+
 
 
 
@@ -2128,3 +2155,85 @@ screen end_game_menu():
                 size 35
                 idle_color "#ffffff"
                 hover_color "#ffffff60"
+                
+                
+screen diary_page_2():
+ 
+     add "bg book"
+ 
+     # LEWA STRONA
+     frame:
+         background None
+ 
+         xpos 200
+         ypos 120
+         xsize 520
+         ysize 700
+ 
+         vbox:
+             spacing 18
+ 
+             text "Kwiaty.":
+                 font "fonts/Caveat Regular.ttf"
+                 size 30
+                 color "#2b1b12"
+ 
+             text "Są zbyt doskonałe.":
+                 font "fonts/Caveat Regular.ttf" 
+                 size 30
+                 color "#2b1b12"
+ 
+             text "A przez to nienaturalne.":
+                font "fonts/Caveat Regular.ttf" 
+                size 30 
+                color "#2b1b12"
+ 
+             text "Cotard twierdzi, że nie są prawdziwe.":
+                 font "fonts/Caveat Regular.ttf" 
+                 size 30 
+                 color "#2b1b12"
+ 
+ 
+             text "I co najgorsze…":
+                 font "fonts/Caveat Regular.ttf" 
+                 size 30 
+                 color "#2b1b12"
+ 
+ 
+             text "wierzę mu.":
+                 font "fonts/Caveat Regular.ttf" 
+                 size 30 
+                 color "#2b1b12"
+ 
+ 
+             text "Mam jednak dziwne wrażenie, że to miejsce reaguje na emocje.":
+                 font "fonts/Caveat Regular.ttf" 
+                 size 30 
+                 color "#2b1b12"
+ 
+ 
+             text "Na zachwyt.":
+                font "fonts/Caveat Regular.ttf" 
+                size 30 
+                color "#2b1b12"
+ 
+ 
+             text "Na lęk.":
+                 font "fonts/Caveat Regular.ttf" 
+                 size 30 
+                 color "#2b1b12"
+             
+             text "Na wspomnienia.":
+              font "fonts/Caveat Regular.ttf" 
+              size 30 
+              color "#2b1b12"    
+ 
+             text "Im bardziej chcę coś zrozumieć, tym bardziej rzeczywistość wydaje się miękka.":
+              font "fonts/Caveat Regular.ttf" 
+              size 30 
+              color "#2b1b12"
+                              
+             text "Jakby można ją było rozerwać palcami.":
+               font "fonts/Caveat Regular.ttf" 
+               size 30 
+               color "#2b1b12"                  

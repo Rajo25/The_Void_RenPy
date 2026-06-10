@@ -195,11 +195,11 @@ label Chapter_1:
 
     scene bg book
    
-    show screen diary_page
+    show screen diary_page_1
    
     pause
    
-    hide screen diary_page
+    hide screen diary_page_1
     nvl clear
 
     play music 'audio/Chapter 1.mp3'
@@ -528,26 +528,17 @@ label Chapter_1:
 
     hide alysia
     hide Cotard
+    
     scene bg book
-
-    n "Kwiaty."
-    n "Są zbyt doskonałe."
-    n "A przez to nienaturalne."
-
-    n "Cotard twierdzi, że nie są prawdziwe."
-    n "I co najgorsze…"
-
-    n "wierzę mu."
-
-    n "Mam jednak dziwne wrażenie, że to miejsce reaguje na emocje."
-    n "Na zachwyt."
-    n "Na lęk."
-    n "Na wspomnienia."
-
-    n "Im bardziej chcę coś zrozumieć, tym bardziej rzeczywistość wydaje się miękka."
-    n "Jakby można ją było rozerwać palcami."
-
+    
+    show screen diary_page_2
+      
+    pause   
+    
+    hide screen diary_page_2
+    
     nvl clear
+   
     
     scene bg flower plain
 
