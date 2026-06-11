@@ -141,22 +141,21 @@ style namebox:
     xpos 0.15
     ypos -89
     
-    xminimum 300   # Minimalna szerokość (dla krótkich imion)
-    xsize None     # Zdejmujemy sztywny kaganiec szerokości! (Pudełko może rosnąć)
-    ysize 100      # Wysokość zostaje sztywna
+    xminimum 300   
+    xsize None    
+    ysize 100     
     
-    # Używamy Frame. Cyferki (np. 15, 15) to marginesy lewy/prawy Twojego obrazka, 
-    # których silnik ma NIE rozciągać (żeby nie zepsuć krawędzi ramki).
+   
     background Frame("gui/namebox.png", 0, 0) 
     
-    padding (30, 0) # Margines dla tekstu, żeby nie dotykał ramki
+    padding (30, 0) #
 
     #padding gui.namebox_borders.padding
 
 style say_label:
     properties gui.text_properties("name", accent=True)
     xalign 0.5
-    yalign 0.2
+    yalign 0.23
 
 style say_dialogue:
     properties gui.text_properties("dialogue")
@@ -294,7 +293,7 @@ screen quick_menu():
                 action Rollback()
                 xysize (100,50) 
                 text_align (0.5, 0.5) 
-                text_size 22
+                text_size 25
                 text_idle_color "#ffffffff"
                 text_hover_color "#ffffff60"
                 
@@ -308,7 +307,7 @@ screen quick_menu():
                 action ShowMenu('history')
                 xysize (100,50) 
                 text_align (0.5, 0.5) 
-                text_size 22
+                text_size 25
                 text_idle_color "#ffffffff"
                 text_hover_color "#ffffff60"
                 
@@ -320,7 +319,7 @@ screen quick_menu():
                 action Skip() alternate Skip(fast=True, confirm=True)
                 xysize (100,50) 
                 text_align (0.5, 0.5) 
-                text_size 22
+                text_size 25
                 text_idle_color "#ffffffff"
                 text_hover_color "#ffffff60"
                 
@@ -332,7 +331,7 @@ screen quick_menu():
                 action Preference("auto-forward", "toggle")
                 xysize (100,50) 
                 text_align (0.5, 0.5) 
-                text_size 22
+                text_size 25
                 text_idle_color "#ffffffff"
                 text_hover_color "#ffffff60"
                 
@@ -1881,10 +1880,10 @@ screen pause_menu():
 
     tag menu # Mówi silnikowi, że to jest menu i ma zatrzymać grę
 
-    # 1. Czarne, półprzezroczyste tło przyciemniające grę
+    
     add Solid("#000000a7")
 
-    # 2. Kwadrat na środku ekranu
+    
 
     add "gui/Pause_Menu/Pause_Menu.png":
         xalign 0.5
@@ -2117,13 +2116,13 @@ screen end_game_menu():
          
             idle_background Composite(
                 (400, 120),                                                   
-                (0, 0), Solid("#141414"),                                     
+                (0, 0), Solid("#14141471"),                                     
                 (0, 0), Transform("gui/Pause_Menu/Button.png", size=(400, 120)) 
             )
 
             hover_background Composite(
                 (400, 120),                                                   
-                (0, 0), Solid("#141414"),                                     
+                (0, 0), Solid("14141471"),                                     
                 (0, 0), Transform("gui/Pause_Menu/Button.png", size=(400, 120), alpha=0.6) 
             )
 
@@ -2132,7 +2131,7 @@ screen end_game_menu():
                 align (0.48, 0.5)           
                 size 35
                 idle_color "#ffffff"
-                hover_color "#ffffff60"
+                hover_color "#ffffffff"
 
         button:
             action MainMenu()
@@ -2140,13 +2139,13 @@ screen end_game_menu():
          
             idle_background Composite(
                 (400, 120),                                                   
-                (0, 0), Solid("#141414"),                                     
+                (0, 0), Solid("#14141471"),                                     
                 (0, 0), Transform("gui/Pause_Menu/Button.png", size=(400, 120)) 
             )
 
             hover_background Composite(
                 (400, 120),                                                   
-                (0, 0), Solid("#141414"),                                     
+                (0, 0), Solid("#14141471"),                                     
                 (0, 0), Transform("gui/Pause_Menu/Button.png", size=(400, 120), alpha=0.6) 
             )
             
@@ -2154,7 +2153,7 @@ screen end_game_menu():
                 align (0.48, 0.5)
                 size 35
                 idle_color "#ffffff"
-                hover_color "#ffffff60"
+                hover_color "#ffffffff"
                 
                 
 screen diary_page_2():
