@@ -16,7 +16,7 @@ define f = Character("Ojciec", color="#0077ff")
 define m = Character("Matka", color="#00ffd5")
 define m1 = Character("Mężczyzna 1", color="#ff5050")
 define m2 = Character("Mężczyzna 2", color="#ffae00")
-define om = Character("Stary Mężczyzna", color="#474747")
+define om = Character("Stary Mężczyzna", color="#007a45")
 define k1 = Character("Kobieta 1", color="#b9009a")
 define k2 = Character("Kobieta 2", color="#7700ff")
 
