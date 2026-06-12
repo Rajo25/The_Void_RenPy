@@ -1042,7 +1042,6 @@ label Chapter_2:
     n "Wyczuwają pod stopami delikatny ruch. "
     nvl clear
 
-    show alysia Speak_Not_Happy
     a "Cotard…"
     a "Zimno mi."
     a "Ale… Ale nie w ciało."
@@ -1058,23 +1057,19 @@ label Chapter_2:
 
     "Oddech Alysi staje się spokojniejszy."
     
-    show alysia Speak_Not_Happy
     a "Czy to normalne, że przestaję się bać?"
     a "Przecież powinnam."
     a "Wiem o tym."
     a "Ale…"
     a "Jakby ktoś wyciszył mnie w środku."
-    show alysia notspeak Not_Happy
 
     "Alysia dotyka klatki piersiowej."
 
-    show alysia Speak_Not_Happy
     a "Jakby moje własne serce było gdzieś daleko stąd."
     a "Powinnam się bać…"
     a "A jakoś…"
     a "Nie potrafię."
     a "To chyba źle? Prawda?"
-    show alysia notspeak Not_Happy
     
     "Cotard patrzy przed siebie."
     "Idzie nie zatrzymując się."
@@ -1582,25 +1577,19 @@ label chapter_3:
     nvl clear
 
 
-    show alysia Speak_Not_Happy
     a "…Cotard."
-    show alysia notspeak Not_Happy
     
     "Dotyka powierzchni wody."
 
     "Nie rozlewa się."
     "Nie reaguje."
 
-    show alysia Speak_Not_Happy
     a "To nie jest woda. "
     a "Jest jak powietrze."
-    show alysia notspeak Not_Happy
     
     "Alysia bierze głęboki oddech."
 
-    show alysia Speak_Not_Happy
     a "Musimy…?" 
-    show alysia notspeak Not_Happy
     
     c "Tak."
     "Robią krok."
