@@ -219,7 +219,7 @@ label Chapter_1:
     show alysia at night
     show alysia Speak_Not_Happy
     a "…to tutaj."
-    show alysia notspeak Not_Happy
+    show alysia notspeak Normal
     c "…"
 
     show alysia at right
@@ -235,13 +235,13 @@ label Chapter_1:
     "Alysia wybucha lekkim śmiechem"
 
     show Cotard notspeak Not_Happy
-    show alysia Speak_Not_Happy
+    show alysia Speak_Smile
     a "Właśnie dlatego tu jesteśmy."
-    show alysia notspeak Not_Happy
+    show alysia notspeak Extatic
     "Cotard patrzy w dół."
     "Długo."
     "Zbyt długo."
-    
+    show alysia notspeak Normal
     show Cotard Arm_On_Body Lost speak Speak_Not_Happy
 
     c "Nie czuję strachu."
@@ -279,7 +279,7 @@ label Chapter_1:
 
     show alysia Speak_Not_Happy
     a "Słyszysz to?"
-    show alysia notspeak Not_Happy
+    show alysia notspeak Scared
     show Cotard Bitch speak Speak_Not_Happy
     
     c "Nie"
@@ -288,7 +288,7 @@ label Chapter_1:
     show Cotard notspeak Not_Happy
     show alysia Speak_Not_Happy
     a "Jesteś jedyną osobą, która może tam wejść i wrócić."
-    show alysia notspeak Not_Happy
+    show alysia notspeak Normal
     "Cotard przekrzywia głowę jakby analizował coś czego nie da się zrozumieć"
     show Cotard Small_Cry speak Speak_Not_Happy
     c "Boje się, jak na Ciebie zadziała to otoczenie."
@@ -309,7 +309,7 @@ label Chapter_1:
     a "Boję się, że nagle coś się zmieni i Nicość zacznie działać również na ciebie."
     a "Że odbierze mi nawet tę pewność, którą teraz mam."
     a "Ale… przekonamy się, gdy dojdziemy do Kwiecistej Nicości."
-    show alysia notspeak Not_Happy
+    show alysia notspeak Sad
     "Cotard patrzy na nią długo."
     "Jego twarz pozostaje niemal nieruchoma, ale głos staje się cichszy."
     
@@ -322,7 +322,7 @@ label Chapter_1:
     show alysia Speak_Not_Happy
     a "Nieprawda."
     a "Gdyby zrobiła wszystko, nie szedłbyś teraz obok mnie."
-    show alysia notspeak Not_Happy
+    show alysia notspeak Normal
     "Cotard milknie."
     "Jakby nie potrafił znaleźć odpowiedzi."
     "Po chwili rusza dalej."
@@ -334,9 +334,9 @@ label Chapter_1:
     show Cotard notspeak Bitch Not_Happy
     
     "Alysia lekko się uśmiecha."
-    show alysia Speak_Not_Happy
+    show alysia Speak_Happy
     a "Jest."
-    show alysia notspeak Not_Happy
+    show alysia notspeak Extatic
     jump choice2chapter1_done
 
     label choice2chapter1_2:
@@ -344,7 +344,7 @@ label Chapter_1:
     a "Przekonamy się z czasem."
     a "Mam nadzieję, że po prostu nic nam się nie stanie"
     a "Może to miejsce tylko tylko próbuje nas przestraszyć."
-    show alysia notspeak Not_Happy
+    show alysia notspeak Normal
     "Spogląda w nicość"
 
     show Cotard speak Bitch Speak_Not_Happy
@@ -353,7 +353,7 @@ label Chapter_1:
     c "Ludzie zawsze próbują nadać sens temu, czego się boją."
     c "Jakby nazwanie lęku czyniło go mniejszym."
      
-    show Cotard notspeak Not_Happy
+    show Cotard notspeak Digust
     show alysia Speak_Not_Happy
     a "A ty?"
     a "Na czym budujesz strój spokój"
@@ -364,7 +364,7 @@ label Chapter_1:
     c "Nie oczekuję już niczego dobrego."
 
     show Cotard notspeak Not_Happy
-    show alysia Speak_Not_Happy
+    show alysia Speak_Happy
     a "A ja właśnie odwrotnie."
     a "Oczekuje, że damy sobie radę."
     a "Dlatego dobrze, że idziemy razem."
@@ -380,7 +380,7 @@ label Chapter_1:
     show Cotard notspeak Not_Happy
     show alysia Speak_Not_Happy
     a "Czego?"
-    show alysia notspeak Not_Happy
+    show alysia notspeak Sad
     show Cotard speak Bitch Speak_Not_Happy
     
     c "Góry."
@@ -395,7 +395,7 @@ label Chapter_1:
             jump choice3chapter1_2
 
     label choice3chapter1_1:
-    show Cotard speak Speak_Not_Happy
+    show Cotard speak Speak_Angry
        
     c "Nie przesadzaj"
     c "To normalne."
@@ -409,7 +409,7 @@ label Chapter_1:
     c "To normalne."
     c "Przyzwyczaisz się."
      
-    show Cotard notspeak Not_Happy
+    show Cotard notspeak Digust
     jump choice3chapter1_done
 
     label choice3chapter1_done:
@@ -428,7 +428,7 @@ label Chapter_1:
     show alysia Speak_Not_Happy
     a "Cotard…"
     a "Czy to tylko mi sie wydaje, czy powietrze tutaj pachnie inaczej?"
-    show alysia notspeak Not_Happy
+    show alysia notspeak Normal
     "Cotard zatrzymuje się na moment" 
     "Unosi głowę."
 
@@ -440,7 +440,7 @@ label Chapter_1:
     show Cotard notspeak Not_Happy
     show alysia Speak_Not_Happy
     a "Co takiego?"
-    show alysia notspeak Not_Happy
+    show alysia notspeak Suprised
     show Cotard speak Speak_Not_Happy
     
     c "Pierwszy poziom."
@@ -462,20 +462,20 @@ label Chapter_1:
 
     scene bg flower plain
     show alysia at right,day
-    show alysia Speak_Not_Happy
+    show alysia Speak_Happy
     show Cotard crossed_arms notspeak Lost Not_Happy at left, day
     
 
     a "Cotard!"
     a "Jak tu pięknie!"
-    show alysia notspeak Not_Happy
+    show alysia notspeak Suprised
     "Na jej twarzy pojawia się prawdziwy, ciepł uśmiech."
     "Pierwszy od wejścia."
 
     show Cotard speak Speak_Not_Happy
     
     c "{size=+20}Nie podchodź!{/size}"
-     
+    show alysia notspeak Empty
     show Cotard notspeak Not_Happy
 
     menu:
@@ -497,7 +497,7 @@ label Chapter_1:
     c "Gorzej."
     c "Chcą, abyś została."
  
-    show Cotard notspeak Not_Happy
+    show Cotard notspeak Digust
     show alysia Speak_Not_Happy
     a "Kwiaty?"
     show alysia notspeak Not_Happy
@@ -521,7 +521,7 @@ label Chapter_1:
     c "Tak samo jak ja." 
     c "Też powoli znikam."
  
-    show Cotard notspeak Not_Happy
+    show Cotard notspeak Sad
     show alysia Speak_Not_Happy
     a "Nie mów tak."
     show alysia notspeak Not_Happy
@@ -530,7 +530,7 @@ label Chapter_1:
     c "Dlaczego?"
     c "Ty jedyna nie próbujesz mi wmówić, że żyję."
      
-    show Cotard notspeak Not_Happy
+    show Cotard notspeak Sad
     jump choice4chapter1_done
 
     label choice4chapter1_done:
@@ -599,7 +599,7 @@ label Chapter_1:
 
     "Cotard patrzy na nią pustym wzrokiem."
 
-    show Cotard speak Speak_Not_Happy
+    show Cotard speak Speak_Angry
     
     c "Odejdź."
     
@@ -615,7 +615,7 @@ label Chapter_1:
 
     show alysia Speak_Not_Happy
     a "Jesteś… mieszkanką tego miejsca?"
-    show alysia notspeak Not_Happy
+    show alysia notspeak Normal
     bee "A ty jesteś śmieszna."
     bee "Prrr."
     bee "Pytasz tak, jakby to miejsce miało mieszkańców."
@@ -648,11 +648,11 @@ label Chapter_1:
     bee "Tak."
     bee "Widziałam."
 
-    show alysia Speak_Not_Happy
+    show alysia Speak_Happy
     a "Co?! Naprawdę?!"
     a "Gdzie?!"
     a "Co się z nimi stało?!"
-    show alysia notspeak Not_Happy
+    show alysia notspeak Suprised
     "Pszczółka wykonuje kilka chaotycznych obrotów w powietrzu."
     bee "Pachniesz jak oni."
     bee "Zeszli niżej."
@@ -672,7 +672,7 @@ label Chapter_1:
         
     c "Wiesz coś więcej o rodzicach?."
     
-    show Cotard notspeak Not_Happy
+    show Cotard notspeak Digust
 
     "Pszczółka śmieje się."
     bee "Prr."
@@ -710,20 +710,20 @@ label Chapter_1:
     "Alysia przerywa ciszę"
     "Zaciska notes przy piersi."
     
-    show alysia Speak_Not_Happy
+    show alysia Speak_Happy
     a "Więc…"
     a "Naprawdę tu byli"
-    show alysia notspeak Not_Happy
+    show alysia notspeak Extatic
     "Cotard patrzy na nią."
 
     show Cotard speak Speak_Not_Happy
     
     c "Albo to miejsce chce, żebyś w to uwierzyła."
  
-    show Cotard notspeak Not_Happy
+    show Cotard notspeak  Not_Happy
     show alysia Speak_Not_Happy
     a "A jeśli choć raz nie masz racji?"
-    show alysia notspeak Not_Happy
+    show alysia notspeak Normal
     show Cotard speak Speak_Not_Happy
     
     c "…"
@@ -771,7 +771,7 @@ label Chapter_1:
     
     c "Nie patrz na nich!"
      
-    show Cotard notspeak Not_Happy
+    show Cotard notspeak Sad
     show alysia Speak_Not_Happy
 
     a "To moi uczniowie!"
@@ -784,18 +784,18 @@ label Chapter_1:
     show alysia Speak_Not_Happy
 
     a "{size=+20}Puść mnie Cotard!!!{/size}"
-    show alysia notspeak Not_Happy
+    show alysia notspeak Angry
     
     "Pierwszy raz w jego głosie słychać… GNIEW."
 
-    show Cotard speak Speak_Not_Happy
+    show Cotard speak Speak_Angry   
     
     c "{size=+20}NIE.{/size}"
     c "{size=+20}to nie oni{/size}"
     c "{size=+20}NICOŚĆ wie, czego najbardziej ci brakuje.{/size}"
     c "{size=+20}I użyje tego przeciwko tobie.{/size}"
      
-    show Cotard notspeak Not_Happy
+    show Cotard notspeak Sad
 
     "Głos."
     "Rozbrzmiewa wszędzie."
@@ -805,7 +805,7 @@ label Chapter_1:
     "Alysia patrzy na Cotarda."
     show alysia Speak_Not_Happy
     a "Słyszysz to?"
-    show alysia notspeak Not_Happy
+    show alysia notspeak Normal
     show Cotard speak Speak_Not_Happy
    
     c "Tak."
@@ -870,7 +870,7 @@ label Chapter_1:
     show Cotard notspeak Not_Happy
     show alysia Speak_Not_Happy
     a "A jeśli odbierze mi ich wspomnienia?!"
-    show alysia notspeak Not_Happy
+    show alysia notspeak Empty
     show Cotard speak Speak_Not_Happy
     
     c "Już zaczęła."
@@ -897,7 +897,7 @@ label Chapter_1:
     show alysia Speak_Not_Happy
     a "Mówisz, że Oni nie istnieją…"
     a "To dlaczego o sobie mówisz to samo?"
-    show alysia notspeak Not_Happy
+    show alysia notspeak Scared
     show Cotard speak Speak_Not_Happy
     
     c "Jeśli tego nie usuniesz…"
@@ -936,7 +936,7 @@ label Chapter_1:
     a "chyba się zgubiłam."
     a "Ale już wszystko dobrze."
     a "Możemy wracać."
-    show alysia notspeak Not_Happy
+    show alysia notspeak Normal
     n "Powoli siada na łące."
     n "Kładzie się między kwiatami."
     n "Oczy same się zamykają."
@@ -957,7 +957,7 @@ label Chapter_1:
     c "…"
     c "Nie znikaj."
      
-    show Cotard notspeak Not_Happy
+    show Cotard notspeak Small_Cry Not_Happy
 
     n "Alysia nie odpowiada."
     n "Zostaje na łące."
@@ -974,7 +974,7 @@ label Chapter_1:
 
     show alysia Speak_Not_Happy
     a "To nie oni."
-    show alysia notspeak Not_Happy
+    show alysia notspeak Sad
     "Iluzja zaczyna pękać."
     "Światło przygasa."
     "Sylwetki uczniów powoli znikają"
@@ -1004,7 +1004,7 @@ label Chapter_1:
     c "…"
     c "To jest prawdziwe."
      
-    show Cotard notspeak Not_Happy
+    show Cotard notspeak Digust
     show alysia Speak_Not_Happy
     a "Co?"
     show alysia notspeak Not_Happy
@@ -1016,14 +1016,14 @@ label Chapter_1:
     c "Idziemy niżej"
     c "Alysia ociera łzy."
      
-    show Cotard notspeak Not_Happy
+    show Cotard notspeak Sad
     show alysia Speak_Not_Happy
     a "Zaczynam rozumieć, dlaczego ludzie nie chcą wiedzieć."
     a "Jeśli każde zejście wymaga poświęcenia to…"
     a "ile z naszych wspomnień zostanie na końcu?"
     a "A jeśli na samym końcu nie zostanie nic?"
     a "to kim będę."
-    show alysia notspeak Not_Happy
+    show alysia notspeak Scared
     jump Chapter_2
 
 
@@ -1106,13 +1106,13 @@ label Chapter_2:
     show alysia Speak_Not_Happy
     a "To są ludzie."
     a "To ich wspomnienia"
-    show alysia notspeak Not_Happy
+    show alysia notspeak Normal
     show Cotard speak Speak_Not_Happy
     
     c "Nie."
     c "To są resztki wspomnień, tych co byli w Nicości."
      
-    show Cotard notspeak Not_Happy
+    show Cotard notspeak Sad
 
     n "Dwie ogromne bryły lodu z hukiem przebijają powierzchnię."
     n "Są idealnie gładkie."
@@ -1138,13 +1138,13 @@ label Chapter_2:
     show alysia Speak_Not_Happy
     a "To… my."
     a "To naprawdę my."
-    show alysia notspeak Not_Happy
+    show alysia notspeak Suprised
     show Cotard speak Speak_Not_Happy
     
     c "Wydaje mi się, że to zapis tego co było."
     c "Albo tego, co Nicość chcę żebyś pamiętała."
      
-    show Cotard notspeak Not_Happy
+    show Cotard notspeak Sad
 
     "Alysia wyciąga rękę."
     "Dotyka lodu."
@@ -1154,7 +1154,7 @@ label Chapter_2:
     show alysia Speak_Not_Happy
     a "Musimy razem."
     a "Prawda?"
-    show alysia notspeak Not_Happy
+    show alysia notspeak Scared 
     "Cotard przez chwile się nie rusza."
     "Potem przykłada dłoń"
 
@@ -1207,8 +1207,8 @@ label Chapter_2:
     a "Siniak."
     a "Ukrywaliśmy to przed rodzicami."
     a "Bałam się, że zamkną biuro."
-    show alysia notspeak Not_Happy
-    show Cotard speak Speak_Not_Happy
+    show alysia notspeak Sad
+    show Cotard speak Lost Speak_Not_Happy
     
     c "Bałaś się bardziej kary, czy tego, że stracisz dostęp do wiedzy?"
     
@@ -1219,13 +1219,13 @@ label Chapter_2:
     show alysia Speak_Not_Happy
     a "…" 
     a "obu."
-    show alysia notspeak Not_Happy
+    show alysia notspeak Sad
     show Cotard speak Speak_Not_Happy
     
     c "To nie było całe wspomnienie."
     c "Tylko fragment."
     
-    show Cotard notspeak Not_Happy
+    show Cotard notspeak Sad
 
     a "…"
     jump choice1chapter2_done
@@ -1270,7 +1270,7 @@ label Chapter_2:
     show alysia Speak_Not_Happy
     a "Oni wiedzieli…"
     a "więcej niż mówili…"
-    show alysia notspeak Not_Happy
+    show alysia notspeak Empty
     show Cotard speak Speak_Not_Happy
     
     c "Dobrze wiedzieli, co ich czeka."
@@ -1362,7 +1362,7 @@ label Chapter_2:
     a "Nie możesz tak mówić!"
     a "Przecież stoisz tutaj!"
     a "Oddychasz!!!"
-    show alysia notspeak Not_Happy
+    show alysia notspeak Angry
     show Cotard speak Speak_Not_Happy
     
     c "Nie."
@@ -1371,7 +1371,7 @@ label Chapter_2:
     c "Po tym… "
     c "Nagle znów mogłem się ruszać…"
      
-    show Cotard notspeak Not_Happy
+    show Cotard notspeak Sad
     show alysia Speak_Not_Happy
     a "Jeśli to wspomnienie jest prawdziwe…to kim jesteś?"
     show alysia notspeak Not_Happy
@@ -1475,22 +1475,22 @@ label Chapter_2:
     
     c "Nie."
      
-    show Cotard notspeak Not_Happy
+    show Cotard notspeak Sad
     show alysia Speak_Not_Happy
     
     a "Dlaczego tam chodziłeś, jak już stałeś się sobą?"
-    show alysia notspeak Not_Happy
+    show alysia notspeak Empty
     show Cotard speak Speak_Not_Happy
     
     c "Bo ja nie wiem, co tracę."
     c "Więc nie mam czego żałować."
      
-    show Cotard notspeak Not_Happy
+    show Cotard notspeak Crying Not_Happy
 
     n "Hałas wokół nich milknie,"
     n "Żadnych szeptów."
     n "Żadnych ruchów."
-
+    show Cotard notspeak Not_Happy
     n "Jakby wszystko…"
     n "Zostało już zapisane"
     n "i zamknięte."
@@ -1499,7 +1499,7 @@ label Chapter_2:
     show alysia Speak_Not_Happy
     a "Cotard…"
     a "Co się teraz stanie?"
-    show alysia notspeak Not_Happy
+    show alysia notspeak Sad
     "Nie odpowiada od razu."
 
     show Cotard speak Speak_Not_Happy
@@ -1508,7 +1508,7 @@ label Chapter_2:
     c "Myślę, że to moment…"
     c "W którym jesteśmy sprawdzani."
      
-    show Cotard notspeak Not_Happy
+    show Cotard notspeak Digust
 
     n "Lód pod ich stopami zaczyna drżeć."
     n "Nie pęka."
@@ -1519,7 +1519,7 @@ label Chapter_2:
 
     show alysia Speak_Not_Happy
     a "Nie chcieliśmy niczego oddawać."
-    show alysia notspeak Not_Happy
+    show alysia notspeak Sad
     unon "{size=+30}Nicość{/size}"
     unon "{size=+30}Nie ma różnicy.{/size}"
 
@@ -1623,13 +1623,13 @@ label chapter_3:
 
     show alysia Speak_Not_Happy
     a "{size=-10}Mogę oddychać, ale nie w pełni.{/size}"
-    show alysia notspeak Not_Happy
+    show alysia notspeak Scared
     show alysia at right, water
     show Cotard crossed_arms notspeak Lost Not_Happy at left,water
 
     "Cotard patrzy na nią."
 
-    show Cotard speak Speak_Not_Happy
+    show Cotard speak Bitch Speak_Not_Happy
     
     c "Zobaczymy co będzie dalej."
      
@@ -1650,7 +1650,7 @@ label chapter_3:
 
     "Alysia wyciąga rękę"
 
-    show Cotard speak Speak_Not_Happy
+    show Cotard speak Crying Speak_Not_Happy
     
     c "{size=+20}Nie!{/size}"
     
@@ -1666,7 +1666,7 @@ label chapter_3:
 
     show alysia Speak_Not_Happy
     a "Cotard…" 
-    show alysia notspeak Not_Happy
+    show alysia notspeak Scared
     n "Meduza delikatnie „otwiera się” przy jej gardle."
     n "Wnika w nią."
     nvl clear
@@ -1683,7 +1683,7 @@ label chapter_3:
     c "Adaptujesz się do tego."
     c "Ale koszt tego jeszcze nie przyszedł."
     
-    show Cotard notspeak Not_Happy
+    show Cotard notspeak Sad
 
     #WYBÓR 1  MEDUZA
     menu:
@@ -1700,7 +1700,7 @@ label chapter_3:
 
     show alysia Speak_Not_Happy
     a "Co czujesz?" 
-    show alysia notspeak Not_Happy
+    show alysia notspeak Normal
     show Cotard speak Speak_Not_Happy
    
     c "Nic nowego. "
@@ -1828,7 +1828,7 @@ label chapter_3:
 
     show alysia Speak_Not_Happy
     a "Oni… schodzili dalej." 
-    show alysia notspeak Not_Happy
+    show alysia notspeak Scared
     show Cotard speak Speak_Not_Happy
     
     c "Świadomie." 
@@ -2090,7 +2090,7 @@ label chapter_3:
     n "Ale zamiast ich topić…"
  
     n "woda znika. "
-
+ 
     n "Nie odpływa."
     n "Nie opada."
     n "przestaje istnieć. "
