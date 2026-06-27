@@ -2088,7 +2088,7 @@ screen diary_page_1():
                color "#2b1b12"
 
 
-            text "{b}On się mną zaopiekuje.{/b}":
+            text "On się mną zaopiekuje.":
                 font "fonts/Caveat Regular.ttf" 
                 size 30 
                 color "#2b1b12"

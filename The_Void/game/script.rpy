@@ -2,11 +2,10 @@
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
-
 #define narrator = nvl_narrator
 define n = Character("", colour="#00000000", kind=nvl_narrator)
-define a = Character("Alisia", color="#fffd7b")
-define la = Character("Mała Alisia", color="#fffd7b")
+define a = Character("Alysia", color="#fffd7b")
+define la = Character("Mała Alysia", color="#fffd7b")
 define c = Character("Cotard", color="#9c1908")
 define lc = Character("Mały Cotard", color="#9c1908")
 define bee = Character("Pszczółka", color = "#ffa600")
@@ -20,9 +19,10 @@ define om = Character("Stary Mężczyzna", color="#007a45")
 define k1 = Character("Kobieta 1", color="#b9009a")
 define k2 = Character("Kobieta 2", color="#7700ff")
 
-image uczniowie :
+image Uczniowie :
     "uczniowie" 
     zoom 0.5
+    yalign 0.65
 image pszczolka :
     "pszczółka" 
     zoom 0.4
@@ -124,7 +124,7 @@ label start:
     n "Zmuszam go do posiłków, sam najchętniej nic by nie jadł."
     n "Twierdzi, że nie potrzebuje jedzenia."
     n "Tylko moje łzy i błagania skutkują."
-    n "Choć do straszne, znajduję w tym pocieszenie - oznacza bowiem, że mój brat nadal czuje emocje. Nadal mu zależy."
+    n "Choć to straszne, znajduję w tym pocieszenie - oznacza bowiem, że mój brat nadal czuje emocje. Nadal mu zależy."
     n "To dla mnie znaczy wszystko."
 
     n "Ubrania zużywają się na nim jak drewno w ognisku."
@@ -146,7 +146,7 @@ label start:
     n "Myśli, że nie widzę jego reakcji na wodę."
     n "Unika jej jak trucizny. "
     n "Nie myje się."
-    n "Cichnie chorobą, ale o dziwo nie jest chory."
+    n "Cuchnie chorobą, ale o dziwo nie jest chory."
     n "O co w tym chodzi…"
 
     n "Pije tylko grzybowy napar. Dobrze, że chociaż tyle."
@@ -176,7 +176,6 @@ label start:
     n "Ludzie dziwnie na nas patrzą."
     n "Gdyby tylko umieli w nim dostrzec, co ja…"
 
-    scene bg home
 
     n "Wczoraj spytałam go co robi w tej swojej szopie"
     n "Powiedziałam, że chcę wiedzieć BO MAM PRAWO."
@@ -203,7 +202,7 @@ label Chapter_1:
     play music 'audio/Chapter 1.mp3'
     scene bg void entrance at center
 
-    n "{b}{size=+60}Rozdział Pierwszy{/size}{/b}"
+    n "{size=+60}Rozdział Pierwszy{/size}"
     n "Wiatr… jest dziwnie cichy"
     n "Nie zimny. Nie ciepły."
     n "Po prostu… czuć, że pochodzi z Nicości."
@@ -300,7 +299,6 @@ label Chapter_1:
         "Przekonamy się.":
             jump choice2chapter1_2
     label choice2chapter1_1:
-    scene bg flower plain dark 
     show alysia at right , day
     show alysia Speak_Not_Happy
     show Cotard crossed_arms notspeak Lost Not_Happy at left,day
@@ -513,7 +511,7 @@ label Chapter_1:
     "Dotyka jednego z kwiatów."
 
     "Jeden z płatków drży"
-    "Potem cofa się."
+    "Potem, cofa się."
     "Jakby czas na moment się załamał."
     
     show Cotard speak Speak_Not_Happy
@@ -682,7 +680,7 @@ label Chapter_1:
     bee "Kłócili się."
     bee "O to, które z nich zaczęło znikać pierwsze."
 
-    "Cotard spogląda na Alyssie."
+    "Cotard spogląda na Alysie."
     "W jego oczach po raz pierwszy pojawia się cień napięcia."
 
     show Cotard speak Speak_Not_Happy
@@ -755,12 +753,13 @@ label Chapter_1:
 
     "Alysia zamiera."
 
-
     unon "Pani Alysio!"
+
+    show Uczniowie
 
     "Na końcu ścieżki stoją dzieci."
     "Jej uczniowie."
-    
+
     u "Wróci Pani?"
     u "Brakuje nam Pani…"
 
@@ -931,12 +930,10 @@ label Chapter_1:
     u "Gdzie pani była?"
     u "Martwiliśmy się."
     
-    show alysia Speak_Not_Happy
     a "Ja…"
     a "chyba się zgubiłam."
     a "Ale już wszystko dobrze."
     a "Możemy wracać."
-    show alysia notspeak Normal
     n "Powoli siada na łące."
     n "Kładzie się między kwiatami."
     n "Oczy same się zamykają."
@@ -945,8 +942,6 @@ label Chapter_1:
     n "Po raz pierwszy jego głos"
     n "drży."
     nvl clear
-    show Cotard crossed_arms notspeak Lost Not_Happy at left,day
-    show Cotard speak Speak_Not_Happy
     
     c "{size=+20}Alysia…{/size}"
     c "Nie…"
@@ -957,7 +952,6 @@ label Chapter_1:
     c "…"
     c "Nie znikaj."
      
-    show Cotard notspeak Small_Cry Not_Happy
 
     n "Alysia nie odpowiada."
     n "Zostaje na łące."
@@ -987,6 +981,8 @@ label Chapter_1:
     show alysia Speak_Not_Happy
     a "Przepraszam…"
     show alysia notspeak Not_Happy
+    hide Uczniowie
+
     "Uczniowie znikają."
     "Zaczyna płakać"
 
@@ -1020,9 +1016,9 @@ label Chapter_1:
     show alysia Speak_Not_Happy
     a "Zaczynam rozumieć, dlaczego ludzie nie chcą wiedzieć."
     a "Jeśli każde zejście wymaga poświęcenia to…"
-    a "ile z naszych wspomnień zostanie na końcu?"
+    a "Ile z naszych wspomnień zostanie na końcu?"
     a "A jeśli na samym końcu nie zostanie nic?"
-    a "to kim będę."
+    a "To kim będę."
     show alysia notspeak Scared
     jump Chapter_2
 
@@ -1168,7 +1164,7 @@ label Chapter_2:
     label choice1chapter2_1:
 
         #dodać czarne tło
-    scene bg black
+    scene bg home
 
     n "Lód pęka"
     n "Świat zmienia się natychmiast."
@@ -1233,7 +1229,7 @@ label Chapter_2:
     label choice1chapter2_2:
 
         #dodać czarne tło
-    scene bg black
+    scene bg home
 
     n "Lód pęka."
     n "Zimno uderza natychmiast."
@@ -1553,7 +1549,7 @@ label chapter_3:
     play music 'audio/Chapter 3.mp3'
     scene bg black
 
-    n "{b}{size=+60}Rozdział 3{/size}{/b}"
+    n "{size=+60}Rozdział 3{/size}"
     n "Schodzą."
     n "Długo."
     n "Za długo."
@@ -1641,7 +1637,7 @@ label chapter_3:
 
     "Organiczna forma życia"
     "płynie w ich stronę."
-    "Wygląda jak niebieska ośmiornica."
+    "Wygląda jak różowa meduza."
     "Jej ciało pluska miękkim światłem"
     "Gdy zbliża się, słychać szept"
     "Nie słów a uczuć."
@@ -1658,7 +1654,7 @@ label chapter_3:
 
     "Za późno."
     "Alysia dotyka jednej macki."
-    "Ośmiornica przykleja się do jej dłoni."
+    "Meduza przykleja się do jej dłoni."
     "A potem"
     "przesuwa się wyżej"
     "na szyje"
@@ -1851,7 +1847,7 @@ label chapter_3:
 
     n "Płyną dalej. "
     n "Ich ciała zaczynają się zmieniać."
-    n "Skóra Alyssii:"
+    n "Skóra Alysii:"
     n "delikatnie przezroczysta."
     n "Jej ruchy:"
     n "bardziej płynne."
@@ -1986,7 +1982,7 @@ label chapter_3:
     label choice3chapter3_done:
     n "Ocean zatrzymuje się. "
     n "Wszystko zamiera. "
-    n "Ośmiornica zaczyna bardzo mocno świecić"
+    n "Meduza zaczyna bardzo mocno świecić"
     nvl clear
 
 
@@ -2072,7 +2068,7 @@ label chapter_3:
     n "Zanurzają się dalej. "
     n "Bez oporu. "
 
-    n "Ośmiornica odkleja się od nich"
+    n "Meduza odkleja się od nich"
     n "Jej światło gaśnie."
 
     n "Alysia nagle próbuje nabrać powietrza"
